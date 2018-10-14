@@ -1,4 +1,4 @@
-package proyectof
+package tienda
 
 class BootStrap {
 

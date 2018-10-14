@@ -11,7 +11,7 @@ buildscript {
 }
 
 version "0.1"
-group "proyectof"
+group "tienda"
 
 apply plugin:"eclipse"
 apply plugin:"idea"
@@ -58,6 +58,8 @@ dependencies {
     testRuntime "org.seleniumhq.selenium:selenium-chrome-driver:2.47.1"
     testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1"
     testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
+
+    runtime 'org.postgresql:postgresql:9.4.1211.jre7'
 }
 
 bootRun {
