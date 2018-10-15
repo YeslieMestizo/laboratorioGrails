@@ -9,7 +9,7 @@ class DisfrazController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-    def index(Integer max) {
+    def index(Integer max){
         params.max = Math.min(max ?: 10, 100)
         respond disfrazService.list(params), model:[disfrazCount: disfrazService.count()]
     }
@@ -35,7 +35,7 @@ class DisfrazController {
             return
         }
 
-        request.withFormat {
+        request.withFormat{
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'disfraz.label', default: 'Disfraz'), disfraz.id])
                 redirect disfraz
@@ -54,7 +54,7 @@ class DisfrazController {
             return
         }
 
-        try {
+        try{
             disfrazService.save(disfraz)
         } catch (ValidationException e) {
             respond disfraz.errors, view:'edit'
@@ -87,9 +87,9 @@ class DisfrazController {
         }
     }
 
-    protected void notFound() {
-        request.withFormat {
-            form multipartForm {
+    protected void notFound(){
+        request.withFormat{
+            form multipartForm{
                 flash.message = message(code: 'default.not.found.message', args: [message(code: 'disfraz.label', default: 'Disfraz'), params.id])
                 redirect action: "index", method: "GET"
             }
