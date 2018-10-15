@@ -13,3 +13,9 @@
 *= require mobile
 *= require_self
 */
+h1 {
+	font-size: 500px;
+}
+body{
+	background-color: black;
+}

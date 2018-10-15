@@ -7,5 +7,9 @@ class Alquiler {
     MedioPago medio
 
     static constraints = {
+    	fechaEntrega (blank:false)
+    	fechaDevolucion (blank:false)
+    	precio (blank:false)
+    	
     }
 }
