@@ -50,8 +50,8 @@
                     <input type="text" class="form-control" name="usuario" placeholder="Escribir usuario">
 		</div>
                 <div class="form-group">
-                    <label for="contrasena">Contraseña</label>
-                    <input type="text" class="form-control" name="contrasena" placeholder="Escribir contraseña">
+                    <label for="password">Contraseña</label>
+                    <input type="text" class="form-control" name="password" placeholder="Escribir contraseña">
 		</div>
                     <input type="submit" name="enviar" value="Guardar" class="btn btn-default" />
 		</g:form>

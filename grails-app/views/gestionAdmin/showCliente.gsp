@@ -35,7 +35,7 @@
                 <td>${it.telefono}</td>
                 <td>${it.direccion}</td>
                 <td>${it.usuario}</td>
-                <td>${it.contrasena}</td>
+                <td>${it.password}</td>
             </tr>
             </g:each>
         </table>
