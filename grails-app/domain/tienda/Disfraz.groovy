@@ -1,6 +1,7 @@
 package tienda
 
 class Disfraz {
+    String descripcion
     String talle
     String genero
     //String disponibilidad

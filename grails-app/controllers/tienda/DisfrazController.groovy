@@ -57,16 +57,16 @@ class DisfrazController {
         try{
             disfrazService.save(disfraz)
         } catch (ValidationException e) {
-            respond disfraz.errors, view:'edit'
+            respond disfraz.errors, view:'gestionAdmin/editarDisfraz'
             return
         }
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'disfraz.label', default: 'Disfraz'), disfraz.id])
-                redirect disfraz
+                redirect(controller:"gestionAdmin",action:"editarEliminarDisfraz")
             }
-            '*'{ respond disfraz, [status: OK] }
+            '*'{ render(view:"/gestionAdmin/editarEliminarDisfraz", [status: OK]) }
         }
     }
 

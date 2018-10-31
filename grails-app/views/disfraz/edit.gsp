@@ -26,8 +26,8 @@
                 </g:eachError>
             </ul>
             </g:hasErrors>
-            <g:form resource="${this.disfraz}" method="PUT">
-                <g:hiddenField name="version" value="${this.disfraz?.version}" />
+            <g:form action resource="${disfraz}" method="PUT">
+                <g:hiddenField name="version" value="${disfraz?.version}" />
                 <fieldset class="form">
                     <f:all bean="disfraz"/>
                 </fieldset>

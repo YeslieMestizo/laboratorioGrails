@@ -5,7 +5,7 @@ class Cliente {
     String apellido
     String usuario
     String contrasena
-    int telefono
+    String telefono
     String direccion
 
     static constraints = {

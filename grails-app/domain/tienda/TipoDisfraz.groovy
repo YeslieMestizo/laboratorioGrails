@@ -3,6 +3,6 @@ package tienda
 class TipoDisfraz {
     String descripcion
     static constraints = {
-    	descripcion (maxSize:2000)
+    	descripcion (maxSize:200)
     }
 }
