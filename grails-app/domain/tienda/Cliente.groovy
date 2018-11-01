@@ -13,7 +13,7 @@ class Cliente {
         apellido (blank:false, mazSize:50)
         usuario (blank:false)
         password (blank:false)
-        telefono (matches:"[0-9]{3}-[0-9]{6}", blank:false)
+        telefono (blank:false)
         direccion (blank:false, maxSize:500)
     }
 }

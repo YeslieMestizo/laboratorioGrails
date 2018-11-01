@@ -23,7 +23,7 @@
                 <div class="panel panel-default">
             <div class="panel-heading">
 		<h3 class="panel-title">
-		<span class="glyphicon glyphicon-log-in"></span> 
+		<span class="glyphicon glyphicon-log-in"></span>
 		Crear
 		</h3>
             </div>
@@ -51,7 +51,7 @@
 		</div>
                 <div class="form-group">
                     <label for="password">Contraseña</label>
-                    <input type="text" class="form-control" name="password" placeholder="Escribir contraseña">
+                    <input type="password" class="form-control" name="password" placeholder="Escribir contraseña">
 		</div>
                     <input type="submit" name="enviar" value="Guardar" class="btn btn-default" />
 		</g:form>
@@ -60,8 +60,8 @@
             </div>
             <div class="col-sm-2"></div>
         </div>
-        
-        <asset:javascript src="bootstrap.min.js" />    
+
+        <asset:javascript src="bootstrap.min.js" />
         <asset:javascript src="jquery-1.11.3.min.js" />
         <asset:javascript src="holder.min.js" />
         <asset:javascript src="ie10-viewport-bug-workaround.js" />
