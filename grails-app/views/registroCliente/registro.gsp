@@ -35,6 +35,12 @@
         <br><br>
         </div>
         <div class="formField">
+          <label for="password">Confirmacion Contraseña:</label>
+      <g:passwordField name="confirmacion"
+        value="${cliente?.password}"/>
+        <br><br>
+        </div>
+        <div class="formField">
           <label for="telefono">Telefono:</label>
       <g:textField name="telefono" value="${cliente?.telefono}" />
       <br><br>

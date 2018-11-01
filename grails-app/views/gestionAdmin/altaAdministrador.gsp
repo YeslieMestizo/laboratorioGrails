@@ -16,10 +16,17 @@
             <div class="col-sm-6">
             <div class="well well-sm">
             <div class="panel-heading">
+<<<<<<< HEAD
 	            <h3 class="panel-title">
 	               <span class="glyphicon glyphicon-log-in"></span> 
 		           Crear
 	            </h3>
+=======
+		<h3 class="panel-title">
+		<span class="glyphicon glyphicon-log-in"></span>
+		Crear
+		</h3>
+>>>>>>> 7e9ddee72d7a1de3c1ac19db0a0d546eabeccd4d
             </div>
             <div class="well well-sm">
 		    <g:form action="guardarAltaAdministrador" method="post">
@@ -37,7 +44,7 @@
                 </div>
                 <div class="form-group">
                     <label for="contrasena">Contrasena</label>
-                    <input type="text" class="form-control" id= "contrasena" name="contrasena" placeholder="contrasena">
+                    <input type="password" class="form-control" id= "contrasena" name="contrasena" placeholder="contrasena">
                 </div>
                 <div class="form-group">
                     <label for="telefono">telefono</label>
@@ -50,9 +57,9 @@
             </div>
             <div class="col-sm-3"></div>
         </div>
-                
-        
-        <asset:javascript src="bootstrap.min.js" />    
+
+
+        <asset:javascript src="bootstrap.min.js" />
         <asset:javascript src="jquery-1.11.3.min.js" />
         <asset:javascript src="holder.min.js" />
         <asset:javascript src="ie10-viewport-bug-workaround.js" />

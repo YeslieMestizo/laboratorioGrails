@@ -1,26 +1,44 @@
 package tienda
+import grails.validation.ValidationException
 
 class LoginController {
+LoginService loginService
 
-  def index() {
+  def index(){
+  render(view: "login")
+  }
+  def login() {
    if (request.get) {
      return render(view: 'login')
    }
-     def u = Cliente.findByUsuario(params.usuario)
-     if (u) {
-       if (u.password == u.generateMD5_A(params.password)) {
-          session.cliente = u
-          render(view: "/index")
+
+      def u = Cliente.findByUsuario(params.usuario)
+      def a = Administrador.findByUsuario(params.usuario)
+      if (u) {
+        if (u.password == u.password) {
+           session.cliente = u
+           render(view: "/index")
+         } else {
+           render(view: "login", model: [message: "Constraseña Incorrecta"])
+         }
+       } else {
+       if (a) {
+         if (a.password == a.password) {
+            session.administrador = a
+            render(view: "/gestionAdmin/index")
+          } else {
+            render(view: "login", model: [message: "Constraseña Incorrecta"])
+          }
         } else {
-          render(view: "login", model: [message: "Constraseña Incorrecta"])
+          render(view: "login", model: [message: "No existe el usuario ingresado"])
         }
-      } else {
-        render(view: "login", model: [message: "No existe el usuario ingresado"])
+       }
+
       }
-    }
+
 
     def logout() {
       session.usuario=null
-      render(view: "/index")
+      render(view: "login")
     }
 }
