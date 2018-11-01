@@ -38,7 +38,7 @@
 
     <g:layoutBody/>
 
-    <div class="footer" role="contentinfo"></div>
+    <div class="footer" role="contentinfo"> Catamarca-Argentina</div>
 
     <div id="spinner" class="spinner" style="display:none;">
         <g:message code="spinner.alt" default="Loading&hellip;"/>

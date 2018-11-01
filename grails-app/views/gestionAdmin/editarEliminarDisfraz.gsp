@@ -1,11 +1,4 @@
-<!--
-  To change this license header, choose License Headers in Project Properties.
-  To change this template file, choose Tools | Templates
-  and open the template in the editor.
--->
-
 <%@ page contentType="text/html;charset=UTF-8" %>
-
 <html>
     <head>
         <meta name="layout" content="mainadmin"/>
@@ -16,12 +9,13 @@
     </head>
     <body>
         <h1>Eliminar y/o Editar un Disfraz</h1>
-        <table>
+        <div class="table-responsive m-b-40">
+        <table class="table table-borderless table-data3">
             <tr>
-                <th>Codigo</th>
-                <th>Descripcion</th>
+                <th>C&oacute;digo</th>
+                <th>Descripci&oacute;n</th>
                 <th>Talle</th>
-                <th>Genero</th>
+                <th>G&eacute;nero</th>
                 <th>Tipo</th>
             </tr>
             <g:each in="${listado?}">

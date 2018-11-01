@@ -1,9 +1,3 @@
-<!--
-  To change this license header, choose License Headers in Project Properties.
-  To change this template file, choose Tools | Templates
-  and open the template in the editor.
--->
-
 <%@ page contentType="text/html;charset=UTF-8" %>
 
 <html>
@@ -23,11 +17,11 @@
                     <table class="table table-borderless table-data3">
                         <thead>
                             <tr>
-                                <th>Codigo</th>
+                                <th>C&oacute;digo</th>
                                 <th>Nombre</th>
                                 <th>Apellido</th>
-                                <th>Telefono</th>
-                                <th>Direccion</th>
+                                <th>Tel&eacute;fono</th>
+                                <th>Direcci&oacute;n</th>
                                 <th>Usuario</th>
                                 <th>Contraseña</th>
                             </tr>

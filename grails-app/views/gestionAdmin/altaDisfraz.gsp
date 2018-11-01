@@ -1,11 +1,4 @@
-<!--
-  To change this license header, choose License Headers in Project Properties.
-  To change this template file, choose Tools | Templates
-  and open the template in the editor.
--->
-
 <%@ page contentType="text/html;charset=UTF-8" %>
-
 <html>
     <head>
         <meta name="layout" content="mainadmin"/>
@@ -20,21 +13,21 @@
         <div class="row">
             <div class="col-sm-3"></div>
             <div class="col-sm-6">
-                <div class="well well-sm">
+            <div class="well well-sm">
             <div class="panel-heading">
-		<h3 class="panel-title">
-		<span class="glyphicon glyphicon-log-in"></span> 
-		Crear
-		</h3>
+        		<h3 class="panel-title">
+            		<span class="glyphicon glyphicon-log-in"></span> 
+            		Crear
+        		</h3>
             </div>
             <div class="well well-sm">
 		<g:form action="guardarAltaDisfraz" method="post">
 		<div class="form-group">
-                    <label for="descripcion">Descripcion</label>
+                    <label for="descripcion">Descripci&oacute;n</label>
                     <input type="text" class="form-control" id= "descripcion" name="descripcion" placeholder="Descripcion">
                 </div>
                 <div class="form-group">
-                    <label for="genero">Genero</label>
+                    <label for="genero">G&enero</label>
                     <g:select name="genero" from="${['F','M']}" class="form-control"/>
 		</div>
                 <div class="form-group">

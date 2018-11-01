@@ -16,13 +16,14 @@
         
     </head>
     <body>
-        <h1>Gestion de Administrador</h1>
-        <table>
+        <h1>Gesti&oacute;n de Administrador</h1>
+        <div class="table-responsive m-b-40">
+        <table class="table table-borderless table-data3">
             <tr>
-                <th>Codigo</th>
+                <th>C&ocute;digo</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
-                <th>Telefono</th>
+                <th>Tel&eacute;fono</th>
                 <th>Usuario</th>
                 <th>Contraseña</th>
             </tr>
