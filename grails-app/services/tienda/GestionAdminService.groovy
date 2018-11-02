@@ -1,5 +1,4 @@
 package tienda
-
 import grails.gorm.transactions.Transactional
 
 @Transactional

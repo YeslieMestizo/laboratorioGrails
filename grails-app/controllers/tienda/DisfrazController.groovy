@@ -1,12 +1,9 @@
 package tienda
-
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
 
 class DisfrazController {
-
     DisfrazService disfrazService
-
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max){

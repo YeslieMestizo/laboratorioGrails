@@ -4,14 +4,14 @@ class Administrador {
     String nombre
     String apellido
     String usuario
-    String password
+    String contrasena
     String telefono
 
     static constraints = {
         nombre (blank:false, maxSize:50)
         apellido (blank:false, mazSize:50)
         usuario (blank:false)
-        password (blank:false)
+        contrasena (blank:false)
         telefono(blank:false)
     }
 }
