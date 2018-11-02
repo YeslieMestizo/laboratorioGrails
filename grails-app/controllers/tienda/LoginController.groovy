@@ -16,7 +16,7 @@ LoginService loginService
       def a = Administrador.findByUsuario(params.usuario)
       if (u) {
         if (u.password == u.password) {
-           session.cliente = u
+           session.usuario = u
            render(view: "/index")
          } else {
            render(view: "login", model: [message: "Constraseña Incorrecta"])
