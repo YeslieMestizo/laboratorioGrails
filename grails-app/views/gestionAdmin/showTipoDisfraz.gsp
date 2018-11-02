@@ -19,6 +19,8 @@
             <tr>
                 <td>${it.id}</td>
                 <td>${it.descripcion}</td>
+                <td><g:link action="editarTipoDisfraz" id="${it.id}">Editar</g:link></td>
+                <td><g:link action="darBajaTipoDisfraz" id="${it.id}">Eliminar</g:link></td>
             </tr>
             </g:each>
         </table>

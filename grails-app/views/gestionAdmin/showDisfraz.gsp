@@ -24,7 +24,9 @@
                 <td>${it.descripcion}</td>
                 <td>${it.talle}</td>
                 <td>${it.genero}</td>
-                <td><g:link action="darBaja" id="${it.id}">${it.tipo.id}</g:link></td>
+                <td><g:link action="showTipoDisfraz">${it.tipo.id}</g:link></td>
+                <td><g:link action="editarDisfraz" id="${it.id}">Editar</g:link></td>
+                <td><g:link action="darBajaDisfraz" id="${it.id}">Eliminar</g:link></td>
             </tr>
             </g:each>
         </table>
