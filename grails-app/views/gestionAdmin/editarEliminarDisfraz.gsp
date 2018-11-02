@@ -1,11 +1,11 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+<!DOCTYPE html>
 <html>
     <head>
         <meta name="layout" content="mainadmin"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Eliminar Disfraz</title>
         <asset:stylesheet src="bootstrap.min.css" />
-    <asset:stylesheet src="custom.css" />
+        <asset:stylesheet src="custom.css" />
     </head>
     <body>
         <h1>Eliminar y/o Editar un Disfraz</h1>
@@ -30,6 +30,5 @@
             </tr>
             </g:each>
         </table>
-        
     </body>
 </html>

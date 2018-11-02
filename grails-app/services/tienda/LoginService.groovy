@@ -1,5 +1,4 @@
 package tienda
-
 import grails.gorm.transactions.Transactional
 
 @Transactional
@@ -10,7 +9,7 @@ class LoginService {
     }
 
     Cliente buscarUsuario(String us){
-    def cliente = Cliente.find( new Cliente(usuario:us) )
+    def cliente = Cliente.find(new Cliente(usuario:us))
     return cliente
     }
 
