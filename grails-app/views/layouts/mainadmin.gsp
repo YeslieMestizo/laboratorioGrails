@@ -10,7 +10,7 @@
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
     <asset:stylesheet src="bootstrap.min.css" />
     <asset:stylesheet src="custom.css" />
-    <g:layoutHead/>-->
+    <g:layoutHead/>
     <!--<meta name="layout" content="main"/>
     <title>Tienda de Disfraces</title>
 
@@ -52,8 +52,17 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <span class="glyphicon glyphicon-globe"></span> Logo
+                    <span class="glyphicon glyphicon-globe"></span>Logo
                 </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <!--Login y Salida de Sesion-->
+                <g:if test="${session.usuario}">
+                    login as:${session.usuario.nombre} | <g:link controller="login" action="logout">Salir</g:link>
+                </g:if>
+                <g:else>
+                    <g:link controller="login" action="login">Ingresar al sistema</g:link>
+                </g:else>
             </div>
             <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="navbar">
@@ -65,7 +74,7 @@
                     <li>
                         <g:link action="clientes">Clientes</g:link></li>
                 </ul>
-
+            </div>
 		<!-- Search -->
 		<form class="navbar-form navbar-right" role="search">
             <div class="form-group">

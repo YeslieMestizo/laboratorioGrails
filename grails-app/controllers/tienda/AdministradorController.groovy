@@ -23,20 +23,18 @@ class AdministradorController {
             notFound()
             return
         }
-
         try {
             administradorService.save(administrador)
         } catch (ValidationException e) {
             respond administrador.errors, view:'create'
             return
         }
-
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'administrador.label', default: 'Administrador'), administrador.id])
                 redirect administrador
             }
-            '*' { respond administrador, [status: CREATED] }
+            '*' {respond administrador, [status: CREATED] }
         }
     }
 
@@ -49,7 +47,6 @@ class AdministradorController {
             notFound()
             return
         }
-
         try {
             administradorService.save(administrador)
         } catch (ValidationException e) {
@@ -71,9 +68,7 @@ class AdministradorController {
             notFound()
             return
         }
-
         administradorService.delete(id)
-
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'administrador.label', default: 'Administrador'), id])
