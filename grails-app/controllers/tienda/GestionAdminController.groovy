@@ -16,12 +16,9 @@ class GestionAdminController {
       gestionAdminService.altaDisfraz(params)
       redirect(action:"showDisfraz")
     }
-    def editarEliminarDisfraz(){
-        [listado: gestionAdminService.listaDisfraz()]
-    }
     def darBajaDisfraz() {
       gestionAdminService.eliminarDisfraz(new Long(params.id))
-      redirect(action:"editarEliminarDisfraz")
+      redirect(action:"showDisfraz")
     }
     def editarDisfraz(){
         [disfraz: gestionAdminService.unDisfraz(new Long(params.id))]
@@ -37,15 +34,21 @@ class GestionAdminController {
       gestionAdminService.altaCliente(params)
       redirect(action:"showCliente")
     }
-    def editarEliminarCliente(){
-        [listado: gestionAdminService.listaCliente()]
-    }
     def darBajaCliente() {
       gestionAdminService.eliminarCliente(new Long(params.id))
-      redirect(action:"editarEliminarCliente")
+      redirect(action:"showCliente")
     }
     def editarCliente(){
         [cliente: gestionAdminService.unCliente(new Long(params.id))]
+    }
+    def actualizarCliente(Long id){
+        def cliente = Cliente.get(id)
+        cliente.propieties = params
+        if (cliente!=null){
+            
+            cliente.save()
+            redirect(action:"showCliente")
+        }        
     }
     //Gestion de Administrador
     def showAdministrador(){        
@@ -58,12 +61,9 @@ class GestionAdminController {
       gestionAdminService.altaAdministrador(params)
       redirect(action:"showAdministrador")
     }
-    def editarEliminarAdministrador(){
-        [listado: gestionAdminService.listaAdministrador()]
-    }
     def darBajaAdministrador() {
       gestionAdminService.eliminarAdministrador(new Long(params.id))
-      redirect(action:"editarEliminarAdministrador")
+      redirect(action:"showAdministrador")
     }
     def editarAdministrador(){
         [administrador: gestionAdminService.unAdministrador(new Long(params.id))]
@@ -79,35 +79,19 @@ class GestionAdminController {
       gestionAdminService.altaTipoDisfraz(params)
       redirect(action:"showTipoDisfraz")
     }
-    def editarEliminarTipoDisfraz(){
-        [listado: gestionAdminService.listaTipoDisfraz()]
-    }
     def darBajaTipoDisfraz() {
       gestionAdminService.eliminarTipoDisfraz(new Long(params.id))
-      redirect(action:"editarEliminarTipoDisfraz")
+      redirect(action:"showTipoDisfraz")
     }
     def editarTipoDisfraz(){
         [tipoDisfraz: gestionAdminService.unTipoDisfraz(new Long(params.id))]
     }
-    //Gestion de MedioPago
-    def showMedioPago(){        
-        [listado: gestionAdminService.listaMedioPago()]
+    
+    //gestion Alquiler
+    def showAlquiler(){
+        [listado: gestionAdminService.listaAlquiler()]
     }
-    def altaMedioPago(){
-        [MedioPago: new MedioPago()]
-    }
-    def guardarAltaMedioPago(  ) {
-      gestionAdminService.altaMedioPago(params)
-      redirect(action:"showMedioPago")
-    }
-    def editarEliminarMedioPago(){
-        [listado: gestionAdminService.listaMedioPago()]
-    }
-    def darBajaMedioPago() {
-      gestionAdminService.eliminarMedioPago(new Long(params.id))
-      redirect(action:"editarEliminarMedioPago")
-    }
-    def editarMedioPago(){
-        [medioPago: gestionAdminService.unMedioPago(new Long(params.id))]
+    def detalleAlquiler(){
+        [alquiler: gestionAdminService.unAlquiler(new Long(params.id))]
     }
 }

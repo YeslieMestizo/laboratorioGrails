@@ -10,29 +10,32 @@
     <head>
         <meta name="layout" content="mainadmin"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Eliminar Disfraz</title>
+        <title>Gestion de Alquiler</title>
         <asset:stylesheet src="bootstrap.min.css" />
     <asset:stylesheet src="custom.css" />
     </head>
     <body>
-        <h1>Eliminar y/o Editar un Disfraz</h1>
+        <h1>Gestion de Alquiler</h1>
         <table>
             <tr>
                 <th>Codigo</th>
-                <th>Descripcion</th>
-                <th>Talle</th>
-                <th>Genero</th>
-                <th>Tipo</th>
+                <th>Cliente</th>
+                <th>Fecha Entrega</th>
+                <th>Fecha Devolucion</th>
+                <th>Productos</th>
+                <th>Precio</th>
+                <th>Estado</th>
             </tr>
             <g:each in="${listado?}">
             <tr>
                 <td>${it.id}</td>
-                <td>${it.descripcion}</td>
-                <td>${it.talle}</td>
-                <td>${it.genero}</td>
-                <td>${it.tipo.id}</td>
-                <td><g:link action="editarDisfraz" id="${it.id}">Editar</g:link></td>
-                <td><g:link action="darBajaDisfraz" id="${it.id}">Eliminar</g:link></td>
+                <td>${it.cliente.id}</td>
+                <td>${it.fechaEntrega}</td>
+                <td>${it.fechaDevolucion}</td>
+                <td>${it.items.id}</td>
+                <td>${it.precio}</td>
+                <td>${it.estado}</td>
+                <td><g:link action="detalleAlquiler" id="${it.id}">Mas detalle</g:link></td>
             </tr>
             </g:each>
         </table>

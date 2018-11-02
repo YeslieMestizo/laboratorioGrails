@@ -34,6 +34,8 @@
                 <td>${it.telefono}</td>
                 <td>${it.usuario}</td>
                 <td>${it.contrasena}</td>
+                <td><g:link action="editarAdministrador" id="${it.id}">Editar</g:link></td>
+                <td><g:link action="darBajaAdministrador" id="${it.id}">Eliminar</g:link></td>
             </tr>
             </g:each>
         </table>

@@ -78,21 +78,14 @@ class GestionAdminService {
         def tipoDisfraz = TipoDisfraz.get(id)
         return tipoDisfraz
     }
-    //Gestion MedioPago
-    void altaMedioPago(Map params) {
-        def medioPago = new MedioPago(params).save(flush:true)
+   
+    //gestion Alquiler
+    List listaAlquiler(){
+        def alquiler = Alquiler.findAll()
+        return alquiler
     }
-    void eliminarMedioPago(Long id) {
-      def medioPago = MedioPago.get(id)
-      tipoMedioPago.delete(flush: true)
-    }
-    List listaMedioPago(){
-        def medioPago = MedioPago.findAll()
-        return medioPago
-    }
-    
-    MedioPago unMedioPago(Long id){
-        def medioPago = MedioPago.get(id)
-        return medioPago
+    Alquiler unAlquiler(Long id){
+        def alquiler = Alquiler.get(id)
+        return alquiler
     }
 }

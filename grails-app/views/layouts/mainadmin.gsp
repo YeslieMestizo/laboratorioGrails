@@ -70,7 +70,6 @@
                         <ul>
                             <li class="list-group-item"><g:link action="altaDisfraz">Alta</g:link></li>
                             <li class="list-group-item"><g:link action="showDisfraz">Listado</g:link></li>
-                            <li class="list-group-item"><g:link action="editarEliminarDisfraz">Editar/Eliminar</g:link></li>
                             
                         </ul>
                     </div>
@@ -81,7 +80,6 @@
                         <ul>
                             <li class="list-group-item"><g:link action="altaCliente">Alta</g:link></li>
                             <li class="list-group-item"><g:link action="showCliente">Listado</g:link></li>
-                            <li class="list-group-item"><g:link action="editarEliminarCliente">Editar/Eliminar </g:link></li>
                             
                         </ul>
                     </div>
@@ -91,8 +89,7 @@
                     <div class="list-group ">
                         <ul>
                             <li class="list-group-item"><g:link action="altaAdministrador">Alta</g:link></li>
-                            <li class="list-group-item"><g:link action="showAdministrador">listado</g:link></li>
-                            <li class="list-group-item"><g:link action="editarEliminarAdministrador">Editar/Eliminar </g:link></li>                            
+                            <li class="list-group-item"><g:link action="showAdministrador">listado</g:link></li>                           
                         </ul>
                     </div>
                     <div class="panel-heading">
@@ -101,11 +98,19 @@
                     <div class="list-group ">
                         <ul>
                             <li class="list-group-item"><g:link action="altaTipoDisfraz">Alta</g:link></li>
-                            <li class="list-group-item"><g:link action="showTipoDisfraz">listado</g:link></li>
-                            <li class="list-group-item"><g:link action="editarEliminarTipoDisfraz">Editar/Eliminar </g:link></li>                            
+                            <li class="list-group-item"><g:link action="showTipoDisfraz">listado</g:link></li>                           
+                        </ul>
+                    </div>
+                    <div class="panel-heading">
+                        <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span>Alquiler</h1>
+                    </div>
+                    <div class="list-group ">
+                        <ul>
+                            <li class="list-group-item"><g:link action="showAlquiler">Listado</g:link></li>                            
                         </ul>
                     </div>
                 </div>
+                
             </div>
             <div class="col-sm-9">
                 <g:layoutBody/>

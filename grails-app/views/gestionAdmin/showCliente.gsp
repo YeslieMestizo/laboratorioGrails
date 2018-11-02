@@ -36,6 +36,8 @@
                 <td>${it.direccion}</td>
                 <td>${it.usuario}</td>
                 <td>${it.password}</td>
+                <td><g:link action="editarCliente" id="${it.id}">Editar</g:link></td>
+                <td><g:link action="darBajaCliente" id="${it.id}">Eliminar</g:link></td>
             </tr>
             </g:each>
         </table>
