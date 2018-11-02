@@ -1,28 +1,21 @@
-<!--
-  To change this license header, choose License Headers in Project Properties.
-  To change this template file, choose Tools | Templates
-  and open the template in the editor.
--->
-
-<%@ page contentType="text/html;charset=UTF-8" %>
-
+<!DOCTYPE html>
 <html>
     <head>
         <meta name="layout" content="mainadmin"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Gestion de Administrador</title>
         <asset:stylesheet src="bootstrap.min.css" />
-        <asset:stylesheet src="custom.css" />
-        
+        <asset:stylesheet src="custom.css" />  
     </head>
     <body>
-        <h1>Gestion de Administrador</h1>
-        <table>
+        <h1>Gesti&oacute;n de Administrador</h1>
+        <div class="table-responsive m-b-40">
+        <table class="table table-borderless table-data3">
             <tr>
-                <th>Codigo</th>
+                <th>C&oacute;digo</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
-                <th>Telefono</th>
+                <th>Tel&eacute;fono</th>
                 <th>Usuario</th>
                 <th>Contraseña</th>
             </tr>

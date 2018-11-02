@@ -1,11 +1,4 @@
-<!--
-  To change this license header, choose License Headers in Project Properties.
-  To change this template file, choose Tools | Templates
-  and open the template in the editor.
--->
-
-<%@ page contentType="text/html;charset=UTF-8" %>
-
+<!DOCTYPE html>
 <html>
     <head>
         <meta name="layout" content="mainadmin"/>
@@ -15,15 +8,15 @@
         <asset:stylesheet src="custom.css" />
     </head>
     <body>
-        <h1>Gestion de clientes</h1>
-        
-        <table>
+        <h1>Gesti&oacute;n de clientes</h1>
+        <div class="table-responsive m-b-40">
+        <table class="table table-borderless table-data3">
             <tr>
-                <th>Codigo</th>
+                <th>C&oacute;digo</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
-                <th>Telefono</th>
-                <th>Direccion</th>
+                <th>Tel&eacute;fono</th>
+                <th>Direcci&oacute;n</th>
                 <th>Usuario</th>
                 <th>Contraseña</th>
             </tr>

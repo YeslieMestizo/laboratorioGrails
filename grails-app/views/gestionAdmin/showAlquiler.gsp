@@ -1,20 +1,14 @@
-<!--
-  To change this license header, choose License Headers in Project Properties.
-  To change this template file, choose Tools | Templates
-  and open the template in the editor.
--->
-
-<%@ page contentType="text/html;charset=UTF-8" %>
-
+<!DOCTYPE html>
 <html>
     <head>
         <meta name="layout" content="mainadmin"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Gestion de Alquiler</title>
         <asset:stylesheet src="bootstrap.min.css" />
-    <asset:stylesheet src="custom.css" />
+        <asset:stylesheet src="custom.css" />
     </head>
     <body>
+<<<<<<< HEAD:grails-app/views/gestionAdmin/showAlquiler.gsp
         <h1>Gestion de Alquiler</h1>
         <table>
             <tr>
@@ -25,6 +19,17 @@
                 <th>Productos</th>
                 <th>Precio</th>
                 <th>Estado</th>
+=======
+        <h1>Eliminar y/o Editar un Disfraz</h1>
+        <div class="table-responsive m-b-40">
+        <table class="table table-borderless table-data3">
+            <tr>
+                <th>C&oacute;digo</th>
+                <th>Descripci&oacute;n</th>
+                <th>Talle</th>
+                <th>G&eacute;nero</th>
+                <th>Tipo</th>
+>>>>>>> 3bf05d7a4bb1f43cabc0b197c5f3c61a0d513187:grails-app/views/gestionAdmin/editarEliminarDisfraz.gsp
             </tr>
             <g:each in="${listado?}">
             <tr>
@@ -39,6 +44,5 @@
             </tr>
             </g:each>
         </table>
-        
     </body>
 </html>

@@ -1,28 +1,21 @@
-<!--
-  To change this license header, choose License Headers in Project Properties.
-  To change this template file, choose Tools | Templates
-  and open the template in the editor.
--->
-
-<%@ page contentType="text/html;charset=UTF-8" %>
-
+<!DOCTYPE html>
 <html>
     <head>
         <meta name="layout" content="mainadmin"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Gestion de Disfraces</title>
         <asset:stylesheet src="bootstrap.min.css" />
-    <asset:stylesheet src="custom.css" />
+        <asset:stylesheet src="custom.css" />
     </head>
     <body>
-        <h1>Gestion de Disfraces</h1>
-        
-        <table>
+        <h1>Gesti&oacute;n de Disfraces</h1>
+        <div class="table-responsive m-b-40">
+        <table class="table table-borderless table-data3">
             <tr>
-                <th>Codigo</th>
-                <th>Descripcion</th>
+                <th>C&oacute;digo</th>
+                <th>Descripci&oacute;n</th>
                 <th>Talle</th>
-                <th>Genero</th>
+                <th>G&eacute;nero</th>
                 <th>Tipo</th>
             </tr>
             <g:each in="${listado?}">
@@ -39,8 +32,8 @@
         </table>
             
         <asset:javascript src="bootstrap.min.js" />    
-    <asset:javascript src="jquery-1.11.3.min.js" />
-    <asset:javascript src="holder.min.js" />
-    <asset:javascript src="ie10-viewport-bug-workaround.js" />
+        <asset:javascript src="jquery-1.11.3.min.js" />
+        <asset:javascript src="holder.min.js" />
+        <asset:javascript src="ie10-viewport-bug-workaround.js" />
     </body>
 </html>

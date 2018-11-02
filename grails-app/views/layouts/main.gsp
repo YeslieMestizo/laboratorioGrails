@@ -6,15 +6,12 @@
     <title>
         <g:layoutTitle default="Grails"/>
     </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
-
     <asset:stylesheet src="application.css"/>
-
     <g:layoutHead/>
 </head>
 <body>
-
     <div class="navbar navbar-default navbar-static-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -25,7 +22,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/#">
-		    <asset:image src="grails.svg" alt="Grails Logo"/>
+		          <asset:image src="grails.svg" alt="Grails Logo"/>
                 </a>
             </div>
             <div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
@@ -35,16 +32,13 @@
             </div>
         </div>
     </div>
-
     <g:layoutBody/>
-
-    <div class="footer" role="contentinfo"></div>
+    <div class="footer" role="contentinfo"> Catamarca-Argentina</div>
 
     <div id="spinner" class="spinner" style="display:none;">
         <g:message code="spinner.alt" default="Loading&hellip;"/>
     </div>
 
     <asset:javascript src="application.js"/>
-
 </body>
 </html>

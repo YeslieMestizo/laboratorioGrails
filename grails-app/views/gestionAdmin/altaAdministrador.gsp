@@ -1,11 +1,4 @@
-<!--
-  To change this license header, choose License Headers in Project Properties.
-  To change this template file, choose Tools | Templates
-  and open the template in the editor.
--->
-
-<%@ page contentType="text/html;charset=UTF-8" %>
-
+<!DOCTYPE html>
 <html>
     <head>
         <meta name="layout" content="mainadmin"/>
@@ -19,17 +12,16 @@
         <h1>Crear</h1>
         <div class="row">
             <div class="col-sm-3"></div>
-            <div class="col-sm-6">
+                <div class="col-sm-6">
                 <div class="well well-sm">
-            <div class="panel-heading">
-		<h3 class="panel-title">
-		<span class="glyphicon glyphicon-log-in"></span> 
-		Crear
-		</h3>
+                <div class="panel-heading">
+                <h3 class="panel-title">
+                    <span class="glyphicon glyphicon-log-in"></span>Crear
+                </h3>
             </div>
             <div class="well well-sm">
-		<g:form action="guardarAltaAdministrador" method="post">
-		<div class="form-group">
+                <g:form action="guardarAltaAdministrador" method="post">
+                <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input type="text" class="form-control" id= "nombre" name="nombre" placeholder="nombre">
                 </div>
@@ -43,22 +35,21 @@
                 </div>
                 <div class="form-group">
                     <label for="contrasena">Contrasena</label>
-                    <input type="text" class="form-control" id= "contrasena" name="contrasena" placeholder="contrasena">
+                    <input type="password" class="form-control" id= "contrasena" name="contrasena" placeholder="contrasena">
                 </div>
                 <div class="form-group">
                     <label for="telefono">telefono</label>
                     <input type="text" class="form-control" id= "telefono" name="telefono" placeholder="telefono">
                 </div>
-                    <input type="submit" name="enviar" value="Guardar" class="btn btn-default" />
-		</g:form>
+                <input type="submit" name="enviar" value="Guardar" class="btn btn-default"/>
+                </g:form>
             </div>
         </div>
-            </div>
-            <div class="col-sm-3"></div>
         </div>
-                
-        
-        <asset:javascript src="bootstrap.min.js" />    
+        <div class="col-sm-3"></div>
+        </div>
+
+        <asset:javascript src="bootstrap.min.js" />
         <asset:javascript src="jquery-1.11.3.min.js" />
         <asset:javascript src="holder.min.js" />
         <asset:javascript src="ie10-viewport-bug-workaround.js" />

@@ -1,19 +1,12 @@
-<!--
-  To change this license header, choose License Headers in Project Properties.
-  To change this template file, choose Tools | Templates
-  and open the template in the editor.
--->
-
-<%@ page contentType="text/html;charset=UTF-8" %>
-
+<!DOCTYPE html>
 <html>
     <head>
         <meta name="layout" content="mainadmin"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Nuevo Tipo Disfraz</title>
         <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
-        <asset:stylesheet src="bootstrap.min.css" />
-        <asset:stylesheet src="custom.css" />
+        <asset:stylesheet src="bootstrap.min.css"/>
+        <asset:stylesheet src="custom.css"/>
     </head>
     <body>
         <h1>Nuevo Tipo Disfraz</h1>
@@ -22,20 +15,20 @@
             <div class="col-sm-8">
                 <div class="panel panel-default">
             <div class="panel-heading">
-		<h3 class="panel-title">
-		<span class="glyphicon glyphicon-log-in"></span> 
-		Crear
-		</h3>
+        <h3 class="panel-title">
+        <span class="glyphicon glyphicon-log-in"></span> 
+        Crear
+        </h3>
             </div>
             <div class="well well-sm">
-		<g:form action="guardarAltaTipoDisfraz" method="post">
-		<div class="form-group">
+        <g:form action="guardarAltaTipoDisfraz" method="post">
+        <div class="form-group">
                     <label for="descripcion">Descripcion</label>
                     <input type="text" class="form-control" name="descripcion" placeholder="descripcion">
                 </div>
                 
                     <input type="submit" name="enviar" value="Guardar" class="btn btn-default" />
-		</g:form>
+        </g:form>
             </div>
         </div>
             </div>

@@ -6,10 +6,10 @@
 </head>
 <body>
     <div class="container">
-    <g:if test="${message}">
+      <g:if test="${message}">
       <div class="message" role="status">${message}</div>
-    </g:if>
-      <h2>Login de Cliente</h2>
+      </g:if>
+      <h2>Login</h2>
       <g:form controller="login" action="login" method="post">
           <label for='usuario'>Ingrese su Usuario: </label>
           <input type='text' id='usuario' name='usuario' required/>
@@ -20,6 +20,5 @@
           <input type="submit" value="Login"/>
       </g:form>
     </div>
-
 </body>
 </html>
