@@ -3,10 +3,6 @@ package tienda
 class BootStrap {
 
     def init = { servletContext ->
-<<<<<<< HEAD
-
-=======
->>>>>>> 52dc15d55d727a4e6ca7ba5b61520ebc4ceded26
         TipoDisfraz tipo = new TipoDisfraz(descripcion:'Terror').save()
         TipoDisfraz tipo2 = new TipoDisfraz(descripcion:'Infantil').save()
         Cliente cliente1 =new Cliente(nombre:'aldana',apellido:'apellido',direccion:'los sasos',telefono:'333-435323',usuario:'al',password:'123').save()
@@ -17,11 +13,11 @@ class BootStrap {
 
 
         //Prueba cliente
-        Cliente client = new Cliente (nombre:'Guisel', apellido:'Montaño', usuario:'lulo', telefono:532, password:'789', direccion:'bhj')
+        Cliente client = new Cliente (nombre:'Guisel', apellido:'Montaño', usuario:'lulo', telefono:'532', password:'789', direccion:'bhj')
         client.save()
 
         //Prueba de administrador
-        Administrador admin = new Administrador (nombre:'Yeslie', apellido:'Mestizo', usuario:'admin', password:'123', telefono:4567)
+        Administrador admin = new Administrador (nombre:'Yeslie', apellido:'Mestizo', usuario:'admin', password:'123', telefono:'4567')
         admin.save()
 
     }

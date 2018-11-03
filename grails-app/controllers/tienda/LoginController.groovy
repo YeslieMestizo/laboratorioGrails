@@ -24,7 +24,7 @@ LoginService loginService
           if(a){
               if(a.password == a.password){
                 session.usuario = a
-                render(view: "/gestionAdmin/index")
+                redirect(controller:"gestionAdmin",action:"index")
               }else{
                 render(view: "login", model: [message: "Constraseña Incorrecta"])
               }

@@ -15,62 +15,64 @@
 
         <div class="col-sm-9">
             <h2>Catalogo</h2>
-            <table class="table table-borderless table-data3">
-                <tr>
-                    <th>Codigo</th>
-                    <th>Descripcion</th>
-                    <th>Talle</th>
-                    <th>Genero</th>
-                    <th>Tipo</th>
-                    <th>Cantidad</th>
-                    <th>Precio Unitario</th>
-                </tr>
-                <g:each in="${listaCatalogo}">
+            <div class="table-responsive m-b-40">
+                <table class="table table-borderless table-data3">
                     <tr>
-                        <td>${it.id}</td>
-                        <td>${it.disfraz.descripcion}</td>
-                        <td>${it.disfraz.talle}</td>
-                        <td>${it.disfraz.genero}</td>
-                        <td>${it.disfraz.tipo.descripcion}</td>
-                        <td>${it.cantidad}</td>
-                        <td>${it.precio}</td>
-                        <td><g:link action="editarDisfrazCatalogo" id="${it.id}">Editar</g:link></td>
-                        <td><g:link action="eliminarDisfrazCatalogo" id="${it.id}">Eliminar</g:link></td>
-                        </tr>
-                </g:each>
-            </table>
+                        <th>Codigo</th>
+                        <th>Descripcion</th>
+                        <th>Talle</th>
+                        <th>Genero</th>
+                        <th>Tipo</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unitario</th>
+                    </tr>
+                    <g:each in="${listaCatalogo}">
+                        <tr>
+                            <td>${it.id}</td>
+                            <td>${it.disfraz.descripcion}</td>
+                            <td>${it.disfraz.talle}</td>
+                            <td>${it.disfraz.genero}</td>
+                            <td>${it.disfraz.tipo.descripcion}</td>
+                            <td>${it.cantidad}</td>
+                            <td>${it.precio}</td>
+                            <td><g:link action="editarDisfrazCatalogo" id="${it.id}">Editar</g:link></td>
+                            <td><g:link action="eliminarDisfrazCatalogo" id="${it.id}">Eliminar</g:link></td>
+                            </tr>
+                    </g:each>
+                </table>
+            </div>
         </div>
         <div class="col-sm-3"> 
             <g:if test="${catalogo}">
-            <div class="panel-heading">
-                <h2 class="panel-title">
-                    <span class="glyphicon glyphicon-log-in"></span> 
-                    Editar
-                </h2>
-            </div>
+                <div class="panel-heading">
+                    <h2 class="panel-title">
+                        <span class="glyphicon glyphicon-log-in"></span> 
+                        Editar
+                    </h2>
+                </div>
 
-            <div class="well well-sm">        
-                <g:form action="actualizarCatalogo" method="post">
-                    <g:hiddenField name="version" value="${this.catalogo?.version}" />
-                    <g:hiddenField name="id" value="${this.catalogo?.id}" />
-                    <div class="form-group">
-                        <label for="disfraz">Producto</label>
-                        <g:select from="${catalogo.disfraz}" optionKey="id" optionValue="id" name="disfraz" class="form-control"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="cantidad">Cantidad</label>
-                        <input type="number" class="form-control" name="cantidad" value="${catalogo.cantidad}" >
-                    </div>
-                    <div class="form-group">
-                        <label for="precio">Precio</label>
-                        <input type="number" class="form-control" name="precio" value="${catalogo.precio}" >
-                    </div>
-                    <input type="submit" name="enviar" value="Guardar" class="btn btn-default"/>
-                </g:form>
-            </div>
+                <div class="well well-sm">        
+                    <g:form action="actualizarCatalogo" method="post">
+                        <g:hiddenField name="version" value="${this.catalogo?.version}" />
+                        <g:hiddenField name="id" value="${this.catalogo?.id}" />
+                        <div class="form-group">
+                            <label for="disfraz">Producto</label>
+                            <g:select from="${catalogo.disfraz}" optionKey="id" optionValue="id" name="disfraz" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="cantidad">Cantidad</label>
+                            <input type="number" class="form-control" name="cantidad" value="${catalogo.cantidad}" >
+                        </div>
+                        <div class="form-group">
+                            <label for="precio">Precio</label>
+                            <input type="number" class="form-control" name="precio" value="${catalogo.precio}" >
+                        </div>
+                        <input type="submit" name="enviar" value="Guardar" class="btn btn-default"/>
+                    </g:form>
+                </div>
             </g:if>
         </div>
-                <div class="col-sm-9"> 
+        <div class="col-sm-9"> 
             <h2>Añadir Productos</h2>
             <table class="table table-borderless table-data3">
                 <tr>
@@ -95,30 +97,33 @@
         </div>
         <div class="col-sm-3"> 
             <g:if test="${disfraz}">
-            <div class="panel-heading">
-                <h2 class="panel-title">
-                    <span class="glyphicon glyphicon-log-in"></span> 
-                    Añadir
-                </h2>
-            </div>
+                <div class="panel-heading">
+                    <h2 class="panel-title">
+                        <span class="glyphicon glyphicon-log-in"></span> 
+                        Añadir
+                    </h2>
+                </div>
 
-            <div class="well well-sm">        
-                <g:form action="guardarDisfrazCatalogo" method="post">
-                    <div class="form-group">
-                        <label for="disfraz">Producto</label>
-                        <g:select from="${disfraz}" optionKey="id" optionValue="id" name="disfraz" class="form-control"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="cantidad">Cantidad</label>
-                        <input type="number" class="form-control" name="cantidad" >
-                    </div>
-                    <div class="form-group">
-                        <label for="precio">Precio</label>
-                        <input type="number" class="form-control" name="precio" >
-                    </div>
-                    <input type="submit" name="enviar" value="Guardar" class="btn btn-default"/>
-                </g:form>
-            </div>
+                <div class="well well-sm">        
+                    <g:form action="guardarDisfrazCatalogo" method="post">
+                        <div class="form-group">
+                            <label for="disfraz">Producto</label>
+                            <g:select from="${disfraz}" optionKey="id" optionValue="id" name="disfraz" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="cantidad">Cantidad</label>
+                            <input type="number" class="form-control" name="cantidad" >
+                        </div>
+                        <div class="form-group">
+                            <!--<label for="precio">Precio</label>-->
+                            <p:inputNumber name="precio" value="#{inputNumberView.precio}" symbol="%"                                 symbolPosition="s" required="true" emptyValue="empty">
+
+                            </p:inputNumber>
+                            <input type="number" step="any" class="form-control" name="precio" >
+                        </div>
+                        <input type="submit" name="enviar" value="Guardar" class="btn btn-default"/>
+                    </g:form>
+                </div>
             </g:if>
         </div>
     </div>

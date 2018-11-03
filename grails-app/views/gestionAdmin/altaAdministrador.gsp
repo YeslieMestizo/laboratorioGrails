@@ -34,8 +34,8 @@
                     <input type="text" class="form-control" id= "usuario" name="usuario" placeholder="usuario">
                 </div>
                 <div class="form-group">
-                    <label for="contrasena">Contrasena</label>
-                    <input type="password" class="form-control" id= "contrasena" name="contrasena" placeholder="contrasena">
+                    <label for="password">Contrasena</label>
+                    <input type="password" class="form-control" id= "contrasena" name="password" placeholder="contrasena">
                 </div>
                 <div class="form-group">
                     <label for="telefono">telefono</label>

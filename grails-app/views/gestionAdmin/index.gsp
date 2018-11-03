@@ -8,7 +8,25 @@
         <asset:stylesheet src="custom.css" />
     </head>
     <body>
-        mas contenido
+        <div class="page-container">
+            <div class="col-sm-4">
+                <div>
+                    Cantidad de usuario
+                </div>
+                
+            </div>
+            <div class="col-sm-4">
+                <div>
+                    Itemos
+                </div>
+                
+            </div>
+            <div class="col-sm-4">
+                <div>
+                    Cantidad de usuario
+                </div>
+            </div>
+        </div>
         <asset:javascript src="bootstrap.min.js" />    
         <asset:javascript src="jquery-1.11.3.min.js" />
         <asset:javascript src="holder.min.js" />
