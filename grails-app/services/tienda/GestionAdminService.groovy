@@ -96,4 +96,25 @@ class GestionAdminService {
         def alquiler = Alquiler.get(id)
         return alquiler
     }
+<<<<<<< HEAD
 }
+=======
+    
+    //gestion catalogo
+    List listaCatalogo(){
+        def catalogo = Catalogo.findAll()
+        return catalogo
+    }
+    void agregarDisfrazCatalogo(Map params){
+        def catalogo = new Catalogo(params).save(flush:true)
+    }
+    void eliminarCatalogo(Long id){
+        def catalogo = Catalogo.get(id)
+        catalogo.delete(flush: true)
+    }
+    Catalogo unCatalogo(Long id){
+        def catalogo = Catalogo.get(id)
+        return catalogo
+    }
+}
+>>>>>>> 7792c076265d1b00da70921332d0d897e45fabea

@@ -3,14 +3,12 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>
-        <g:layoutTitle default="Grails"/>
-    </title>
+    <title><g:layoutTitle default="Grails"/></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
     <asset:stylesheet src="bootstrap.min.css" />
     <asset:stylesheet src="custom.css" />
-    <g:layoutHead/>-->
+    <g:layoutHead/>
     <!--<meta name="layout" content="main"/>
     <title>Tienda de Disfraces</title>
 
@@ -52,20 +50,29 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <span class="glyphicon glyphicon-globe"></span> Logo
+                    <span class="glyphicon glyphicon-globe"></span>Logo
                 </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <!--Login y Salida de Sesion-->
+                <g:if test="${session.usuario}">
+                    <strong style="color: white;">Login as :  ${session.usuario.nombre}</strong> | <g:link controller="login" action="logout">Salir</g:link>
+                </g:if>
+                <g:else>
+                    <g:link controller="login" action="login">Ingresar al sistema</g:link>
+                </g:else>
             </div>
             <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <g:link action="index">Inicio</g:link></li>
+                        <g:link action="/#">Inicio</g:link></li>
                     <li>
                         <g:link action="altaDisfraz">Productos</g:link></li>
                     <li>
                         <g:link action="clientes">Clientes</g:link></li>
                 </ul>
-
+            </div>
 		<!-- Search -->
 		<form class="navbar-form navbar-right" role="search">
             <div class="form-group">
@@ -81,10 +88,19 @@
 
     <div class="container-fluid">
             <!-- Left Column -->
-        <div class="col-sm-3">
+            <div class="col-sm-3">
             <!-- List-Group Panel -->
+<<<<<<< HEAD
 		<div class="panel panel-info">
 
+=======
+<<<<<<< HEAD
+		<div class="panel panel-info">
+
+=======
+		        <div class="panel panel-info">
+>>>>>>> 52dc15d55d727a4e6ca7ba5b61520ebc4ceded26
+>>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
                     <div class="panel-heading">
                         <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span> Disfraces</h1>
                     </div>
@@ -102,7 +118,10 @@
                         <ul>
                             <li class="list-group-item"><g:link action="altaCliente">Alta</g:link></li>
                             <li class="list-group-item"><g:link action="showCliente">Listado</g:link></li>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
                         </ul>
                     </div>
                     <div class="panel-heading">
@@ -128,10 +147,23 @@
                     </div>
                     <div class="list-group ">
                         <ul>
+<<<<<<< HEAD
                             <li class="list-group-item"><g:link action="showAlquiler">Listado</g:link></li>
+=======
+                            <li class="list-group-item"><g:link action="showAlquiler">Listado</g:link></li>      
                         </ul>
                     </div>
+<<<<<<< HEAD
+                    <div class="list-group ">
+                        <ul>
+                            <li class="list-group-item"><g:link  action="showCatalogo">catalogo</g:link></li>                            
+>>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
+                        </ul>
+                    </div>
+                    
+=======
                 </div>
+<<<<<<< HEAD
 
             </div>
             <div class="col-sm-9">
@@ -139,6 +171,16 @@
             </div>
 
                 
+=======
+                
+>>>>>>> 52dc15d55d727a4e6ca7ba5b61520ebc4ceded26
+            </div>
+        </div>
+    </div>
+        <div class="col-sm-9">
+            <g:layoutBody/>
+        </div>
+>>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
     </div>
     <div class="footer" role="contentinfo"></div>
     <div id="spinner" class="spinner" style="display:none;">

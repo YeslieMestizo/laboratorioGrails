@@ -8,7 +8,7 @@
         <asset:stylesheet src="custom.css" />
     </head>
     <body>
-        M&aacute;s contenido
+        mas contenido
         <asset:javascript src="bootstrap.min.js" />    
         <asset:javascript src="jquery-1.11.3.min.js" />
         <asset:javascript src="holder.min.js" />

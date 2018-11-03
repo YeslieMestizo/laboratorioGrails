@@ -25,20 +25,27 @@
 		          <asset:image src="grails.svg" alt="Grails Logo"/>
                 </a>
             </div>
-            <div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
-                <ul class="nav navbar-nav navbar-right">
-                    <g:pageProperty name="page.nav" />
-                </ul>
+            <div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;"><br>
+                <a href="/#">I N I C I O</a>
             </div>
+            <div class="navbar-collapse collapse">
+                <!--Login y Salida de Sesion
+                <g:if test="${session.usuario}">
+                    login as:${session.usuario.nombre}|<g:link controller="login" action="logout">Salir</g:link>
+                </g:if>
+                <g:else>
+                    <g:link controller="login" action="login">Ingresar al sistema</g:link>
+                </g:else>-->
+            </div>
+
+            
         </div>
     </div>
     <g:layoutBody/>
-    <div class="footer" role="contentinfo"> Catamarca-Argentina</div>
-
+    <div class="footer" role="contentinfo" style="text-align: center;"> Catamarca-Argentina</div>
     <div id="spinner" class="spinner" style="display:none;">
         <g:message code="spinner.alt" default="Loading&hellip;"/>
     </div>
-
     <asset:javascript src="application.js"/>
 </body>
 </html>

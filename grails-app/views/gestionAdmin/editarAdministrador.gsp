@@ -7,8 +7,9 @@
     </head>
     <body>
         <h1>Editar</h1>
-        <g:form controller="administrador" action="update" resource="${administrador}" method="PUT">
+        <g:form controller="gestionAdmin" action="actualizarAdministrador"  method="POST">
                 <g:hiddenField name="version" value="${this.administrador?.version}" />
+                <g:hiddenField name="id" value="${this.administrador?.id}" />
                 <fieldset class="form">
                     <f:all bean="administrador"/>
                 </fieldset>
