@@ -1,6 +1,13 @@
 <!DOCTYPE html>
+
+<%@ page contentType="text/html;charset=UTF-8" %>
+
 <html>
     <head>
+
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
         <meta name="layout" content="mainadmin"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Nuevo disfraz</title>
@@ -14,11 +21,25 @@
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
             <div class="well well-sm">
+<<<<<<< HEAD
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <span class="glyphicon glyphicon-log-in"></span>
+                    Crear
+                </h3>
+            </div>
+            <div class="well well-sm">
+        <g:form action="guardarAltaDisfraz" method="post">
+        <div class="form-group">
+                    <label for="descripcion">Descripci&oacute;n</label>
+                    <input type="text" class="form-control" id= "descripcion" name="descripcion" placeholder="Descripcion">
+=======
                 <div class="panel-heading">
                     <h3 class="panel-title">
                         <span class="glyphicon glyphicon-log-in"></span> 
                         Crear
                     </h3>
+>>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
                 </div>
                 <div class="well well-sm">
                     <g:form action="guardarAltaDisfraz" method="post">
@@ -41,8 +62,34 @@
                         <input type="submit" name="enviar" value="Guardar" class="btn btn-default" />
                     </g:form>
                 </div>
+<<<<<<< HEAD
+        <div class="form-group">
+                    <label for="tipo">Tipo</label>
+                    <g:select from="${tipoList}" optionKey="id" optionValue="descripcion" name="tipo" class="form-control"/>
+        </div>
+        <h1>Cargar Imágen</h1>
+        <g:uploadForm >
+        <input type="file" name="imagen" /> </br>
+        </g:uploadForm>
+                    <input type="submit" name="enviar" value="Guardar" class="btn btn-default" />
+        </g:form>
+
             </div>
         </div>
+=======
+>>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
+            </div>
+        </div>
+<<<<<<< HEAD
+
+
+        <asset:javascript src="bootstrap.min.js" />
+        <asset:javascript src="jquery-1.11.3.min.js" />
+        <asset:javascript src="holder.min.js" />
+        <asset:javascript src="ie10-viewport-bug-workaround.js" />
+    </body>
+</html>
+=======
         <div class="col-sm-3"></div>
     </div>
 
@@ -53,3 +100,4 @@
 <asset:javascript src="ie10-viewport-bug-workaround.js" />
 </body>
 </html>
+>>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
