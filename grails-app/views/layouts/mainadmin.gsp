@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en" class="no-js">
-<head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title><g:layoutTitle default="Grails"/></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title><g:layoutTitle default="Grails"/></title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
     <asset:stylesheet src="bootstrap.min.css" />
     <asset:stylesheet src="custom.css" />
@@ -67,22 +67,82 @@
                 <ul class="nav navbar-nav">
                     <li class="active">
                         <g:link action="/#">Inicio</g:link></li>
-                    <li>
+                        <li>
                         <g:link action="altaDisfraz">Productos</g:link></li>
-                    <li>
+                        <li>
                         <g:link action="clientes">Clientes</g:link></li>
+                    </ul>
+                </div>
+                    <!-- Search -->
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>Buscar</button>
+            </form>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav>
+
+<div class="container-fluid">
+        <!-- Left Column -->
+    <div class="col-sm-3">
+    <!-- List-Group Panel -->
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span> Disfraces</h1>
+            </div>
+            <div class="list-group ">
+                <ul>
+                    <li class="list-group-item"><g:link action="altaDisfraz">Alta</g:link></li>
+                    <li class="list-group-item"><g:link action="showDisfraz">Listado</g:link></li>
+
                 </ul>
             </div>
-		<!-- Search -->
-		<form class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-                <input type="text" class="form-control">
+            <div class="panel-heading">
+                <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span> Clientes</h1>
             </div>
-			<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>Buscar</button>
-		</form>
-            </div>
-            <!-- /.navbar-collapse -->
-            </div>
+<<<<<<< HEAD
+            <div class="list-group ">
+                <ul>
+                    <li class="list-group-item"><g:link action="altaCliente">Alta</g:link></li>
+                    <li class="list-group-item"><g:link action="showCliente">Listado</g:link></li>
+                    </ul>
+                </div>
+                <div class="panel-heading">
+                    <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span>Administradores</h1>
+                </div>
+                <div class="list-group ">
+                    <ul>
+                        <li class="list-group-item"><g:link action="altaAdministrador">Alta</g:link></li>
+                    <li class="list-group-item"><g:link action="showAdministrador">listado</g:link></li>
+                    </ul>
+                </div>
+                <div class="panel-heading">
+                    <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span>Tipo Disfraz</h1>
+                </div>
+                <div class="list-group ">
+                    <ul>
+                        <li class="list-group-item"><g:link action="altaTipoDisfraz">Alta</g:link></li>
+                    <li class="list-group-item"><g:link action="showTipoDisfraz">listado</g:link></li>
+                    </ul>
+                </div>
+                <div class="panel-heading">
+                    <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span>Alquiler</h1>
+                </div>
+                <div class="list-group ">
+                    <ul>
+                        <li class="list-group-item"><g:link action="showAlquiler">Listado</g:link></li>      
+                    </ul>
+                </div>
+                <div class="list-group ">
+                    <ul>
+                        <li class="list-group-item"><g:link  action="showCatalogo">catalogo</g:link></li>                            
+                    </ul>
+                </div>
+=======
         <!-- /.container -->
     </nav>
 
@@ -148,7 +208,32 @@
                 <g:layoutBody/>
             </div>
 
+<<<<<<< HEAD
+=======
+                
+=======
+                
+>>>>>>> 52dc15d55d727a4e6ca7ba5b61520ebc4ceded26
+>>>>>>> df0c17c9c6ad0a2b8d8d22bbf23a160842dbbcd2
+            </div>
+        </div>
+        <div class="col-sm-9">
+        <g:layoutBody/>
+        </div>
+>>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
+>>>>>>> 29bf403ea6de6e7d137a798c8143763d070878f8
     </div>
+<<<<<<< HEAD
+<div class="footer" role="contentinfo"></div>
+<div id="spinner" class="spinner" style="display:none;">
+    <g:message code="spinner.alt" default="Loading&hellip;"/>
+</div>
+<asset:javascript src="application.js"/>
+<asset:javascript src="bootstrap.min.js" />    
+<asset:javascript src="jquery-1.11.3.min.js" />
+<asset:javascript src="holder.min.js" />
+<asset:javascript src="ie10-viewport-bug-workaround.js" />
+=======
     <div class="footer" role="contentinfo"></div>
     <div id="spinner" class="spinner" style="display:none;">
         <g:message code="spinner.alt" default="Loading&hellip;"/>
@@ -158,5 +243,6 @@
     <asset:javascript src="jquery-1.11.3.min.js" />
     <asset:javascript src="holder.min.js" />
     <asset:javascript src="ie10-viewport-bug-workaround.js" />
+>>>>>>> df0c17c9c6ad0a2b8d8d22bbf23a160842dbbcd2
 </body>
 </html>

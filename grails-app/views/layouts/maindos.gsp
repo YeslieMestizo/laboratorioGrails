@@ -10,21 +10,6 @@
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
     <g:layoutHead/>
 
-    <!--<asset:stylesheet src="font-face.css" media="all"/>
-    <asset:stylesheet src="vendor/font-awesome-4.7/css/font-awesome.min.css" media="all"/>
-    <asset:stylesheet src="vendor/font-awesome-5/css/fontawesome-all.min.css" media="all"/>
-    <asset:stylesheet src="vendor/mdi-font/css/material-design-iconic-font.min.css" media="all"/>
-
-    <asset:stylesheet src="vendor/bootstrap-4.1/bootstrap.min.css"/>
-    <asset:stylesheet src="vendor/animsition/animsition.min.css"/>
-    <asset:stylesheet src="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css"/>
-    <asset:stylesheet src="vendor/wow/animate.css"/>
-    <asset:stylesheet src="vendor/css-hamburgers/hamburgers.min.css"/>
-    <asset:stylesheet src="vendor/slick/slick.css"/>
-    <asset:stylesheet src="vendor/select2/select2.min.css"/>
-    <asset:stylesheet src="vendor/perfect-scrollbar/perfect-scrollbar.css"/>
-    <asset:stylesheet src="css/theme.css"/>-->
-<!---->
     <meta name="layout" content="main"/>
     <title><g:layoutTitle default="Tienda de Disfraces"/></title>
     <meta charset="UTF-8">
@@ -68,7 +53,8 @@
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <g:link action="index">Inicio</g:link></li>
+                    	<a href="http://localhost:8080">INICIO</a>
+                        <!--<g:link href="http://localhost:8080/">Inicio</g:link></li>-->
                     <li>
                         <g:link action="altaDisfraz">Productos</g:link></li>
                     <li>
@@ -87,22 +73,9 @@
     </nav>
 <!---->
     <div class="container-fluid">
-            <!-- Left Column -->
-        <div class="col-sm-3">
-            <!-- List-Group Panel -->
-			<div class="panel panel-info">
-				<div class="navbar-collapse collapse">
-                <!--Login y Salida de Sesion-->
-		            <g:if test="${session.usuario}">
-		                <strong>Login as : ${session.usuario.nombre}| </strong><g:link controller="login" action="logout">Salir</g:link>
-		            </g:if>
-		            <g:else>
-	                <g:link controller="login" action="login">Ingresar al sistema</g:link>
-	            	</g:else>
-            	</div>
-        	</div>
+        <div class="col-sm-4">
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-8">
             <g:layoutBody/>
         </div>
     </div>

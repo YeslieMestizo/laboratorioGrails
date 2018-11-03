@@ -168,8 +168,14 @@ class GestionAdminController {
         if (catalogo!=null){
 
             catalogo.save(flush:true)
+<<<<<<< HEAD
             redirect(action:"showCatalogo")
         }
+=======
+            render(view:"showCatalogo",model:[listaCatalogo: gestionAdminService.listaCatalogo(),listaDisfraz: gestionAdminService.listaDisfraz()])
+            //redirect(action:"showCatalogo")
+        }    
+>>>>>>> 29bf403ea6de6e7d137a798c8143763d070878f8
     }
 
 }
