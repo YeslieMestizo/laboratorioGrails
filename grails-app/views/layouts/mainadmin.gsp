@@ -90,17 +90,7 @@
             <!-- Left Column -->
             <div class="col-sm-3">
             <!-- List-Group Panel -->
-<<<<<<< HEAD
 		<div class="panel panel-info">
-
-=======
-<<<<<<< HEAD
-		<div class="panel panel-info">
-
-=======
-		        <div class="panel panel-info">
->>>>>>> 52dc15d55d727a4e6ca7ba5b61520ebc4ceded26
->>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
                     <div class="panel-heading">
                         <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span> Disfraces</h1>
                     </div>
@@ -118,10 +108,6 @@
                         <ul>
                             <li class="list-group-item"><g:link action="altaCliente">Alta</g:link></li>
                             <li class="list-group-item"><g:link action="showCliente">Listado</g:link></li>
-<<<<<<< HEAD
-
-=======
->>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
                         </ul>
                     </div>
                     <div class="panel-heading">
@@ -147,40 +133,21 @@
                     </div>
                     <div class="list-group ">
                         <ul>
-<<<<<<< HEAD
                             <li class="list-group-item"><g:link action="showAlquiler">Listado</g:link></li>
-=======
-                            <li class="list-group-item"><g:link action="showAlquiler">Listado</g:link></li>      
                         </ul>
                     </div>
-<<<<<<< HEAD
                     <div class="list-group ">
                         <ul>
-                            <li class="list-group-item"><g:link  action="showCatalogo">catalogo</g:link></li>                            
->>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
+                            <li class="list-group-item"><g:link  action="showCatalogo">catalogo</g:link></li>
+
                         </ul>
                     </div>
-                    
-=======
-                </div>
-<<<<<<< HEAD
-
+                  </div>
             </div>
             <div class="col-sm-9">
                 <g:layoutBody/>
             </div>
 
-                
-=======
-                
->>>>>>> 52dc15d55d727a4e6ca7ba5b61520ebc4ceded26
-            </div>
-        </div>
-    </div>
-        <div class="col-sm-9">
-            <g:layoutBody/>
-        </div>
->>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
     </div>
     <div class="footer" role="contentinfo"></div>
     <div id="spinner" class="spinner" style="display:none;">

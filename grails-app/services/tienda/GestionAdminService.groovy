@@ -13,16 +13,9 @@ class GestionAdminService {
         return tipo
     }
     //Gestion Disfraz
-    void altaDisfraz(Map params,File file) {
-    //def file = request.getFile('imagen')
-    def disfraz = new Disfraz(descriocion:params.descripcion,talle:params.talle,genero:params.genero,tipo:tipo,imagen:filen).save(flush:true)
-  //  def img = new Imagen(imagen:file,nombre:params.descripcion).save(flush:true)
-    //img.save(flush:true)
-    if (disfraz.hasErrors()) {
-        disfraz.errors.allErrors.each {
-            println it
-        }
-    }
+    void altaDisfraz(Map params) {
+    def disfraz = new Disfraz(params).save(flush:true)
+    println disfraz
 
     }
     void eliminarDisfraz(Long id) {
@@ -96,10 +89,7 @@ class GestionAdminService {
         def alquiler = Alquiler.get(id)
         return alquiler
     }
-<<<<<<< HEAD
-}
-=======
-    
+
     //gestion catalogo
     List listaCatalogo(){
         def catalogo = Catalogo.findAll()
@@ -117,4 +107,3 @@ class GestionAdminService {
         return catalogo
     }
 }
->>>>>>> 7792c076265d1b00da70921332d0d897e45fabea

@@ -72,13 +72,8 @@
                         <div class="welcome2-inner m-t-60">
                             <div class="welcome2-greeting">
                                 <h1 class="title-6">Hola
-<<<<<<< HEAD
-                                    <span>,</span> bienvenido a R A Y.com</h1>
-                                <p>La mejor tienda de disfraces, aqui podr&aacute;s conseguir muy buenas opciones :)</p>
-=======
                                     <span>,</span> bienvenido a R A Y.c o m </h1>
                                 <p>La mejor tienda de disfraces, aqu&iacute; podr&aacute;s conseguir muy buenas opciones! :)</p>
->>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
                             </div>
                             <form class="form-header form-header2" action="" method="post">
                                 <input class="au-input au-input--w435" type="text" name="search" placeholder="B&uacute;squedas">
@@ -128,10 +123,7 @@
                         </div>
                         <div class="col-xl-9">
                             <!-- PAGE CONTENT-->
-<<<<<<< HEAD
 
-=======
->>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="copyright">
