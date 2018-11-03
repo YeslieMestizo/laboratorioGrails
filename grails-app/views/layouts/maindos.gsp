@@ -10,7 +10,7 @@
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
     <g:layoutHead/>
 
-    <asset:stylesheet src="font-face.css" media="all"/>
+    <!--<asset:stylesheet src="font-face.css" media="all"/>
     <asset:stylesheet src="vendor/font-awesome-4.7/css/font-awesome.min.css" media="all"/>
     <asset:stylesheet src="vendor/font-awesome-5/css/fontawesome-all.min.css" media="all"/>
     <asset:stylesheet src="vendor/mdi-font/css/material-design-iconic-font.min.css" media="all"/>
@@ -23,7 +23,7 @@
     <asset:stylesheet src="vendor/slick/slick.css"/>
     <asset:stylesheet src="vendor/select2/select2.min.css"/>
     <asset:stylesheet src="vendor/perfect-scrollbar/perfect-scrollbar.css"/>
-    <asset:stylesheet src="css/theme.css"/>
+    <asset:stylesheet src="css/theme.css"/>-->
 <!---->
     <meta name="layout" content="main"/>
     <title><g:layoutTitle default="Tienda de Disfraces"/></title>
@@ -37,21 +37,23 @@
     <asset:stylesheet src="hamburgers.min.css"/>
     <asset:stylesheet src="vendor/font-awesome-5/css/fontawesome-all.min.css"/>
     <asset:stylesheet src="vendor/mdi-font/css/material-design-iconic-font.min.css"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>
+        <g:layoutTitle default="Grails"/>
+    </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
+    <asset:stylesheet src="application.css"/>
+    <g:layoutHead/>
+
 </head>
 <body class="animsition">
     <div class="page-wrapper">
-
-
     <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
         <div class="container-fluid">
-            
             <div class="header-wrap">
-            	<form class="form-header" action="" method="POST">
-					<input class="au-input au-input--xl" type="text" name="search" placeholder="B&uacute;squedas por nombre &amp; m&aacute;s..." />
-					<button class="au-btn--submit" type="submit">
-						<i class="zmdi zmdi-search"></i>
-					</button>
-				</form>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
                     <span class="sr-only">Barra de Navegación</span>
                     <span class="icon-bar"></span>
@@ -66,24 +68,22 @@
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <g:link action="/index">Inicio</g:link></li>
+                        <g:link action="index">Inicio</g:link></li>
                     <li>
                         <g:link action="altaDisfraz">Productos</g:link></li>
                     <li>
                         <g:link action="clientes">Clientes</g:link></li>
                 </ul>
-
-		
-		<form class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-                <input type="text" class="form-control">
+				<form class="navbar-form navbar-right" role="search">
+		            <div class="form-group">
+		                <input type="text" class="au-input au-input--xl" placeholder="B&uacute;squedas ...">
+		            </div>
+					<button type="submit" class="au-btn--submit">
+						<span class="glyphicon glyphicon-search"></span>Buscar
+					</button>
+				</form>
             </div>
-			<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>Buscar</button>
-		</form>
-            </div>
-            
-            </div>
-
+        </div>
     </nav>
 <!---->
     <div class="container-fluid">
@@ -93,8 +93,8 @@
 			<div class="panel panel-info">
 				<div class="navbar-collapse collapse">
                 <!--Login y Salida de Sesion-->
-		            <g:if test="${session.administrador}">
-		                login as:${session.administrador.nombre}| <g:link controller="login" action="logout">Salir</g:link>
+		            <g:if test="${session.usuario}">
+		                <strong>Login as : ${session.usuario.nombre}| </strong><g:link controller="login" action="logout">Salir</g:link>
 		            </g:if>
 		            <g:else>
 	                <g:link controller="login" action="login">Ingresar al sistema</g:link>
@@ -106,7 +106,6 @@
             <g:layoutBody/>
         </div>
     </div>
-
 <!---->
     <div class="page-container">
 			<!-- HEADER DESKTOP-->
@@ -125,7 +124,6 @@
 				</div>
 			</header>
 			<!-- END HEADER DESKTOP-->
-
 			<!-- MAIN CONTENT-->
 			<div class="main-content">
 				<div class="section__content section__content--p30">
@@ -140,7 +138,6 @@
 										<ul class="list-unstyled">
 											<li>
 												<g:link action="altaDisfraz">Alta</g:link></li>
-											</li>
 											<li>
 												<g:link action="showDisfraz">Listado</g:link></li>
 											<li>
@@ -155,12 +152,12 @@
 										<h4>CLIENTES</h4>
 									</div>
 									<div class="card-body">
-										<p class="text-muted m-b-15">Opciones para ver:</p>
-										<ul class="list-inline">
-											<g:link action="altaCliente">Alta</g:link></li>
-											<li class="list-inline-item">
+										<ul class="list-unstyled">
+											<li>
+												<g:link action="altaCliente">Alta</g:link></li>
+											<li>
 												<g:link action="showCliente">Listado</g:link></li>
-											<li class="list-inline-item">
+											<li>
 												<g:link action="editarEliminarCliente">Editar/Eliminar </g:link></li>
 										</ul>
 									</div>
@@ -181,8 +178,6 @@
 												<g:link action="showAdministrador">listado</g:link></li>
 											<li>
 												<g:link action="editarEliminarAdministrador">Editar/Eliminar </g:link></li>
-
-
 										</ul>
 									</div>
 								</div>

@@ -3,9 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>
-        <g:layoutTitle default="Grails"/>
-    </title>
+    <title><g:layoutTitle default="Grails"/></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
     <asset:stylesheet src="bootstrap.min.css" />
@@ -58,7 +56,7 @@
             <div class="navbar-collapse collapse">
                 <!--Login y Salida de Sesion-->
                 <g:if test="${session.usuario}">
-                    login as:${session.usuario.nombre} | <g:link controller="login" action="logout">Salir</g:link>
+                    <strong style="color: white;">Login as :  ${session.usuario.nombre}</strong> | <g:link controller="login" action="logout">Salir</g:link>
                 </g:if>
                 <g:else>
                     <g:link controller="login" action="login">Ingresar al sistema</g:link>
@@ -68,7 +66,7 @@
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <g:link action="index">Inicio</g:link></li>
+                        <g:link action="/#">Inicio</g:link></li>
                     <li>
                         <g:link action="altaDisfraz">Productos</g:link></li>
                     <li>
@@ -90,10 +88,9 @@
     
     <div class="container-fluid">
             <!-- Left Column -->
-        <div class="col-sm-3">
+            <div class="col-sm-3">
             <!-- List-Group Panel -->
-		<div class="panel panel-info">
-<<<<<<< HEAD
+		        <div class="panel panel-info">
                     <div class="panel-heading">
                         <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span> Disfraces</h1>
                     </div>
@@ -111,7 +108,6 @@
                         <ul>
                             <li class="list-group-item"><g:link action="altaCliente">Alta</g:link></li>
                             <li class="list-group-item"><g:link action="showCliente">Listado</g:link></li>
-                            
                         </ul>
                     </div>
                     <div class="panel-heading">
@@ -120,7 +116,7 @@
                     <div class="list-group ">
                         <ul>
                             <li class="list-group-item"><g:link action="altaAdministrador">Alta</g:link></li>
-                            <li class="list-group-item"><g:link action="showAdministrador">listado</g:link></li>                           
+                            <li class="list-group-item"><g:link action="showAdministrador">listado</g:link></li>
                         </ul>
                     </div>
                     <div class="panel-heading">
@@ -129,7 +125,7 @@
                     <div class="list-group ">
                         <ul>
                             <li class="list-group-item"><g:link action="altaTipoDisfraz">Alta</g:link></li>
-                            <li class="list-group-item"><g:link action="showTipoDisfraz">listado</g:link></li>                           
+                            <li class="list-group-item"><g:link action="showTipoDisfraz">listado</g:link></li>
                         </ul>
                     </div>
                     <div class="panel-heading">
@@ -137,71 +133,14 @@
                     </div>
                     <div class="list-group ">
                         <ul>
-                            <li class="list-group-item"><g:link action="showAlquiler">Listado</g:link></li>                            
+                            <li class="list-group-item"><g:link action="showAlquiler">Listado</g:link></li>      
                         </ul>
                     </div>
                 </div>
                 
             </div>
-            <div class="col-sm-9">
-                <g:layoutBody/>
-            </div>
-=======
-                <div class="panel-heading">
-                    <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span> Disfraces</h1>
-                </div>
-                <div class="list-group ">
-                    <ul>
-                        <li class="list-group-item">
-                            <g:link action="altaDisfraz">Alta</g:link></li>
-                        <li class="list-group-item">
-                            <g:link action="showDisfraz">Listado</g:link></li>
-                        <li class="list-group-item">
-                            <g:link action="editarEliminarDisfraz">Editar/Eliminar</g:link></li>
-                    </ul>
-                </div>
-                <div class="panel-heading">
-                    <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span> Clientes</h1>
-                </div>
-                <div class="list-group ">
-                    <ul>
-                        <li class="list-group-item">
-                            <g:link action="altaCliente">Alta</g:link></li>
-                        <li class="list-group-item">
-                            <g:link action="showCliente">Listado</g:link></li>
-                        <li class="list-group-item">
-                            <g:link action="editarEliminarCliente">Editar/Eliminar </g:link></li>
-                    </ul>
-                </div>
-                <div class="panel-heading">
-                    <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span>Administradores</h1>
-                </div>
-                <div class="list-group ">
-                    <ul>
-                        <li class="list-group-item">
-                            <g:link action="altaAdministrador">Alta</g:link></li>
-                        <li class="list-group-item">
-                            <g:link action="showAdministrador">listado</g:link></li>
-                        <li class="list-group-item">
-                            <g:link action="editarEliminarAdministrador">Editar/Eliminar </g:link></li>                            
-                    </ul>
-                </div>
-                <div class="panel-heading">
-                    <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span>Tipo Disfraz</h1>
-                </div>
-                <div class="list-group ">
-                    <ul>
-                        <li class="list-group-item">
-                            <g:link action="altaTipoDisfraz">Alta</g:link></li>
-                        <li class="list-group-item">
-                            <g:link action="showTipoDisfraz">listado</g:link></li>
-                        <li class="list-group-item">
-                            <g:link action="editarEliminarTipoDisfraz">Editar/Eliminar </g:link></li>                            
-                    </ul>
-                </div>
->>>>>>> 3bf05d7a4bb1f43cabc0b197c5f3c61a0d513187
         </div>
-        </div>
+    </div>
         <div class="col-sm-9">
             <g:layoutBody/>
         </div>

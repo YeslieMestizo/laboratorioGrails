@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="layout" content="maindos"/>
+        <meta name="layout" content="mainadmin"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Administrador</title>
         <asset:stylesheet src="bootstrap.min.css" />

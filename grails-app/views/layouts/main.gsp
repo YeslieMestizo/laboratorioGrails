@@ -42,7 +42,7 @@
         </div>
     </div>
     <g:layoutBody/>
-    <div class="footer" role="contentinfo" style="align-content: center;"> Catamarca-Argentina</div>
+    <div class="footer" role="contentinfo" style="text-align: center;"> Catamarca-Argentina</div>
     <div id="spinner" class="spinner" style="display:none;">
         <g:message code="spinner.alt" default="Loading&hellip;"/>
     </div>
