@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <meta name="layout" content="main"/>
+    <meta name="layout" content="maindos"/>
     <title>Login</title>
 </head>
 <body>
@@ -18,6 +18,7 @@
           <input type="password" id='password' name='password' required/>
           <br><br>
           <input type="submit" value="Login"/>
+          <input type="submit" value="Registrarse"/>
       </g:form>
     </div>
 </body>
