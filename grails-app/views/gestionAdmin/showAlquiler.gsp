@@ -8,9 +8,10 @@
         <asset:stylesheet src="custom.css" />
     </head>
     <body>
-<<<<<<< HEAD:grails-app/views/gestionAdmin/showAlquiler.gsp
         <h1>Gestion de Alquiler</h1>
-        <table>
+                
+        <div class="table-responsive m-b-40">
+        <table class="table table-borderless table-data3">
             <tr>
                 <th>Codigo</th>
                 <th>Cliente</th>
@@ -19,17 +20,6 @@
                 <th>Productos</th>
                 <th>Precio</th>
                 <th>Estado</th>
-=======
-        <h1>Eliminar y/o Editar un Disfraz</h1>
-        <div class="table-responsive m-b-40">
-        <table class="table table-borderless table-data3">
-            <tr>
-                <th>C&oacute;digo</th>
-                <th>Descripci&oacute;n</th>
-                <th>Talle</th>
-                <th>G&eacute;nero</th>
-                <th>Tipo</th>
->>>>>>> 3bf05d7a4bb1f43cabc0b197c5f3c61a0d513187:grails-app/views/gestionAdmin/editarEliminarDisfraz.gsp
             </tr>
             <g:each in="${listado?}">
             <tr>

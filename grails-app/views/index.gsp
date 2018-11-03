@@ -28,7 +28,7 @@
     <asset:stylesheet src="vendor/perfect-scrollbar/perfect-scrollbar.css"/>
     <asset:stylesheet src="css/theme.css"/>
     <script src="js/main.js"></script>
-    
+
 </head>
 <body>
     <header class="header-desktop4">
@@ -53,7 +53,7 @@
                     <div class="col-md-12">
                         <div class="au-breadcrumb3">
                             <div class="au-breadcrumb-left">
-                                <span class="au-breadcrumb-span">Usted esta aqu&iacute;:</span>
+                                <span class="au-breadcrumb-span">Tu estas aqu&iacute;:</span>
                                 <ul class="list-unstyled list-inline au-breadcrumb__list">
                                     <li class="list-inline-item active">
                                         <a href="#">INICIO</a>
@@ -72,8 +72,13 @@
                         <div class="welcome2-inner m-t-60">
                             <div class="welcome2-greeting">
                                 <h1 class="title-6">Hola
+<<<<<<< HEAD
+                                    <span>,</span> bienvenido a R A Y.com</h1>
+                                <p>La mejor tienda de disfraces, aqui podr&aacute;s conseguir muy buenas opciones :)</p>
+=======
                                     <span>,</span> bienvenido a R A Y.c o m </h1>
                                 <p>La mejor tienda de disfraces, aqu&iacute; podr&aacute;s conseguir muy buenas opciones! :)</p>
+>>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
                             </div>
                             <form class="form-header form-header2" action="" method="post">
                                 <input class="au-input au-input--w435" type="text" name="search" placeholder="B&uacute;squedas">
@@ -95,9 +100,13 @@
                             <aside class="menu-sidebar3 js-spe-sidebar">
                                 <nav class="navbar-sidebar2 navbar-sidebar3">
                                     <ul class="list-unstyled navbar__list">
+<<<<<<< HEAD
+
+=======
                                         <li class="bg-info">
                                             <g:link controller="Administrador">Administradores</g:link>
                                         </li>
+>>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
                                         <li class="bg-danger">
                                             <g:link controller="Disfraz">Disfraces</g:link>
                                         </li>
@@ -110,6 +119,8 @@
                                         <li class="bg-info">
                                             <g:link controller="RegistroCliente">Registrarse</g:link>
                                         </li>
+                                        <li class="bg-info">
+                                            <g:link controller="Imagen">Imagen</g:link></li>
                                     </ul>
                                 </nav>
                             </aside>
@@ -117,6 +128,10 @@
                         </div>
                         <div class="col-xl-9">
                             <!-- PAGE CONTENT-->
+<<<<<<< HEAD
+
+=======
+>>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="copyright">
