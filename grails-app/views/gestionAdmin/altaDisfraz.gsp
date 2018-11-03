@@ -1,6 +1,13 @@
 <!DOCTYPE html>
+
+<%@ page contentType="text/html;charset=UTF-8" %>
+
 <html>
     <head>
+
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
         <meta name="layout" content="mainadmin"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Nuevo disfraz</title>
@@ -16,7 +23,7 @@
             <div class="well well-sm">
             <div class="panel-heading">
                 <h3 class="panel-title">
-                    <span class="glyphicon glyphicon-log-in"></span> 
+                    <span class="glyphicon glyphicon-log-in"></span>
                     Crear
                 </h3>
             </div>
@@ -38,16 +45,21 @@
                     <label for="tipo">Tipo</label>
                     <g:select from="${tipoList}" optionKey="id" optionValue="descripcion" name="tipo" class="form-control"/>
         </div>
+        <h1>Cargar Imágen</h1>
+        <g:uploadForm >
+        <input type="file" name="imagen" /> </br>
+        </g:uploadForm>
                     <input type="submit" name="enviar" value="Guardar" class="btn btn-default" />
         </g:form>
+
             </div>
         </div>
             </div>
             <div class="col-sm-3"></div>
         </div>
-                
-        
-        <asset:javascript src="bootstrap.min.js" />    
+
+
+        <asset:javascript src="bootstrap.min.js" />
         <asset:javascript src="jquery-1.11.3.min.js" />
         <asset:javascript src="holder.min.js" />
         <asset:javascript src="ie10-viewport-bug-workaround.js" />

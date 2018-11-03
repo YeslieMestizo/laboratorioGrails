@@ -2,7 +2,7 @@ package tienda
 
 class Catalogo {
     int cantidad
-    doube precio
+    double precio
     Disfraz disfraz
 
     static constraints = {

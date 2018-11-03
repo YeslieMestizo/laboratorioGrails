@@ -13,8 +13,17 @@ class GestionAdminService {
         return tipo
     }
     //Gestion Disfraz
-    void altaDisfraz(Map params) {
-        def disfraz = new Disfraz(params).save(flush:true)
+    void altaDisfraz(Map params,File file) {
+    //def file = request.getFile('imagen')
+    def disfraz = new Disfraz(descriocion:params.descripcion,talle:params.talle,genero:params.genero,tipo:tipo,imagen:filen).save(flush:true)
+  //  def img = new Imagen(imagen:file,nombre:params.descripcion).save(flush:true)
+    //img.save(flush:true)
+    if (disfraz.hasErrors()) {
+        disfraz.errors.allErrors.each {
+            println it
+        }
+    }
+
     }
     void eliminarDisfraz(Long id) {
       def disfraz = Disfraz.get(id)
@@ -72,12 +81,12 @@ class GestionAdminService {
         def tipoDisfraz = TipoDisfraz.findAll()
         return tipoDisfraz
     }
-    
+
     TipoDisfraz unTipoDisfraz(Long id){
         def tipoDisfraz = TipoDisfraz.get(id)
         return tipoDisfraz
     }
-   
+
     //gestion Alquiler
     List listaAlquiler(){
         def alquiler = Alquiler.findAll()
