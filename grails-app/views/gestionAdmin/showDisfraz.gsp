@@ -12,13 +12,13 @@
         <div class="table-responsive m-b-40">
         <table class="table table-borderless table-data3">
             <tr>
-                <th>C&oacute;digo</th>
-                <th>Descripci&oacute;n</th>
+                <th>Codigo</th>
+                <th>Descripcion</th>
                 <th>Talle</th>
-                <th>G&eacute;nero</th>
+                <th>Genero</th>
                 <th>Tipo</th>
             </tr>
-            <g:each in="${listado?}">
+            <g:each in="${listado}">
             <tr>
                 <td>${it.id}</td>
                 <td>${it.descripcion}</td>

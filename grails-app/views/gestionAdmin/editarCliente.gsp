@@ -8,14 +8,14 @@
     <body>
         <h1>Editar</h1>
         <g:form controller="gestionAdmin" action="actualizarCliente"  method="POST">
-                <g:hiddenField name="version" value="${this.cliente?.version}" />
-                <g:hiddenField name="version" value="${this.cliente?.id}" />
-                <fieldset class="form">
-                    <f:all bean="cliente"/>
-                </fieldset>
-                <fieldset class="buttons">
+            <g:hiddenField name="version" value="${this.cliente?.version}" />
+            <g:hiddenField name="id" value="${this.cliente?.id}" />
+            <fieldset class="form">
+                <f:all bean="cliente" class="form-control"/>
+            </fieldset>
+            <fieldset class="buttons">
                 <input class="save" type="submit" value="${message(code: 'default.button.update.label', default: 'Update')}" />
-                </fieldset>
+            </fieldset>
         </g:form>
     </body>
 </html>

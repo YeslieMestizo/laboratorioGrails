@@ -10,7 +10,7 @@
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
     <asset:stylesheet src="bootstrap.min.css" />
     <asset:stylesheet src="custom.css" />
-    <g:layoutHead/>-->
+    <g:layoutHead/>
     <!--<meta name="layout" content="main"/>
     <title>Tienda de Disfraces</title>
 
@@ -84,7 +84,7 @@
         <div class="col-sm-3">
             <!-- List-Group Panel -->
 		<div class="panel panel-info">
-<<<<<<< HEAD
+
                     <div class="panel-heading">
                         <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span> Disfraces</h1>
                     </div>
@@ -131,67 +131,13 @@
                             <li class="list-group-item"><g:link action="showAlquiler">Listado</g:link></li>                            
                         </ul>
                     </div>
-                </div>
-                
+                    <div class="list-group ">
+                        <ul>
+                            <li class="list-group-item"><g:link  action="showCatalogo">catalogo</g:link></li>                            
+                        </ul>
+                    </div>
+                    
             </div>
-            <div class="col-sm-9">
-                <g:layoutBody/>
-            </div>
-=======
-                <div class="panel-heading">
-                    <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span> Disfraces</h1>
-                </div>
-                <div class="list-group ">
-                    <ul>
-                        <li class="list-group-item">
-                            <g:link action="altaDisfraz">Alta</g:link></li>
-                        <li class="list-group-item">
-                            <g:link action="showDisfraz">Listado</g:link></li>
-                        <li class="list-group-item">
-                            <g:link action="editarEliminarDisfraz">Editar/Eliminar</g:link></li>
-                    </ul>
-                </div>
-                <div class="panel-heading">
-                    <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span> Clientes</h1>
-                </div>
-                <div class="list-group ">
-                    <ul>
-                        <li class="list-group-item">
-                            <g:link action="altaCliente">Alta</g:link></li>
-                        <li class="list-group-item">
-                            <g:link action="showCliente">Listado</g:link></li>
-                        <li class="list-group-item">
-                            <g:link action="editarEliminarCliente">Editar/Eliminar </g:link></li>
-                    </ul>
-                </div>
-                <div class="panel-heading">
-                    <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span>Administradores</h1>
-                </div>
-                <div class="list-group ">
-                    <ul>
-                        <li class="list-group-item">
-                            <g:link action="altaAdministrador">Alta</g:link></li>
-                        <li class="list-group-item">
-                            <g:link action="showAdministrador">listado</g:link></li>
-                        <li class="list-group-item">
-                            <g:link action="editarEliminarAdministrador">Editar/Eliminar </g:link></li>                            
-                    </ul>
-                </div>
-                <div class="panel-heading">
-                    <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span>Tipo Disfraz</h1>
-                </div>
-                <div class="list-group ">
-                    <ul>
-                        <li class="list-group-item">
-                            <g:link action="altaTipoDisfraz">Alta</g:link></li>
-                        <li class="list-group-item">
-                            <g:link action="showTipoDisfraz">listado</g:link></li>
-                        <li class="list-group-item">
-                            <g:link action="editarEliminarTipoDisfraz">Editar/Eliminar </g:link></li>                            
-                    </ul>
-                </div>
->>>>>>> 3bf05d7a4bb1f43cabc0b197c5f3c61a0d513187
-        </div>
         </div>
         <div class="col-sm-9">
             <g:layoutBody/>

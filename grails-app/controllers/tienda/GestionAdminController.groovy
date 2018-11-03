@@ -23,6 +23,14 @@ class GestionAdminController {
     def editarDisfraz(){
         [disfraz: gestionAdminService.unDisfraz(new Long(params.id))]
     }
+    def actualizarDisfraz(Long id){
+        def disfraz = Disfraz.get(params.id)
+        disfraz.properties = params
+        if (disfraz!=null){
+            disfraz.save(flush:true)
+            redirect(action:"showDisfraz")
+        }      
+    }
     //Gestion de cliente
     def showCliente(){        
         [listado: gestionAdminService.listaCliente()]
@@ -42,13 +50,13 @@ class GestionAdminController {
         [cliente: gestionAdminService.unCliente(new Long(params.id))]
     }
     def actualizarCliente(Long id){
-        def cliente = Cliente.get(id)
-        cliente.propieties = params
+        def cliente = Cliente.get(params.id)
+        cliente.properties = params
         if (cliente!=null){
-            
-            cliente.save()
+
+            cliente.save(flush:true)
             redirect(action:"showCliente")
-        }        
+        }      
     }
     //Gestion de Administrador
     def showAdministrador(){        
@@ -68,6 +76,15 @@ class GestionAdminController {
     def editarAdministrador(){
         [administrador: gestionAdminService.unAdministrador(new Long(params.id))]
     }
+    def actualizarAdministrador(Long id){
+        def administrador = Administrador.get(params.id)
+        administrador.properties = params
+        if (administrador!=null){
+
+            administrador.save(flush:true)
+            redirect(action:"showAdministrador")
+        }      
+    }
     //Gestion de tipoDisfraz
     def showTipoDisfraz(){        
         [listado: gestionAdminService.listaTipoDisfraz()]
@@ -86,6 +103,14 @@ class GestionAdminController {
     def editarTipoDisfraz(){
         [tipoDisfraz: gestionAdminService.unTipoDisfraz(new Long(params.id))]
     }
+    def actualizarTipoDisfraz(Long id){
+        def tipo = TipoDisfraz.get(params.id)
+        tipo.properties = params
+        if (tipo!=null){
+            tipo.save(flush:true)
+            redirect(action:"showTipoDisfraz")
+        }      
+    }
     
     //gestion Alquiler
     def showAlquiler(){
@@ -93,5 +118,34 @@ class GestionAdminController {
     }
     def detalleAlquiler(){
         [alquiler: gestionAdminService.unAlquiler(new Long(params.id))]
+    }
+    
+    //gestion catalogo
+    def showCatalogo() { 
+        [listaCatalogo: gestionAdminService.listaCatalogo(),listaDisfraz: gestionAdminService.listaDisfraz()]
+    }
+    def agregarDisfrazCatalogo(Long id){
+        render(view:"showCatalogo",model:[listaCatalogo: gestionAdminService.listaCatalogo(),disfraz:gestionAdminService.unDisfraz(id),listaDisfraz: gestionAdminService.listaDisfraz()])        
+    }
+    def guardarDisfrazCatalogo(){
+        gestionAdminService.agregarDisfrazCatalogo(params)
+        redirect(action:"showCatalogo")
+    }
+    def eliminarDisfrazCatalogo(Long id){
+        gestionAdminService.eliminarCatalogo(id)
+        redirect(action:"showCatalogo")
+    }
+    def editarDisfrazCatalogo(Long id){
+        render(view:"showCatalogo",model:[listaCatalogo: gestionAdminService.listaCatalogo(),catalogo:gestionAdminService.unCatalogo(id),listaDisfraz: gestionAdminService.listaDisfraz()])        
+
+    }
+    def actualizarCatalogo(Long id){
+        def catalogo = Catalogo.get(params.id)
+        catalogo.properties = params
+        if (catalogo!=null){
+
+            catalogo.save(flush:true)
+            redirect(action:"showCatalogo")
+        }    
     }
 }
