@@ -1,13 +1,11 @@
-
-<%@ page contentType="text/html;charset=UTF-8" %>
-
+<!DOCTYPE html>
 <html>
     <head>        
-        <meta name="layout" content="mainadmin"/>
+        <meta name="layout" content="mainAdministrador"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Gestion Catalogo</title>
-    <asset:stylesheet src="bootstrap.min.css" />
-    <asset:stylesheet src="custom.css" />
+        <title>Gesti&oacute;n Cat&aacute;logo</title>
+        <asset:stylesheet src="bootstrap.min.css" />
+        <asset:stylesheet src="custom.css" />
 </head>
 <body>
     <h1>Gestion Catalogo</h1>
@@ -15,18 +13,20 @@
 
         <div class="col-sm-9">
             <h2>Catalogo</h2>
-            <table class="table table-borderless table-data3">
-                <tr>
-                    <th>Codigo</th>
-                    <th>Descripcion</th>
+            <table class="table table-hover">
+                <tr class="info">
+                    <th>C&oacute;digo</th>
+                    <th>Descripci&oacute;n</th>
                     <th>Talle</th>
-                    <th>Genero</th>
+                    <th>G&eacute;nero</th>
                     <th>Tipo</th>
                     <th>Cantidad</th>
                     <th>Precio Unitario</th>
+                    <th></th>
+                    <th></th>
                 </tr>
                 <g:each in="${listaCatalogo}">
-                    <tr>
+                    <tr class="success">
                         <td>${it.id}</td>
                         <td>${it.disfraz.descripcion}</td>
                         <td>${it.disfraz.talle}</td>
@@ -34,8 +34,8 @@
                         <td>${it.disfraz.tipo.descripcion}</td>
                         <td>${it.cantidad}</td>
                         <td>${it.precio}</td>
-                        <td><g:link action="editarDisfrazCatalogo" id="${it.id}">Editar</g:link></td>
-                        <td><g:link action="eliminarDisfrazCatalogo" id="${it.id}">Eliminar</g:link></td>
+                        <td><g:link action="editarDisfrazCatalogo" id="${it.id}" class="btn btn-info">Editar</g:link></td>
+                        <td><g:link action="eliminarDisfrazCatalogo" id="${it.id}" class="btn btn-info">Eliminar</g:link></td>
                         </tr>
                 </g:each>
             </table>
@@ -124,13 +124,10 @@
     </div>
 
 
-
-
-
     <label></label>
-<asset:javascript src="bootstrap.min.js" />    
-<asset:javascript src="jquery-1.11.3.min.js" />
-<asset:javascript src="holder.min.js" />
-<asset:javascript src="ie10-viewport-bug-workaround.js" />
+    <asset:javascript src="bootstrap.min.js" />    
+    <asset:javascript src="jquery-1.11.3.min.js" />
+    <asset:javascript src="holder.min.js" />
+    <asset:javascript src="ie10-viewport-bug-workaround.js" />
 </body>
 </html>

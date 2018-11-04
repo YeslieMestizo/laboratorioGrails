@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="layout" content="mainadmin"/>
-        <meta name="layout" content="mainadmin"/>
+        <meta name="layout" content="mainAdministrador"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Editar Cliente</title>
     </head>

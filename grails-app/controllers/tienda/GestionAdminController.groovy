@@ -4,7 +4,6 @@ import grails.validation.ValidationException
 class GestionAdminController {
     GestionAdminService gestionAdminService
     def index() {
-
     }
     //gestion disfraz
     def showDisfraz(){
@@ -58,15 +57,9 @@ class GestionAdminController {
         cliente.properties = params
         if (cliente!=null){
 
-<<<<<<< HEAD
-            cliente.save()
-            redirect(action:"showCliente")
-        }
-=======
             cliente.save(flush:true)
             redirect(action:"showCliente")
         }      
->>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
     }
     //Gestion de Administrador
     def showAdministrador(){
@@ -113,9 +106,6 @@ class GestionAdminController {
     def editarTipoDisfraz(){
         [tipoDisfraz: gestionAdminService.unTipoDisfraz(new Long(params.id))]
     }
-<<<<<<< HEAD
-
-=======
     def actualizarTipoDisfraz(Long id){
         def tipo = TipoDisfraz.get(params.id)
         tipo.properties = params
@@ -124,8 +114,6 @@ class GestionAdminController {
             redirect(action:"showTipoDisfraz")
         }      
     }
-    
->>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
     //gestion Alquiler
     def showAlquiler(){
         [listado: gestionAdminService.listaAlquiler()]
@@ -133,7 +121,6 @@ class GestionAdminController {
     def detalleAlquiler(){
         [alquiler: gestionAdminService.unAlquiler(new Long(params.id))]
     }
-<<<<<<< HEAD
 
     def cargar(){
 
@@ -156,8 +143,6 @@ class GestionAdminController {
     response.outputStream << img.imagen
     response.outputStream.flush()
   }
-=======
-    
     //gestion catalogo
     def showCatalogo() { 
         [listaCatalogo: gestionAdminService.listaCatalogo(),listaDisfraz: gestionAdminService.listaDisfraz()]
@@ -186,5 +171,4 @@ class GestionAdminController {
             redirect(action:"showCatalogo")
         }    
     }
->>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
 }

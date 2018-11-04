@@ -2,8 +2,7 @@ package tienda
 import grails.gorm.services.Service
 
 @Service(Administrador)
-interface AdministradorService {
-
+interface AdministradorService{
     Administrador get(Serializable id)
 
     List<Administrador> list(Map args)
@@ -13,5 +12,4 @@ interface AdministradorService {
     void delete(Serializable id)
 
     Administrador save(Administrador administrador)
-
 }

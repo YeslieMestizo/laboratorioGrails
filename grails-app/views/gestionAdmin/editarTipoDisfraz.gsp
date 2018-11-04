@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="layout" content="mainadmin"/>
+        <meta name="layout" content="mainAdministrador"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Editar Tipo Disfraz</title>
+        <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
+        <asset:stylesheet src="bootstrap.min.css"/>
+        <asset:stylesheet src="custom.css"/>
     </head>
     <body>
         <h1>Editar</h1>

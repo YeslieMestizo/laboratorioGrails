@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="layout" content="mainadmin"/>
+        <meta name="layout" content="mainAdministrador"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Nuevo Administrador</title>
         <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
@@ -34,11 +34,11 @@
                     <input type="text" class="form-control" id= "usuario" name="usuario" placeholder="usuario">
                 </div>
                 <div class="form-group">
-                    <label for="contrasena">Contrasena</label>
+                    <label for="contrasena">Contraseña</label>
                     <input type="password" class="form-control" id= "contrasena" name="contrasena" placeholder="contrasena">
                 </div>
                 <div class="form-group">
-                    <label for="telefono">telefono</label>
+                    <label for="telefono">Tel&eacute;fono</label>
                     <input type="text" class="form-control" id= "telefono" name="telefono" placeholder="telefono">
                 </div>
                 <input type="submit" name="enviar" value="Guardar" class="btn btn-default"/>

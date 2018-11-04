@@ -81,12 +81,10 @@ class GestionAdminService {
         def tipoDisfraz = TipoDisfraz.findAll()
         return tipoDisfraz
     }
-
     TipoDisfraz unTipoDisfraz(Long id){
         def tipoDisfraz = TipoDisfraz.get(id)
         return tipoDisfraz
     }
-
     //gestion Alquiler
     List listaAlquiler(){
         def alquiler = Alquiler.findAll()
@@ -96,10 +94,6 @@ class GestionAdminService {
         def alquiler = Alquiler.get(id)
         return alquiler
     }
-<<<<<<< HEAD
-}
-=======
-    
     //gestion catalogo
     List listaCatalogo(){
         def catalogo = Catalogo.findAll()
@@ -117,4 +111,3 @@ class GestionAdminService {
         return catalogo
     }
 }
->>>>>>> 7792c076265d1b00da70921332d0d897e45fabea

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="layout" content="mainAdministrador"/>
+        <meta name="layout" content="mainClient"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Administrador</title>
+        <title>Cliente</title>
         <asset:stylesheet src="bootstrap.min.css" />
         <asset:stylesheet src="custom.css" />
     </head>
@@ -14,9 +14,8 @@
                     <div class="card-body">
                         <ul class="list-unstyled">
                             <li>
-                                <g:link controller="GestionAdmin" action="showAdministrador" class="btn btn-primary btn-lg btn-block">D A T O S - A D M I N I S T R A D O R</g:link></li>
-                            <li>
-                                <g:link controller="GestionAdmin" action="showAlquiler" class="btn btn-success btn-lg btn-block">A L Q U I L E R</g:link></li>
+                                <g:link controller="GestionCliente" action="showCliente" class="btn btn-primary btn-lg btn-block">D A T O S - C L I E N T E</g:link>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -25,9 +24,8 @@
                     <div class="card-body">
                         <ul class="list-unstyled">
                             <li>
-                                <g:link controller="GestionAdmin" action="showCatalogo" class="btn btn-success btn-lg btn-block">C A T &Aacute; L O G O</g:link></li>
-                            <li>
-                                <g:link controller="GestionAdmin" action="showCliente" class="btn btn-primary btn-lg btn-block">C L I E N T E S</g:link></li>
+                                <g:link controller="GestionCliente" action="showCarrito" class="btn btn-success btn-lg btn-block">C A R R I T O</g:link>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -36,16 +34,14 @@
                     <div class="card-body">
                         <ul class="list-unstyled">
                             <li>
-                                <g:link controller="GestionAdmin" action="showDisfraz" class="btn btn-primary btn-lg btn-block">D I S F R A C E S</g:link></li>
-                            <li>
-                                <g:link controller="GestionAdmin" action="showTipoDisfraz" class="btn btn-success btn-lg btn-block">T I P O S - D E - D I S F R A C E S</g:link></li>
+                                <g:link controller="GestionCliente" action="showPago" class="btn btn-primary btn-lg btn-block">L I S T A - P R O D U C T O S</g:link>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
          </div>
-        
-        <hr>
+
         <asset:javascript src="bootstrap.min.js" />    
         <asset:javascript src="jquery-1.11.3.min.js" />
         <asset:javascript src="holder.min.js" />
