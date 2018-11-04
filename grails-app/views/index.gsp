@@ -31,8 +31,8 @@
 
 </head>
 <body>
-    <header class="header-desktop4">
-        <div class="container">
+    <header>
+        <div>
             <div class="header4-wrap">
                 <div class="header__logo">
                     <a href="/#">
@@ -45,46 +45,33 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </header>
-        <section class="welcome2 p-t-40 p-b-55">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="au-breadcrumb3">
-                            <div class="au-breadcrumb-left">
-                                <span class="au-breadcrumb-span">Tu estas aqu&iacute;:</span>
-                                <ul class="list-unstyled list-inline au-breadcrumb__list">
-                                    <li class="list-inline-item active">
-                                        <a href="#">INICIO</a>
-                                    </li>
-                                    <li class="list-inline-item seprate">
-                                        <span>/</span>
-                                    </li>
-                                    <li class="list-inline-item">INDICE</li>
-                                </ul>
+            <section class="welcome2 p-t-40 p-b-55">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="au-breadcrumb3">
+                                <div class="au-breadcrumb-left">
+                                    <span class="au-breadcrumb-span">Tu estas aqu&iacute;:</span>
+                                    <ul class="list-unstyled list-inline au-breadcrumb__list">
+                                        <li class="list-inline-item active">
+                                            <a href="#">INICIO</a>
+                                        </li>
+                                        <li class="list-inline-item seprate">
+                                            <span>/</span>
+                                        </li>
+                                        <li class="list-inline-item">INDICE</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="welcome2-inner m-t-60">
-                            <div class="welcome2-greeting">
-                                <h1 class="title-6">Hola
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                                <span>,</span> bienvenido a R A Y.c o m </h1>
-                            <p>La mejor tienda de disfraces, aqu&iacute; podr&aacute;s conseguir muy buenas opciones! :)</p>
-=======
-<<<<<<< HEAD
-                                    <span>,</span> bienvenido a R A Y.com</h1>
-                                <p>La mejor tienda de disfraces, aqui podr&aacute;s conseguir muy buenas opciones :)</p>
-=======
->>>>>>> 29bf403ea6de6e7d137a798c8143763d070878f8
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="welcome2-inner m-t-60">
+                                <div class="welcome2-greeting">
+                                    <h1 class="title-6">Hola
                                     <span>,</span> bienvenido a R A Y.c o m </h1>
-                                <p>La mejor tienda de disfraces, aqu&iacute; podr&aacute;s conseguir muy buenas opciones! :)</p>
+                                    <p>La mejor tienda de disfraces, aqu&iacute; podr&aacute;s conseguir muy buenas opciones! :)</p>
                             </div>
                             <form class="form-header form-header2" action="" method="post">
                                 <input class="au-input au-input--w435" type="text" name="search" placeholder="B&uacute;squedas">
@@ -92,20 +79,63 @@
                                     <i class="zmdi zmdi-search"></i>
                                 </button>
                             </form>
->>>>>>> df0c17c9c6ad0a2b8d8d22bbf23a160842dbbcd2
                         </div>
-                        <form class="form-header form-header2" action="" method="post">
-                            <input class="au-input au-input--w435" type="text" name="search" placeholder="B&uacute;squedas">
-                            <button class="au-btn--submit" type="submit">
-                                <i class="zmdi zmdi-search"></i>
-                            </button>
-                        </form>
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
+        </section>
+            </div>
+            <div class="jumbotron feature">
+        <div class="container">
+
+        <div id="feature-carousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#feature-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#feature-carousel" data-slide-to="1"></li>
+            <li data-target="#feature-carousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <a href="#">
+                <asset:image src="portada1.png" alt="Portada1"/>
+                      </a>
+                      <div class="carousel-caption">
+                <h3>Disfraces De Zombies</h3>
+                <p><a class="btn btn-primary" href="#">Ver Más</a></p>
+              </div>
+            </div>
+            <div class="item">
+              <a href="#">
+                <asset:image src="portada2.png" alt="Portada2"/>
+                      </a>
+                      <div class="carousel-caption">
+                        <h3>Disfraces De Payasos</h3>
+              </div>
+            </div>
+            <div class="item">
+              <a href="#">
+                <asset:image src="portada3.png" alt="Portada3"/>
+                      </a>
+                      <div class="carousel-caption">
+                <h3>Disfraces de Vampiros</h3>
+              </div>
+            </div>
+
+          </div>
+          <a class="left carousel-control" href="#feature-carousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#feature-carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+          </div>
+
         </div>
-    </section>
+      </div>
+        </header>
+
     <div class="page-container3">
         <section>
             <div class="container">
@@ -141,53 +171,6 @@
                             <div class="col-md-12">
                                 <div class="copyright">
                                     <p>Copyright © 2018 RAY.com. All rights reserved.</p>
-=======
-        </section>
-        <div class="page-container3">
-            <section>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-3">
-                            <!-- MENU SIDEBAR\
-                            <aside class="menu-sidebar3 js-spe-sidebar">
-                                <nav class="navbar-sidebar2 navbar-sidebar3">
-                                    <ul class="list-unstyled navbar__list">
-<<<<<<< HEAD
-
-=======
-                                        <li class="bg-info">
-                                            <g:link controller="Administrador">Administradores</g:link>
-                                        </li>
->>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
-                                        <li class="bg-danger">
-                                            <g:link controller="Disfraz">Disfraces</g:link>
-                                        </li>
-                                        <li class="bg-info">
-                                            <g:link controller="GestionAdmin">Admin</g:link>
-                                        </li>
-                                        <li class="bg-danger">
-                                            <g:link controller="Login">Ingresar</g:link>
-                                        </li>
-                                        <li class="bg-info">
-                                            <g:link controller="RegistroCliente">Registrarse</g:link>
-                                        </li>
-                                        <li class="bg-info">
-                                            <g:link controller="Imagen">Imagen</g:link></li>
-                                    </ul>
-                                </nav>
-                            </aside>
-                            END MENU SIDEBAR-->
-                        </div>
-                        <div class="col-xl-9">
-                            <!-- PAGE CONTENT-->
-
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="copyright">
-                                            <p>Copyright © 2018 RAY.com. All rights reserved.</p>
-                                        </div>
-                                    </div>
->>>>>>> df0c17c9c6ad0a2b8d8d22bbf23a160842dbbcd2
                                 </div>
                             </div>
                         </div>
@@ -197,7 +180,6 @@
             </div>
     </div>
 </section>
-</div>
 <script src="vendor/jquery-3.2.1.min.js"></script>
 <script src="vendor/bootstrap-4.1/popper.min.js"></script>
 <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>

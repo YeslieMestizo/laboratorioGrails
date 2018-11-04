@@ -1,6 +1,7 @@
 package tienda
 
 class UrlMappings {
+GestionAdminService gestionAdminService
 
     static mappings = {
         "/$controller/$action?/$id?(.$format)?"{

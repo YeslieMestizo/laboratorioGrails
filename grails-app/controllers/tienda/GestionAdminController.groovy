@@ -42,8 +42,8 @@ class GestionAdminController {
       gestionAdminService.eliminarDisfraz(new Long(params.id))
       redirect(action:"showDisfraz")
     }
-    def editarDisfraz(){
-        [disfraz: gestionAdminService.unDisfraz(new Long(params.id))]
+    def editarDisfraz(Long id){
+        [disfraz: gestionAdminService.unDisfraz(id)]
     }
 
     def actualizarDisfraz(Long id){
@@ -168,14 +168,8 @@ class GestionAdminController {
         if (catalogo!=null){
 
             catalogo.save(flush:true)
-<<<<<<< HEAD
             redirect(action:"showCatalogo")
         }
-=======
-            render(view:"showCatalogo",model:[listaCatalogo: gestionAdminService.listaCatalogo(),listaDisfraz: gestionAdminService.listaDisfraz()])
-            //redirect(action:"showCatalogo")
-        }    
->>>>>>> 29bf403ea6de6e7d137a798c8143763d070878f8
     }
 
 }
