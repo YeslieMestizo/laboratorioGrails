@@ -13,15 +13,11 @@ class GestionAdminService {
         return tipo
     }
     //Gestion Disfraz
-<<<<<<< HEAD
- 
-=======
     void altaDisfraz(Map params) {
     def disfraz = new Disfraz(params).save(flush:true)
     println disfraz
 
     }
->>>>>>> e19e2553e3733b3d2c98f1d520df00a5f12ff16b
     void eliminarDisfraz(Long id) {
         def disfraz = Disfraz.get(id)
         disfraz.delete(flush: true)
@@ -91,14 +87,6 @@ class GestionAdminService {
         def alquiler = Alquiler.get(id)
         return alquiler
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    
-=======
-
->>>>>>> e19e2553e3733b3d2c98f1d520df00a5f12ff16b
->>>>>>> 349ccc9fff117a4b9f49b751eeb7cc0ea19327e0
     //gestion catalogo
     List listaCatalogo(){
         def catalogo = Catalogo.findAll()

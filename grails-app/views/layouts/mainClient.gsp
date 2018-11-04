@@ -7,8 +7,8 @@
     <meta name="description" content="au theme template">
 	<meta name="author" content="Hau Nguyen">
 	<meta name="keywords" content="au theme template">
-    <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
-    <meta name="layout" content="main"/>
+    <asset:link rel="icon" href="logo.png" type="image/x-ico"/>
+    <!--<meta name="layout" content="main"/>-->
     <title><g:layoutTitle default="Tienda de Disfraces"/></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -43,10 +43,10 @@
                     <span class="glyphicon glyphicon-globe"></span> Logo
                 </a>
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse" style="float: right;">
                 <!--Login y Salida de Sesion-->
                 <g:if test="${session.usuario}">
-                    <strong style="color: white;">Login as :  ${session.usuario.nombre}</strong> | <g:link controller="login" action="logout">Salir</g:link>
+                    <strong style="color: white;">Login as :  ${session.usuario.nombre}</strong> | <g:link controller="login" action="logout" class="btn btn-primary">Salir</g:link>
                 </g:if>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -59,14 +59,14 @@
                         <a href="javascript:window.history.back();">&laquo; Volver atrás</a></li>
                         <!--<g:link controller="GestionCliente" action="index">A T R &Aacute; S</g:link></li>-->
                 </ul>
-				<form class="navbar-form navbar-right" role="search">
+				<!--<form class="navbar-form navbar-right" role="search">
 		            <div class="form-group">
 		                <input type="text" class="au-input au-input--xl" placeholder="B&uacute;squedas ...">
 		            </div>
 					<button type="submit" class="au-btn--submit">
 						<span class="glyphicon glyphicon-search"></span>Buscar
 					</button>
-				</form>
+				</form>-->
             </div>
         </div>
     </nav>

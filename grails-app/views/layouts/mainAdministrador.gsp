@@ -9,7 +9,7 @@
 	<meta name="keywords" content="au theme template">
     <asset:link rel="icon" href="logo.png" type="image/x-ico"/>
     <g:layoutHead/>
-    <meta name="layout" content="main"/>
+    <!--<meta name="layout" content="main"/>-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <asset:stylesheet src="font-face.css"/>
@@ -32,14 +32,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
-                    <span class="glyphicon glyphicon-globe"></span> Logo
-                </a>
+                <asset:image src="logo.png" width="100px" class="grails-logo"/>
+                <span> R A Y . c o m </span>
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse" style="float: right;">
                 <!--Login y Salida de Sesion-->
                 <g:if test="${session.usuario}">
-                    <strong style="color: white;">Login as :  ${session.usuario.nombre}</strong> | <g:link controller="login" action="logout">Salir</g:link>
+                    <strong style="color: white;">Login as :  ${session.usuario.nombre}</strong> | <g:link controller="login" action="logout" class="btn btn-primary">Salir</g:link>
                 </g:if>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -51,14 +50,14 @@
                     <li>
                         <a href="javascript:window.history.back();">&laquo; Volver atrás</a></li>
                 </ul>
-				<form class="navbar-form navbar-right" role="search">
+				<!--<form class="navbar-form navbar-right" role="search">
 		            <div class="form-group">
 		                <input type="text" class="au-input au-input--xl" placeholder="B&uacute;squedas ...">
 		            </div>
 					<button type="submit" class="au-btn--submit">
 						<span class="glyphicon glyphicon-search"></span>Buscar
 					</button>
-				</form>
+				</form>-->
             </div>
         </div>
     </nav>

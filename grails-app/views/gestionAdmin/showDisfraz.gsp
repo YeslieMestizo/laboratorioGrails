@@ -10,7 +10,6 @@
     <body>
         <h1>Gesti&oacute;n de Disfraces</h1>
         <div class="table-responsive m-b-40">
-<<<<<<< HEAD
             <div class="container">
                 <table class="table table-hover">
                     <tr class="info">
@@ -35,8 +34,6 @@
                     </g:each>
                 </table>
             </div>
-        
-=======
         <table class="table table-borderless table-data3">
             <tr>
                 <th>Codigo</th>
@@ -58,8 +55,6 @@
             </tr>
             </g:each>
         </table>
->>>>>>> 349ccc9fff117a4b9f49b751eeb7cc0ea19327e0
-
         <asset:javascript src="bootstrap.min.js" />
         <asset:javascript src="jquery-1.11.3.min.js" />
         <asset:javascript src="holder.min.js" />

@@ -8,12 +8,10 @@
         <asset:stylesheet src="custom.css" />
 </head>
 <body>
-    <h1>Gestion Catalogo</h1>
+    <h1>Gesti&oacute;n Cat&aacute;logo</h1>
     <div class="container-fluid"> 
-
         <div class="col-sm-9">
-            <h2>Catalogo</h2>
-<<<<<<< HEAD
+            <h2>Cat&aacute;logo</h2>
             <table class="table table-hover">
                 <tr class="info">
                     <th>C&oacute;digo</th>
@@ -40,7 +38,6 @@
                         </tr>
                 </g:each>
             </table>
-=======
             <div class="table-responsive m-b-40">
                 <table class="table table-borderless table-data3">
                     <tr>
@@ -67,7 +64,6 @@
                     </g:each>
                 </table>
             </div>
->>>>>>> 349ccc9fff117a4b9f49b751eeb7cc0ea19327e0
         </div>
         <div class="col-sm-3"> 
             <g:if test="${catalogo}">

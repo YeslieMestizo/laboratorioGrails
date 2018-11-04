@@ -8,7 +8,6 @@
         <asset:stylesheet src="custom.css" />
     </head>
     <body>
-<<<<<<< HEAD
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
@@ -47,27 +46,25 @@
          </div>
         
         <hr>
-=======
         <div class="page-container">
             <div class="col-sm-4">
-                <div>
+                <div style="background-color: cyan;">
                     Cantidad de usuario
                 </div>
                 
             </div>
             <div class="col-sm-4">
                 <div>
-                    Itemos
+                    Items
                 </div>
                 
             </div>
             <div class="col-sm-4">
                 <div>
-                    Cantidad de usuario
+                    Cantidad de venta
                 </div>
             </div>
         </div>
->>>>>>> 349ccc9fff117a4b9f49b751eeb7cc0ea19327e0
         <asset:javascript src="bootstrap.min.js" />    
         <asset:javascript src="jquery-1.11.3.min.js" />
         <asset:javascript src="holder.min.js" />
