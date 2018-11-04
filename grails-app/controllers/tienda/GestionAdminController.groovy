@@ -4,28 +4,25 @@ import grails.validation.ValidationException
 class GestionAdminController {
     GestionAdminService gestionAdminService
     def index() {
-
     }
 
     //gestion disfraz
     def showDisfraz(){
-        [listado: gestionAdminService.listaDisfraz()]
+        [listado: gestionAdminService.listaDisfraz(),tipoList: gestionAdminService.listaTipo()]
     }
     def altaDisfraz(){
         [disfraz: new Disfraz(), tipoList: gestionAdminService.listaTipo()]
     }
     def guardarAltaDisfraz() {
-    def file = request.getFile('myFile')
-    def disfraz = new Disfraz(descripcion:params.descripcion,talle:params.talle,genero:params.genero,tipo:params.tipo,imagen:file).save(flush:true)
-    disfraz.save(flush:true)
-    if (disfraz.hasErrors()) {
-        disfraz.errors.allErrors.each {
-            println it
+        def file = request.getFile('myFile')
+        def disfraz = new Disfraz(descripcion:params.descripcion,talle:params.talle,genero:params.genero,tipo:params.tipo,imagen:file).save(flush:true)
+        disfraz.save(flush:true)
+        if (disfraz.hasErrors()) {
+            disfraz.errors.allErrors.each {
+                println it
+            }
         }
-    }
-    redirect action:"vistaPrevia", params: [id: disfraz.id]
-    //gestionAdminService.altaDisfraz(params)
-    //redirect(action:"showDisfraz")
+        redirect action:"vistaPrevia", params: [id: disfraz.id]
     }
 
     def vistaPrevia(Long id){
@@ -33,14 +30,14 @@ class GestionAdminController {
     }
 
     def verImagen = {
-      def disfraz = Disfraz.get(params.id)
-      response.outputStream << disfraz.imagen
-      response.outputStream.flush()
+        def disfraz = Disfraz.get(params.id)
+        response.outputStream << disfraz.imagen
+        response.outputStream.flush()
     }
 
     def darBajaDisfraz() {
-      gestionAdminService.eliminarDisfraz(new Long(params.id))
-      redirect(action:"showDisfraz")
+        gestionAdminService.eliminarDisfraz(new Long(params.id))
+        redirect(action:"showDisfraz")
     }
     def editarDisfraz(Long id){
         [disfraz: gestionAdminService.unDisfraz(id)]
@@ -62,12 +59,12 @@ class GestionAdminController {
         [cliente: new Cliente()]
     }
     def guardarAltaCliente(  ) {
-      gestionAdminService.altaCliente(params)
-      redirect(action:"showCliente")
+        gestionAdminService.altaCliente(params)
+        redirect(action:"showCliente")
     }
     def darBajaCliente() {
-      gestionAdminService.eliminarCliente(new Long(params.id))
-      redirect(action:"showCliente")
+        gestionAdminService.eliminarCliente(new Long(params.id))
+        redirect(action:"showCliente")
     }
     def editarCliente(){
         [cliente: gestionAdminService.unCliente(new Long(params.id))]
@@ -78,7 +75,11 @@ class GestionAdminController {
         if (cliente!=null){
             cliente.save(flush:true)
             redirect(action:"showCliente")
-        }
+<<<<<<< HEAD
+        }      
+=======
+        } 
+>>>>>>> ed8100a2882d27a75585bd932bef472838636329
     }
     //Gestion de Administrador
     def showAdministrador(){
@@ -88,12 +89,12 @@ class GestionAdminController {
         [administrador: new Administrador()]
     }
     def guardarAltaAdministrador(  ) {
-      gestionAdminService.altaAdministrador(params)
-      redirect(action:"showAdministrador")
+        gestionAdminService.altaAdministrador(params)
+        redirect(action:"showAdministrador")
     }
     def darBajaAdministrador() {
-      gestionAdminService.eliminarAdministrador(new Long(params.id))
-      redirect(action:"showAdministrador")
+        gestionAdminService.eliminarAdministrador(new Long(params.id))
+        redirect(action:"showAdministrador")
     }
     def editarAdministrador(){
         [administrador: gestionAdminService.unAdministrador(new Long(params.id))]
@@ -115,17 +116,16 @@ class GestionAdminController {
         [tipoDisfraz: new TipoDisfraz()]
     }
     def guardarAltaTipoDisfraz(  ) {
-      gestionAdminService.altaTipoDisfraz(params)
-      redirect(action:"showTipoDisfraz")
+        gestionAdminService.altaTipoDisfraz(params)
+        redirect(action:"showTipoDisfraz")
     }
     def darBajaTipoDisfraz() {
-      gestionAdminService.eliminarTipoDisfraz(new Long(params.id))
-      redirect(action:"showTipoDisfraz")
+        gestionAdminService.eliminarTipoDisfraz(new Long(params.id))
+        redirect(action:"showTipoDisfraz")
     }
     def editarTipoDisfraz(){
         [tipoDisfraz: gestionAdminService.unTipoDisfraz(new Long(params.id))]
     }
-
     def actualizarTipoDisfraz(Long id){
         def tipo = TipoDisfraz.get(params.id)
         tipo.properties = params
@@ -134,7 +134,6 @@ class GestionAdminController {
             redirect(action:"showTipoDisfraz")
         }
     }
-
     //gestion Alquiler
     def showAlquiler(){
         [listado: gestionAdminService.listaAlquiler()]
@@ -143,6 +142,12 @@ class GestionAdminController {
         [alquiler: gestionAdminService.unAlquiler(new Long(params.id))]
     }
 
+<<<<<<< HEAD
+=======
+    def cargar(){
+     }
+    
+>>>>>>> ed8100a2882d27a75585bd932bef472838636329
     //gestion catalogo
     def showCatalogo() {
         [listaCatalogo: gestionAdminService.listaCatalogo(),listaDisfraz: gestionAdminService.listaDisfraz()]
@@ -169,7 +174,53 @@ class GestionAdminController {
 
             catalogo.save(flush:true)
             redirect(action:"showCatalogo")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        }}
+    
+=======
+>>>>>>> 637ba2f42bd2d0b39a2f597ff1528b04bac65407
         }
     }
-
+>>>>>>> ed8100a2882d27a75585bd932bef472838636329
+    //Busqueda
+    def busquedaAdministrador(){
+        if(params.campo.toString()=="Nombre"){
+            render(view:"showAdministrador",model:[listado: gestionAdminService.buscarAdminPorNombre(params.busqueda)])
+        }else{
+            if(params.campo.toString()=="Apellido"){
+                render(view:"showAdministrador",model:[listado: gestionAdminService.buscarAdminPorApellido(params.busqueda)])
+                
+            }else{
+                render(view:"showAdministrador",model:[listado: gestionAdminService.buscarAdminPorUsuario(params.busqueda)])
+            }
+        }        
+    }
+    def busquedaDisfraz(String campo){
+        if(campo=="F"){
+            render(view:"showDisfraz",model:[listado: gestionAdminService.buscarDisfrazPorGenero(campo),tipoList: gestionAdminService.listaTipo()])
+        }else{
+            if(campo=="Mas"){
+            render(view:"showDisfraz",model:[listado: gestionAdminService.buscarDisfrazPorGenero('M'),tipoList: gestionAdminService.listaTipo()])
+        }else{
+            if(campo=="XS" || campo=="S" || campo=="M" ||campo=="L" || campo=="XL" ||campo=="XXL"){
+                render(view:"showDisfraz",model:[listado: gestionAdminService.buscarDisfrazPorTalle(campo),tipoList: gestionAdminService.listaTipo()])
+            }else{
+                if(params.descripcion != null){
+                    render(view:"showDisfraz",model:[listado: gestionAdminService.buscarDisfrazPorDescripcion(params.descripcion),tipoList: gestionAdminService.listaTipo()])
+                }else{
+                    println campo
+                    render(view:"showDisfraz",model:[listado: gestionAdminService.buscarDisfrazPorTipo(campo),tipoList: gestionAdminService.listaTipo()])
+                }
+                
+            }
+        }
+        
+    }
+    }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ed8100a2882d27a75585bd932bef472838636329

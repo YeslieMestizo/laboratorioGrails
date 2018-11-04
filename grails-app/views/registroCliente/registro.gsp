@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <meta name="layout" content="main"/>
+    <meta name="layout" content="mainClient"/>
     <title>Registro</title>
 </head>
 <body id="body">
@@ -46,13 +46,11 @@
       <br><br>
         </div>
         <div class="formField">
-          <label for="direccion">Direccion:</label>
+          <label for="direccion">Direcci&oacute;n:</label>
       <g:textField name="direccion" value="${cliente?.direccion}" />
       <br><br>
         </div>
-  <g:submitButton class="formButton"
-  name="register"
-  value="Registrarse" />
+      <g:submitButton class="formButton" name="register" value="Registrarse" />
   </g:form>
 </body>
 </html>
