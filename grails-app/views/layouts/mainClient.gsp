@@ -7,12 +7,8 @@
     <meta name="description" content="au theme template">
 	<meta name="author" content="Hau Nguyen">
 	<meta name="keywords" content="au theme template">
+    
     <asset:link rel="icon" href="logo.png" type="image/x-ico"/>
-    <!--<meta name="layout" content="main"/>-->
-    <title><g:layoutTitle default="Tienda de Disfraces"/></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <asset:stylesheet src="font-face.css"/>
     <asset:stylesheet src="css/font-face.css"/>
     <asset:stylesheet src="fontawesome.min.css"/>
     <asset:stylesheet src="vendor/font-awesome-4.7/css/font-awesome.min.css"/>
@@ -20,13 +16,8 @@
     <asset:stylesheet src="hamburgers.min.css"/>
     <asset:stylesheet src="vendor/font-awesome-5/css/fontawesome-all.min.css"/>
     <asset:stylesheet src="vendor/mdi-font/css/material-design-iconic-font.min.css"/>
-
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
-    <asset:stylesheet src="application.css"/>
     <g:layoutHead/>
+    
 </head>
 <body class="animsition">
     <div class="page-wrapper">

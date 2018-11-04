@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html>
     <head>
         <meta name="layout" content="mainAdministrador"/>
@@ -15,58 +14,36 @@
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
             <div class="well well-sm">
-<<<<<<< HEAD
-
-
-=======
->>>>>>> ed8100a2882d27a75585bd932bef472838636329
                 <div class="panel-heading">
                     <h3 class="panel-title">
                         <span class="glyphicon glyphicon-log-in"></span>
                         Crear
                     </h3>
+                    <g:uploadForm action="guardarAltaDisfraz">
+                        <div class="form-group">
+                                  <label for="descripcion">Descripci&oacute;n</label>
+                                  <input type="text" class="form-control" id= "descripcion" name="descripcion" placeholder="Descripcion">
+                        </div>
+                              <div class="form-group">
+                                  <label for="genero">Genero</label>
+                                  <g:select name="genero" from="${['F','M']}" class="form-control"/>
+                              </div>
+                              <div class="form-group">
+                                  <label for="talle">Talle</label>
+                                  <g:select name="talle" from="${['XS','S','M','L','XL','XXL']}" class="form-control"/>
+                              </div>
+                              <div class="form-group">
+                                  <label for="tipo">Tipo</label>
+                                  <g:select from="${tipoList}" optionKey="id" optionValue="descripcion" name="tipo" class="form-control"/>
+                              </div>
+                              <div class="form-group">
+                                <label for="imagen">Seleccionar Imagen</label>
+                                  <input type="file" name="myFile" /> </br>
+                                  <input type="submit" value="Aceptar" />
+                              </div>
+                    </g:uploadForm>
                 </div>
             </div>
-        </div>
-<<<<<<< HEAD
-    </div>
-
-
-<asset:javascript src="bootstrap.min.js" />
-<asset:javascript src="jquery-1.11.3.min.js" />
-<asset:javascript src="holder.min.js" />
-<asset:javascript src="ie10-viewport-bug-workaround.js" />
-</body>
-</html>
-=======
-        <div class="col-sm-3"></div>
-        </div>
-            <div class="well well-sm">
-                <g:uploadForm action="guardarAltaDisfraz">
-                    <div class="form-group">
-                              <label for="descripcion">Descripci&oacute;n</label>
-                              <input type="text" class="form-control" id= "descripcion" name="descripcion" placeholder="Descripcion">
-                    </div>
-                          <div class="form-group">
-                              <label for="genero">Genero</label>
-                              <g:select name="genero" from="${['F','M']}" class="form-control"/>
-                          </div>
-                          <div class="form-group">
-                              <label for="talle">Talle</label>
-                              <g:select name="talle" from="${['XS','S','M','L','XL','XXL']}" class="form-control"/>
-                          </div>
-                          <div class="form-group">
-                              <label for="tipo">Tipo</label>
-                              <g:select from="${tipoList}" optionKey="id" optionValue="descripcion" name="tipo" class="form-control"/>
-                          </div>
-                          <div class="form-group">
-                            <label for="imagen">Seleccionar Imagen</label>
-                              <input type="file" name="myFile" /> </br>
-                              <input type="submit" value="Aceptar" />
-                          </div>
-                </g:uploadForm>
-            </div>
-        </div>
         </div>
     </div>
     <asset:javascript src="bootstrap.min.js" />
@@ -75,4 +52,3 @@
     <asset:javascript src="ie10-viewport-bug-workaround.js" />
 </body>
 </html>
->>>>>>> ed8100a2882d27a75585bd932bef472838636329

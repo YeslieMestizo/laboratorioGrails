@@ -75,8 +75,13 @@ class GestionAdminController {
         if (cliente!=null){
             cliente.save(flush:true)
             redirect(action:"showCliente")
+<<<<<<< HEAD
         }      
     }
+=======
+        }
+        }
+>>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
     //Gestion de Administrador
     def showAdministrador(){
         [listado: gestionAdminService.listaAdministrador()]
@@ -138,6 +143,11 @@ class GestionAdminController {
         [alquiler: gestionAdminService.unAlquiler(new Long(params.id))]
     }
 
+<<<<<<< HEAD
+=======
+    def cargar(){
+     }
+>>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
     //gestion catalogo
     def showCatalogo() {
         [listaCatalogo: gestionAdminService.listaCatalogo(),listaDisfraz: gestionAdminService.listaDisfraz()]
@@ -173,11 +183,11 @@ class GestionAdminController {
         }else{
             if(params.campo.toString()=="Apellido"){
                 render(view:"showAdministrador",model:[listado: gestionAdminService.buscarAdminPorApellido(params.busqueda)])
-                
+
             }else{
                 render(view:"showAdministrador",model:[listado: gestionAdminService.buscarAdminPorUsuario(params.busqueda)])
             }
-        }        
+        }
     }
     def busquedaDisfraz(String campo){
         if(campo=="F"){
@@ -195,12 +205,14 @@ class GestionAdminController {
                     println campo
                     render(view:"showDisfraz",model:[listado: gestionAdminService.buscarDisfrazPorTipo(campo),tipoList: gestionAdminService.listaTipo()])
                 }
-                
+
             }
         }
-        
+
     }
     }
+    }
+<<<<<<< HEAD
     def busquedaCliente(){
         if(params.campo.toString()=="Nombre"){
             render(view:"showCliente",model:[listado: gestionAdminService.buscarClientePorNombre(params.busqueda)])
@@ -219,3 +231,5 @@ class GestionAdminController {
         }        
     }
 }
+=======
+>>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
