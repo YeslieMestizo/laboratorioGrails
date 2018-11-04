@@ -75,12 +75,8 @@ class GestionAdminController {
         if (cliente!=null){
             cliente.save(flush:true)
             redirect(action:"showCliente")
-<<<<<<< HEAD
-        }      
-=======
-        } 
->>>>>>> ed8100a2882d27a75585bd932bef472838636329
-    }
+        }
+        }
     //Gestion de Administrador
     def showAdministrador(){
         [listado: gestionAdminService.listaAdministrador()]
@@ -142,12 +138,8 @@ class GestionAdminController {
         [alquiler: gestionAdminService.unAlquiler(new Long(params.id))]
     }
 
-<<<<<<< HEAD
-=======
     def cargar(){
      }
-    
->>>>>>> ed8100a2882d27a75585bd932bef472838636329
     //gestion catalogo
     def showCatalogo() {
         [listaCatalogo: gestionAdminService.listaCatalogo(),listaDisfraz: gestionAdminService.listaDisfraz()]
@@ -174,16 +166,8 @@ class GestionAdminController {
 
             catalogo.save(flush:true)
             redirect(action:"showCatalogo")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        }}
-    
-=======
->>>>>>> 637ba2f42bd2d0b39a2f597ff1528b04bac65407
         }
     }
->>>>>>> ed8100a2882d27a75585bd932bef472838636329
     //Busqueda
     def busquedaAdministrador(){
         if(params.campo.toString()=="Nombre"){
@@ -191,11 +175,11 @@ class GestionAdminController {
         }else{
             if(params.campo.toString()=="Apellido"){
                 render(view:"showAdministrador",model:[listado: gestionAdminService.buscarAdminPorApellido(params.busqueda)])
-                
+
             }else{
                 render(view:"showAdministrador",model:[listado: gestionAdminService.buscarAdminPorUsuario(params.busqueda)])
             }
-        }        
+        }
     }
     def busquedaDisfraz(String campo){
         if(campo=="F"){
@@ -213,14 +197,10 @@ class GestionAdminController {
                     println campo
                     render(view:"showDisfraz",model:[listado: gestionAdminService.buscarDisfrazPorTipo(campo),tipoList: gestionAdminService.listaTipo()])
                 }
-                
+
             }
         }
-        
+
     }
     }
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> ed8100a2882d27a75585bd932bef472838636329
+    }
