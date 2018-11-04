@@ -4,6 +4,7 @@
         <meta name="layout" content="mainadmin"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Gestion de Administrador</title>
+<<<<<<< HEAD
     <asset:stylesheet src="bootstrap.min.css" />
     <asset:stylesheet src="custom.css" />  
     
@@ -19,6 +20,14 @@
     <h1>Gesti&oacute;n de Administrador</h1>
     
     <div class="table-responsive m-b-40">
+=======
+        <asset:stylesheet src="bootstrap.min.css" />
+        <asset:stylesheet src="custom.css" />
+    </head>
+    <body>
+        <h1>Gesti&oacute;n de Administrador</h1>
+        <div class="table-responsive m-b-40">
+>>>>>>> e19e2553e3733b3d2c98f1d520df00a5f12ff16b
         <table class="table table-borderless table-data3">
             <tr>
                 <th>C&oacute;digo</th>
@@ -42,7 +51,11 @@
             </g:each>
         </table>
 
+<<<<<<< HEAD
         <asset:javascript src="bootstrap.min.js" />    
+=======
+        <asset:javascript src="bootstrap.min.js" />
+>>>>>>> e19e2553e3733b3d2c98f1d520df00a5f12ff16b
         <asset:javascript src="jquery-1.11.3.min.js" />
         <asset:javascript src="holder.min.js" />
         <asset:javascript src="ie10-viewport-bug-workaround.js" />
