@@ -79,6 +79,8 @@
 <!-- /.container -->
 </nav>
 
+<<<<<<< HEAD
+=======
 <div class="container-fluid">
         <!-- Left Column -->
     <div class="col-sm-3">
@@ -132,8 +134,14 @@
                     <ul>
                         <li class="list-group-item"><g:link  action="showCatalogo">catalogo</g:link></li>                            
                     </ul>
+<<<<<<< HEAD
+                </div>
+
+                  </div>
+=======
             </div>
 
+>>>>>>> 637ba2f42bd2d0b39a2f597ff1528b04bac65407
     <div class="container-fluid">
             <!-- Left Column -->
             <div class="col-sm-3">
@@ -189,20 +197,30 @@
                         </ul>
                     </div>
                 </div>
+>>>>>>> ed8100a2882d27a75585bd932bef472838636329
             </div>
             <div class="col-sm-9">
                 <g:layoutBody/>
             </div>
+<<<<<<< HEAD
+
+    </div>
+=======
+<<<<<<< HEAD
+    
+=======
             </div>
         </div>
     </div>
+>>>>>>> ed8100a2882d27a75585bd932bef472838636329
 </div>
+>>>>>>> 637ba2f42bd2d0b39a2f597ff1528b04bac65407
 <div class="footer" role="contentinfo"></div>
 <div id="spinner" class="spinner" style="display:none;">
     <g:message code="spinner.alt" default="Loading&hellip;"/>
 </div>
 <asset:javascript src="application.js"/>
-<asset:javascript src="bootstrap.min.js" />    
+<asset:javascript src="bootstrap.min.js" />
 <asset:javascript src="jquery-1.11.3.min.js" />
 <asset:javascript src="holder.min.js" />
 <asset:javascript src="ie10-viewport-bug-workaround.js" />

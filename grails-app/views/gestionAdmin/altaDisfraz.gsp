@@ -15,6 +15,11 @@
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
             <div class="well well-sm">
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed8100a2882d27a75585bd932bef472838636329
                 <div class="panel-heading">
                     <h3 class="panel-title">
                         <span class="glyphicon glyphicon-log-in"></span>
@@ -23,6 +28,17 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
+    </div>
+
+
+<asset:javascript src="bootstrap.min.js" />
+<asset:javascript src="jquery-1.11.3.min.js" />
+<asset:javascript src="holder.min.js" />
+<asset:javascript src="ie10-viewport-bug-workaround.js" />
+</body>
+</html>
+=======
         <div class="col-sm-3"></div>
         </div>
             <div class="well well-sm">
@@ -59,3 +75,4 @@
     <asset:javascript src="ie10-viewport-bug-workaround.js" />
 </body>
 </html>
+>>>>>>> ed8100a2882d27a75585bd932bef472838636329

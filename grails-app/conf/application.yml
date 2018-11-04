@@ -93,12 +93,12 @@ dataSource:
     jmxExport: true
     driverClassName: org.postgresql.Driver
     username: postgres
-    password: '54321'
+    password: '1032494104'
 
 environments:
     development:
         dataSource:
-            dbCreate: create-drop
+            dbCreate: update
             url: jdbc:postgresql://localhost:5432/tienda_disfraz
     test:
         dataSource:

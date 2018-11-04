@@ -110,5 +110,33 @@ class GestionAdminService {
           return Administrador.findAllByNombreLike(descripcion)
           
     }
-    
+    List buscarAdminPorApellido(String descripcion) {
+          descripcion='%'+descripcion+'%'
+          return Administrador.findAllByApellidoLike(descripcion)
+          
+    }
+    List buscarAdminPorUsuario(String descripcion) {
+        descripcion='%'+descripcion+'%'
+          return Administrador.findAllByUsuarioLike(descripcion)
+          
+    }
+    List buscarDisfrazPorGenero(String descripcion) {
+        descripcion='%'+descripcion+'%'
+        return Disfraz.findAllByGeneroLike(descripcion)
+          
+    }
+    List buscarDisfrazPorTalle(String descripcion) {
+        descripcion='%'+descripcion+'%'
+        return Disfraz.findAllByTalleLike(descripcion)
+          
+    }
+    List buscarDisfrazPorDescripcion(String descripcion) {
+        descripcion='%'+descripcion+'%'
+        return Disfraz.findAllByDescripcionLike(descripcion)
+          
+    }
+    List buscarDisfrazPorTipo(String id) {
+        TipoDisfraz tipo = TipoDisfraz.findById(id)
+        return Disfraz.findAllByTipo(tipo)
+    }
 }
