@@ -134,95 +134,13 @@
                         <li class="list-group-item"><g:link  action="showCatalogo">catalogo</g:link></li>                            
                     </ul>
                 </div>
-<<<<<<< HEAD
 
-=======
-=======
-        <!-- /.container -->
-    </nav>
-
-    <div class="container-fluid">
-            <!-- Left Column -->
-            <div class="col-sm-3">
-            <!-- List-Group Panel -->
-		<div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span> Disfraces</h1>
-                    </div>
-                    <div class="list-group ">
-                        <ul>
-                            <li class="list-group-item"><g:link action="altaDisfraz">Alta</g:link></li>
-                            <li class="list-group-item"><g:link action="showDisfraz">Listado</g:link></li>
-
-                        </ul>
-                    </div>
-                    <div class="panel-heading">
-                        <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span> Clientes</h1>
-                    </div>
-                    <div class="list-group ">
-                        <ul>
-                            <li class="list-group-item"><g:link action="altaCliente">Alta</g:link></li>
-                            <li class="list-group-item"><g:link action="showCliente">Listado</g:link></li>
-                        </ul>
-                    </div>
-                    <div class="panel-heading">
-                        <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span>Administradores</h1>
-                    </div>
-                    <div class="list-group ">
-                        <ul>
-                            <li class="list-group-item"><g:link action="altaAdministrador">Alta</g:link></li>
-                            <li class="list-group-item"><g:link action="showAdministrador">listado</g:link></li>
-                        </ul>
-                    </div>
-                    <div class="panel-heading">
-                        <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span>Tipo Disfraz</h1>
-                    </div>
-                    <div class="list-group ">
-                        <ul>
-                            <li class="list-group-item"><g:link action="altaTipoDisfraz">Alta</g:link></li>
-                            <li class="list-group-item"><g:link action="showTipoDisfraz">listado</g:link></li>
-                        </ul>
-                    </div>
-                    <div class="panel-heading">
-                        <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span>Alquiler</h1>
-                    </div>
-                    <div class="list-group ">
-                        <ul>
-                            <li class="list-group-item"><g:link action="showAlquiler">Listado</g:link></li>
-                        </ul>
-                    </div>
-                    <div class="list-group ">
-                        <ul>
-                            <li class="list-group-item"><g:link  action="showCatalogo">catalogo</g:link></li>
-
-                        </ul>
-                    </div>
                   </div>
             </div>
             <div class="col-sm-9">
                 <g:layoutBody/>
             </div>
-
-<<<<<<< HEAD
-=======
-                
-=======
-                
->>>>>>> 52dc15d55d727a4e6ca7ba5b61520ebc4ceded26
->>>>>>> df0c17c9c6ad0a2b8d8d22bbf23a160842dbbcd2
-            </div>
->>>>>>> e19e2553e3733b3d2c98f1d520df00a5f12ff16b
-        </div>
-    </div>
-    <div class="col-sm-9">
-        <g:layoutBody/>
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
->>>>>>> 29bf403ea6de6e7d137a798c8143763d070878f8
->>>>>>> e19e2553e3733b3d2c98f1d520df00a5f12ff16b
-    </div>
+    
 </div>
 <div class="footer" role="contentinfo"></div>
 <div id="spinner" class="spinner" style="display:none;">
