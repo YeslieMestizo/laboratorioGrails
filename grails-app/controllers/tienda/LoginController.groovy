@@ -15,17 +15,6 @@ LoginService loginService
       def a = Administrador.findByUsuario(params.usuario)
       if(u){
         if (u.password == u.password) {
-<<<<<<< HEAD
-           session.usuario = u
-           render(view: "/index")
-         } else {
-           render(view: "login", model: [message: "Constraseña Incorrecta"])
-         }
-       } else {
-       if (a) {
-         if (a.password == a.password) {
-            session.usuario = a
-=======
             session.usuario = u
             render(view: "/index")
             
@@ -36,11 +25,7 @@ LoginService loginService
           if(a){
               if(a.password == a.password){
                 session.usuario = a
-<<<<<<< HEAD
                 redirect(controller:"gestionAdmin",action:"index")
-=======
-                redirect(controller:"gestionAdmin", action:"index")
->>>>>>> df0c17c9c6ad0a2b8d8d22bbf23a160842dbbcd2
               }else{
                 render(view: "login", model: [message: "Constraseña Incorrecta"])
               }

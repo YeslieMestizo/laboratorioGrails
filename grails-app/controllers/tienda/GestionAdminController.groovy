@@ -14,15 +14,24 @@ class GestionAdminController {
         [disfraz: new Disfraz(), tipoList: gestionAdminService.listaTipo()]
     }
     def guardarAltaDisfraz() {
-      def file = request.getFile('imagen')
-      gestionAdminService.altaDisfraz(params,file)
-
-      //redirect action:"vistaPrevia", params: [id: img.id]
-      redirect(action:"showDisfraz")
+        def file = request.getFile('myFile')
+        def disfraz = new Disfraz(descripcion:params.descripcion,talle:params.talle,genero:params.genero,tipo:params.tipo,imagen:file).save(flush:true)
+        //disfraz.save(flush:true)
+        if (disfraz.hasErrors()) {
+            disfraz.errors.allErrors.each {
+                println it
+            }
+        }
+        render view:"vistaPrevia", model: [disfraz: disfraz]
     }
+    def verImagen () {
+        def disfraz = Disfraz.get(params.id)
+        response.outputStream << disfraz.imagen
+        response.outputStream.flush()
+    } 
     def darBajaDisfraz() {
-      gestionAdminService.eliminarDisfraz(new Long(params.id))
-      redirect(action:"showDisfraz")
+        gestionAdminService.eliminarDisfraz(new Long(params.id))
+        redirect(action:"showDisfraz")
     }
     def editarDisfraz(){
         [disfraz: gestionAdminService.unDisfraz(new Long(params.id))]
@@ -43,12 +52,12 @@ class GestionAdminController {
         [cliente: new Cliente()]
     }
     def guardarAltaCliente(  ) {
-      gestionAdminService.altaCliente(params)
-      redirect(action:"showCliente")
+        gestionAdminService.altaCliente(params)
+        redirect(action:"showCliente")
     }
     def darBajaCliente() {
-      gestionAdminService.eliminarCliente(new Long(params.id))
-      redirect(action:"showCliente")
+        gestionAdminService.eliminarCliente(new Long(params.id))
+        redirect(action:"showCliente")
     }
     def editarCliente(){
         [cliente: gestionAdminService.unCliente(new Long(params.id))]
@@ -57,16 +66,9 @@ class GestionAdminController {
         def cliente = Cliente.get(params.id)
         cliente.properties = params
         if (cliente!=null){
-
-<<<<<<< HEAD
-            cliente.save()
-            redirect(action:"showCliente")
-        }
-=======
             cliente.save(flush:true)
             redirect(action:"showCliente")
         }      
->>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
     }
     //Gestion de Administrador
     def showAdministrador(){
@@ -76,12 +78,12 @@ class GestionAdminController {
         [administrador: new Administrador()]
     }
     def guardarAltaAdministrador(  ) {
-      gestionAdminService.altaAdministrador(params)
-      redirect(action:"showAdministrador")
+        gestionAdminService.altaAdministrador(params)
+        redirect(action:"showAdministrador")
     }
     def darBajaAdministrador() {
-      gestionAdminService.eliminarAdministrador(new Long(params.id))
-      redirect(action:"showAdministrador")
+        gestionAdminService.eliminarAdministrador(new Long(params.id))
+        redirect(action:"showAdministrador")
     }
     def editarAdministrador(){
         [administrador: gestionAdminService.unAdministrador(new Long(params.id))]
@@ -103,19 +105,16 @@ class GestionAdminController {
         [tipoDisfraz: new TipoDisfraz()]
     }
     def guardarAltaTipoDisfraz(  ) {
-      gestionAdminService.altaTipoDisfraz(params)
-      redirect(action:"showTipoDisfraz")
+        gestionAdminService.altaTipoDisfraz(params)
+        redirect(action:"showTipoDisfraz")
     }
     def darBajaTipoDisfraz() {
-      gestionAdminService.eliminarTipoDisfraz(new Long(params.id))
-      redirect(action:"showTipoDisfraz")
+        gestionAdminService.eliminarTipoDisfraz(new Long(params.id))
+        redirect(action:"showTipoDisfraz")
     }
     def editarTipoDisfraz(){
         [tipoDisfraz: gestionAdminService.unTipoDisfraz(new Long(params.id))]
     }
-<<<<<<< HEAD
-
-=======
     def actualizarTipoDisfraz(Long id){
         def tipo = TipoDisfraz.get(params.id)
         tipo.properties = params
@@ -125,7 +124,6 @@ class GestionAdminController {
         }      
     }
     
->>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
     //gestion Alquiler
     def showAlquiler(){
         [listado: gestionAdminService.listaAlquiler()]
@@ -133,30 +131,24 @@ class GestionAdminController {
     def detalleAlquiler(){
         [alquiler: gestionAdminService.unAlquiler(new Long(params.id))]
     }
-<<<<<<< HEAD
 
     def cargar(){
 
-  }
-  def grabar={
-      def file = request.getFile('imagen')
-      def img = new Imagen(imagen:file,nombre:params.nombre).save(flush:true)
-      img.save(flush:true)
-      if (img.hasErrors()) {
-          img.errors.allErrors.each {
-              println it
-          }
-      }
-      redirect action:"vistaPrevia", params: [id: img.id]
-  }
-  def vistaPrevia={
-  }
-  def verImagen = {
-    def img = Imagen.get(params.id)
-    response.outputStream << img.imagen
-    response.outputStream.flush()
-  }
-=======
+    }
+    def grabar={
+        def file = request.getFile('imagen')
+        def img = new Imagen(imagen:file,nombre:params.nombre).save(flush:true)
+        img.save(flush:true)
+        if (img.hasErrors()) {
+            img.errors.allErrors.each {
+                println it
+            }
+        }
+        render(view:"vistaPrevia", params: [id: disfraz.id])
+    }
+    def vistaPrevia(){
+    }
+
     
     //gestion catalogo
     def showCatalogo() { 
@@ -187,5 +179,10 @@ class GestionAdminController {
             //redirect(action:"showCatalogo")
         }    
     }
->>>>>>> 7792c076265d1b00da70921332d0d897e45fabea
+    
+    //Busqueda
+    def busquedaAdministrador(){
+        println params.busqueda
+        render(view:"showAdministrador",model:[listado: gestionAdminService.buscarAdminPorNombre(params.busqueda)])
+    }
 }

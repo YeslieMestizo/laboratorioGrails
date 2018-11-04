@@ -11,6 +11,7 @@ class Disfraz {
     static constraints = {
         talle (inList:['XS','S','M','L','XL','XXL'])
         genero (inList:['F','M'])
+        imagen(nullable:true)
     }
 
 }
