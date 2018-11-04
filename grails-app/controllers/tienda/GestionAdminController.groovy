@@ -4,7 +4,6 @@ import grails.validation.ValidationException
 class GestionAdminController {
     GestionAdminService gestionAdminService
     def index() {
-
     }
 
     //gestion disfraz
@@ -76,7 +75,11 @@ class GestionAdminController {
         if (cliente!=null){
             cliente.save(flush:true)
             redirect(action:"showCliente")
+<<<<<<< HEAD
         }      
+=======
+        } 
+>>>>>>> ed8100a2882d27a75585bd932bef472838636329
     }
     //Gestion de Administrador
     def showAdministrador(){
@@ -139,6 +142,12 @@ class GestionAdminController {
         [alquiler: gestionAdminService.unAlquiler(new Long(params.id))]
     }
 
+<<<<<<< HEAD
+=======
+    def cargar(){
+     }
+    
+>>>>>>> ed8100a2882d27a75585bd932bef472838636329
     //gestion catalogo
     def showCatalogo() {
         [listaCatalogo: gestionAdminService.listaCatalogo(),listaDisfraz: gestionAdminService.listaDisfraz()]
@@ -165,8 +174,13 @@ class GestionAdminController {
 
             catalogo.save(flush:true)
             redirect(action:"showCatalogo")
+<<<<<<< HEAD
         }}
     
+=======
+        }
+    }
+>>>>>>> ed8100a2882d27a75585bd932bef472838636329
     //Busqueda
     def busquedaAdministrador(){
         if(params.campo.toString()=="Nombre"){
@@ -202,4 +216,8 @@ class GestionAdminController {
         
     }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ed8100a2882d27a75585bd932bef472838636329

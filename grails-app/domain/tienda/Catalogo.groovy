@@ -6,8 +6,9 @@ class Catalogo {
     Disfraz disfraz
 
     static constraints = {
-    cantidad (blank: false, minSize:1)
-    precio (blank: false)
-    disfraz (blank: false)
+	    cantidad (blank: false, minSize:1)
+	    precio (blank: false)
+	    disfraz (blank: false)
+	}
 }
-}
+

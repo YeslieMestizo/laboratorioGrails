@@ -1,13 +1,15 @@
 <!doctype html>
 <html>
-    <head>
-        <meta name="layout" content="main"/>
-        <title>Tienda de Disfraces</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="au theme template">
-        <meta name="author" content="Hau Nguyen">
-        <meta name="keywords" content="au theme template">
+<head>
+    <meta name="layout" content="mainClient"/>
+    <!--<meta name="layout" content="main"/>-->
+    <asset:link rel="icon" href="logo.png" type="image/x-ico"/>
+    <title>Tienda de Disfraces</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
     <asset:stylesheet src="font-face.css"/>
     <asset:stylesheet src="css/font-face.css"/>
     <asset:stylesheet src="fontawesome.min.css"/>
@@ -73,14 +75,19 @@
                             <div class="welcome2-greeting">
                                 <h1 class="title-6">Hola
                                 <span>,</span> bienvenido a R A Y.c o m </h1>
+<<<<<<< HEAD
                             <p>La mejor tienda de disfraces, aqu&iacute; podr&aacute;s conseguir muy buenas opciones! :)</p>
+=======
+                            <p>La mejor tienda de disfraces, aqu&iacute; podr&aacute;s conseguir muy buenas opciones! :)</p>    
+                            </div>
+                            <form class="form-header form-header2" action="" method="post">
+                                <input class="au-input au-input--w435" type="text" name="search" placeholder="B&uacute;squedas">
+                                <button class="au-btn--submit" type="submit">
+                                    <i class="zmdi zmdi-search"></i>
+                                </button>
+                            </form>
+>>>>>>> ed8100a2882d27a75585bd932bef472838636329
                         </div>
-                        <form class="form-header form-header2" action="" method="post">
-                            <input class="au-input au-input--w435" type="text" name="search" placeholder="B&uacute;squedas">
-                            <button class="au-btn--submit" type="submit">
-                                <i class="zmdi zmdi-search"></i>
-                            </button>
-                        </form>
                     </div>
 
                 </div>
@@ -95,6 +102,7 @@
                     <div class="col-xl-3">
 
                     </div>
+<<<<<<< HEAD
                     <div class="col-xl-9">
                         <!-- PAGE CONTENT-->
                         <div class="row">
@@ -102,11 +110,22 @@
                                 <div class="copyright">
                                     <p>Copyright © 2018 RAY.com. All rights reserved.</p>
 
+=======
+                    
+                        <div class="col-xl-9">
+                            <!-- PAGE CONTENT-->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="copyright">
+                                            <p>Copyright © 2018 RAY.com. All rights reserved.</p>
+                                        </div>
+                                    </div>
+>>>>>>> ed8100a2882d27a75585bd932bef472838636329
                                 </div>
-                            </div>
                         </div>
                         </section>
                     </div>
+<<<<<<< HEAD
                     <script src="vendor/jquery-3.2.1.min.js"></script>
                     <script src="vendor/bootstrap-4.1/popper.min.js"></script>
                     <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
@@ -124,3 +143,29 @@
                     <script src="javascripts/main.js"></script>
                     </body>
                     </html>
+=======
+                </div>
+                    <!-- END PAGE CONTENT-->
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<script src="vendor/jquery-3.2.1.min.js"></script>
+<script src="vendor/bootstrap-4.1/popper.min.js"></script>
+<script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+<script src="vendor/slick/slick.min.js"></script>
+<script src="vendor/wow/wow.min.js"></script>
+<script src="vendor/animsition/animsition.min.js"></script>
+<script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+</script>
+<script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+<script src="vendor/counter-up/jquery.counterup.min.js"></script>
+<script src="vendor/circle-progress/circle-progress.min.js"></script>
+<script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="vendor/chartjs/Chart.bundle.min.js"></script>
+<script src="vendor/select2/select2.min.js"></script>
+<script src="javascripts/main.js"></script>
+</body>
+</html>
+>>>>>>> ed8100a2882d27a75585bd932bef472838636329

@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <meta name="layout" content="maindos"/>
+    <meta name="layout" content="mainClient"/>
     <title>Login</title>
 </head>
 <body>
@@ -12,7 +12,6 @@
       <h2>Login</h2>
       <g:form controller="login" action="login" method="post">
           
-
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <label for='usuario'>Ingrese su Usuario: </label>
