@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html  lang="en" class="no-js">
 <head>
     <title><g:layoutTitle default="TIENDA"/></title>
     <meta charset="UTF-8">
@@ -7,12 +7,8 @@
     <meta name="description" content="au theme template">
 	<meta name="author" content="Hau Nguyen">
 	<meta name="keywords" content="au theme template">
+
     <asset:link rel="icon" href="logo.png" type="image/x-ico"/>
-    <g:layoutHead/>
-    <!--<meta name="layout" content="main"/>-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <asset:stylesheet src="font-face.css"/>
     <asset:stylesheet src="css/font-face.css"/>
     <asset:stylesheet src="fontawesome.min.css"/>
     <asset:stylesheet src="vendor/font-awesome-4.7/css/font-awesome.min.css"/>
@@ -20,6 +16,7 @@
     <asset:stylesheet src="hamburgers.min.css"/>
     <asset:stylesheet src="vendor/font-awesome-5/css/fontawesome-all.min.css"/>
     <asset:stylesheet src="vendor/mdi-font/css/material-design-iconic-font.min.css"/>
+    <g:layoutHead/>
 </head>
 <body class="animsition">
     <div class="page-wrapper">
@@ -64,7 +61,7 @@
 <!---->
     <div class="page-container">
 			<!-- HEADER DESKTOP-->
-			<header class="header-desktop">
+			<!--<header class="header-desktop">
 				<div class="section__content section__content--p30">
 					<div class="container-fluid">
 						<div class="header-wrap">
@@ -77,7 +74,7 @@
 						</div>
 					</div>
 				</div>
-			</header>
+			</header>-->
 			<!-- END HEADER DESKTOP-->
 		</div>
 		<g:layoutBody/>
