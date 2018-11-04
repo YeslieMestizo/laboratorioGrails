@@ -14,8 +14,8 @@ class GestionAdminService {
     }
     //Gestion Disfraz
     void altaDisfraz(Map params) {
-    def disfraz = new Disfraz(params).save(flush:true)
-    println disfraz
+        def disfraz = new Disfraz(params).save(flush:true)
+        println disfraz
 
     }
     void eliminarDisfraz(Long id) {
@@ -106,18 +106,18 @@ class GestionAdminService {
     
     //busqueda
     List buscarAdminPorNombre(String descripcion) {
-          descripcion='%'+descripcion+'%'
-          return Administrador.findAllByNombreLike(descripcion)
+        descripcion='%'+descripcion+'%'
+        return Administrador.findAllByNombreLike(descripcion)
           
     }
     List buscarAdminPorApellido(String descripcion) {
-          descripcion='%'+descripcion+'%'
-          return Administrador.findAllByApellidoLike(descripcion)
+        descripcion='%'+descripcion+'%'
+        return Administrador.findAllByApellidoLike(descripcion)
           
     }
     List buscarAdminPorUsuario(String descripcion) {
         descripcion='%'+descripcion+'%'
-          return Administrador.findAllByUsuarioLike(descripcion)
+        return Administrador.findAllByUsuarioLike(descripcion)
           
     }
     List buscarDisfrazPorGenero(String descripcion) {
@@ -138,5 +138,25 @@ class GestionAdminService {
     List buscarDisfrazPorTipo(String id) {
         TipoDisfraz tipo = TipoDisfraz.findById(id)
         return Disfraz.findAllByTipo(tipo)
+    }
+    List buscarClientePorNombre(String descripcion) {
+        descripcion='%'+descripcion+'%'
+        return Cliente.findAllByNombreLike(descripcion)
+          
+    }
+    List buscarClientePorApellido(String descripcion) {
+        descripcion='%'+descripcion+'%'
+        return Cliente.findAllByApellidoLike(descripcion)
+          
+    }
+    List buscarClientePorUsuario(String descripcion) {
+        descripcion='%'+descripcion+'%'
+        return Cliente.findAllByUsuarioLike(descripcion)
+          
+    }
+    List buscarClientePorDireccion(String descripcion) {
+        descripcion='%'+descripcion+'%'
+        return Cliente.findAllByDireccionLike(descripcion)
+          
     }
 }

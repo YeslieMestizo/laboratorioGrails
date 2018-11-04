@@ -8,6 +8,13 @@
         <asset:stylesheet src="custom.css" />
     </head>
     <body>
+        <g:form action="busquedaCliente" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+            <g:select name="campo" from="${['Nombre','Apellido','Usuario','Direccion']}" class="form-control"/>
+            <input type="text" name="busqueda" class="form-control" placeholder="Busqueda por ...">
+        </div>
+        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>Buscar</button>
+        </g:form>
         <h1>Gesti&oacute;n de clientes</h1><br>
         <div class="table-responsive m-b-40">
             <div class="container">

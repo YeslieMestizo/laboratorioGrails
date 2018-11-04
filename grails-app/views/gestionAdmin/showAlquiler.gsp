@@ -21,7 +21,6 @@
                         <th>Precio</th>
                         <th>Estado</th>
                         <th></th>
-                        <th></th>
                     </tr>
                     <g:each in="${listado?}">
                     <tr class="success">
