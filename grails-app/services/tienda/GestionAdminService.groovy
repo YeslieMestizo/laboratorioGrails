@@ -13,21 +13,18 @@ class GestionAdminService {
         return tipo
     }
     //Gestion Disfraz
-    void altaDisfraz(Map params,File file) {
-    //def file = request.getFile('imagen')
-    def disfraz = new Disfraz(descriocion:params.descripcion,talle:params.talle,genero:params.genero,tipo:tipo,imagen:filen).save(flush:true)
-  //  def img = new Imagen(imagen:file,nombre:params.descripcion).save(flush:true)
-    //img.save(flush:true)
-    if (disfraz.hasErrors()) {
-        disfraz.errors.allErrors.each {
-            println it
-        }
-    }
+<<<<<<< HEAD
+ 
+=======
+    void altaDisfraz(Map params) {
+    def disfraz = new Disfraz(params).save(flush:true)
+    println disfraz
 
     }
+>>>>>>> e19e2553e3733b3d2c98f1d520df00a5f12ff16b
     void eliminarDisfraz(Long id) {
-      def disfraz = Disfraz.get(id)
-      disfraz.delete(flush: true)
+        def disfraz = Disfraz.get(id)
+        disfraz.delete(flush: true)
     }
     List listaDisfraz(){
         def disfraz = Disfraz.findAll()
@@ -42,8 +39,8 @@ class GestionAdminService {
         def cliente = new Cliente(params).save(flush:true)
     }
     void eliminarCliente(Long id) {
-      def cliente = Cliente.get(id)
-      cliente.delete(flush: true)
+        def cliente = Cliente.get(id)
+        cliente.delete(flush: true)
     }
     List listaCliente(){
         def cliente = Cliente.findAll()
@@ -58,8 +55,8 @@ class GestionAdminService {
         def administrador = new Administrador(params).save(flush:true)
     }
     void eliminarAdministrador(Long id) {
-      def administrador = Administrador.get(id)
-      administrador.delete(flush: true)
+        def administrador = Administrador.get(id)
+        administrador.delete(flush: true)
     }
     List listaAdministrador(){
         def administrador = Administrador.findAll()
@@ -74,8 +71,8 @@ class GestionAdminService {
         def tipoDisfraz = new TipoDisfraz(params).save(flush:true)
     }
     void eliminarTipoDisfraz(Long id) {
-      def tipoDisfraz = TipoDisfraz.get(id)
-      tipoDisfraz.delete(flush: true)
+        def tipoDisfraz = TipoDisfraz.get(id)
+        tipoDisfraz.delete(flush: true)
     }
     List listaTipoDisfraz(){
         def tipoDisfraz = TipoDisfraz.findAll()
@@ -94,6 +91,14 @@ class GestionAdminService {
         def alquiler = Alquiler.get(id)
         return alquiler
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+=======
+
+>>>>>>> e19e2553e3733b3d2c98f1d520df00a5f12ff16b
+>>>>>>> 349ccc9fff117a4b9f49b751eeb7cc0ea19327e0
     //gestion catalogo
     List listaCatalogo(){
         def catalogo = Catalogo.findAll()
@@ -110,4 +115,12 @@ class GestionAdminService {
         def catalogo = Catalogo.get(id)
         return catalogo
     }
+    
+    //busqueda
+    List buscarAdminPorNombre(String descripcion) {
+          descripcion='%'+descripcion+'%'
+          return Administrador.findAllByNombreLike(descripcion)
+          
+    }
+    
 }

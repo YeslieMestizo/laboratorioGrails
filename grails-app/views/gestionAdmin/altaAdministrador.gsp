@@ -34,8 +34,13 @@
                     <input type="text" class="form-control" id= "usuario" name="usuario" placeholder="usuario">
                 </div>
                 <div class="form-group">
+<<<<<<< HEAD
                     <label for="contrasena">Contraseña</label>
                     <input type="password" class="form-control" id= "contrasena" name="contrasena" placeholder="contrasena">
+=======
+                    <label for="password">Contrasena</label>
+                    <input type="password" class="form-control" id= "contrasena" name="password" placeholder="contrasena">
+>>>>>>> 349ccc9fff117a4b9f49b751eeb7cc0ea19327e0
                 </div>
                 <div class="form-group">
                     <label for="telefono">Tel&eacute;fono</label>

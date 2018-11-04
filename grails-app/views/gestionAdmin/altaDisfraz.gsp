@@ -1,7 +1,19 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html>
     <head>
         <meta name="layout" content="mainAdministrador"/>
+=======
+
+
+<html>
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+        <meta name="layout" content="mainadmin"/>
+>>>>>>> 349ccc9fff117a4b9f49b751eeb7cc0ea19327e0
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Nuevo disfraz</title>
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
@@ -14,18 +26,44 @@
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
             <div class="well well-sm">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> 349ccc9fff117a4b9f49b751eeb7cc0ea19327e0
                 <div class="panel-heading">
                     <h3 class="panel-title">
-                        <span class="glyphicon glyphicon-log-in"></span> 
+                        <span class="glyphicon glyphicon-log-in"></span>
                         Crear
                     </h3>
                 </div>
                 <div class="well well-sm">
-                    <g:form action="guardarAltaDisfraz" method="post">
+                    <!--<g:form action="guardarAltaDisfraz" method="post">-->
+                        <g:uploadForm action="guardarAltaDisfraz" >
                         <div class="form-group">
                             <label for="descripcion">Descripci&oacute;n</label>
                             <input type="text" class="form-control" id= "descripcion" name="descripcion" placeholder="Descripcion">
+
+
+                            <div class="form-group">
+                                <label for="genero">G&enero</label>
+                                <g:select name="genero" from="${['F','M']}" class="form-control"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="talle">Talle</label>
+                                <g:select name="talle" from="${['XS','S','M','L','XL','XXL']}" class="form-control"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="tipo">Tipo</label>
+                                <g:select from="${tipoList}" optionKey="id" optionValue="descripcion" name="tipo" class="form-control"/>
+                            </div>
+                            <!--<input type="submit" name="enviar" value="Guardar" class="btn btn-default" />-->
+
+                                <input type="file" name="myFile" /> </br>
+                                <input type="submit" value="Aceptar" />
+                            
                         </div>
+<<<<<<< HEAD
                         <div class="form-group">
                             <label for="genero">G&eacute;nero</label>
                             <g:select name="genero" from="${['F','M']}" class="form-control"/>
@@ -51,3 +89,64 @@
     <asset:javascript src="ie10-viewport-bug-workaround.js" />
 </body>
 </html>
+=======
+                        </g:uploadForm>
+                    <!--</g:form>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<asset:javascript src="bootstrap.min.js" />
+<asset:javascript src="jquery-1.11.3.min.js" />
+<asset:javascript src="holder.min.js" />
+<asset:javascript src="ie10-viewport-bug-workaround.js" />
+</body>
+</html>
+=======
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <span class="glyphicon glyphicon-log-in"></span>
+                    Crear
+                </h3>
+            </div>
+            <div class="well well-sm">
+
+                          <g:uploadForm action="guardarAltaDisfraz">
+                          <div class="form-group">
+                              <label for="descripcion">Descripci&oacute;n</label>
+                              <input type="text" class="form-control" id= "descripcion" name="descripcion" placeholder="Descripcion">
+                          </div>
+                          <div class="form-group">
+                              <label for="genero">Genero</label>
+                              <g:select name="genero" from="${['F','M']}" class="form-control"/>
+                          </div>
+                          <div class="form-group">
+                              <label for="talle">Talle</label>
+                              <g:select name="talle" from="${['XS','S','M','L','XL','XXL']}" class="form-control"/>
+                          </div>
+                          <div class="form-group">
+                              <label for="tipo">Tipo</label>
+                              <g:select from="${tipoList}" optionKey="id" optionValue="descripcion" name="tipo" class="form-control"/>
+                          </div>
+                          <div class="form-group">
+                            <label for="imagen">Seleccionar Imagen</label>
+                          <input type="file" name="myFile" /> </br>
+                          <input type="submit" value="Aceptar" />
+                          </g:uploadForm>
+                        </div>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+
+
+                        <asset:javascript src="bootstrap.min.js" />
+                        <asset:javascript src="jquery-1.11.3.min.js" />
+                        <asset:javascript src="holder.min.js" />
+                        <asset:javascript src="ie10-viewport-bug-workaround.js" />
+    </body>
+</html>
+>>>>>>> e19e2553e3733b3d2c98f1d520df00a5f12ff16b
+>>>>>>> 349ccc9fff117a4b9f49b751eeb7cc0ea19327e0
