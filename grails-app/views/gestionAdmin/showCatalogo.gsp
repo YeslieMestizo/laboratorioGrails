@@ -38,32 +38,6 @@
                         </tr>
                 </g:each>
             </table>
-            <div class="table-responsive m-b-40">
-                <table class="table table-borderless table-data3">
-                    <tr>
-                        <th>Codigo</th>
-                        <th>Descripcion</th>
-                        <th>Talle</th>
-                        <th>Genero</th>
-                        <th>Tipo</th>
-                        <th>Cantidad</th>
-                        <th>Precio Unitario</th>
-                    </tr>
-                    <g:each in="${listaCatalogo}">
-                        <tr>
-                            <td>${it.id}</td>
-                            <td>${it.disfraz.descripcion}</td>
-                            <td>${it.disfraz.talle}</td>
-                            <td>${it.disfraz.genero}</td>
-                            <td>${it.disfraz.tipo.descripcion}</td>
-                            <td>${it.cantidad}</td>
-                            <td>${it.precio}</td>
-                            <td><g:link action="editarDisfrazCatalogo" id="${it.id}">Editar</g:link></td>
-                            <td><g:link action="eliminarDisfrazCatalogo" id="${it.id}">Eliminar</g:link></td>
-                            </tr>
-                    </g:each>
-                </table>
-            </div>
         </div>
         <div class="col-sm-3"> 
             <g:if test="${catalogo}">
@@ -94,26 +68,26 @@
                     </g:form>
                 </div>
             </g:if>
-        </div>
+        </div><br><br>
         <div class="col-sm-9"> 
             <h2>Añadir Productos</h2>
             <table class="table table-borderless table-data3">
-                <tr>
-                    <th>Codigo</th>
-                    <th>Descripcion</th>
+                <tr class="info">
+                    <th>C&oacute;digo</th>
+                    <th>Descripci&oacute;n</th>
                     <th>Talle</th>
-                    <th>Genero</th>
+                    <th>G&eacute;nero</th>
                     <th>Tipo</th>
                     <th>Stock</th>
                 </tr>
                 <g:each in="${listaDisfraz}">
-                    <tr>
+                    <tr class="success">
                         <td>${it.id}</td>
                         <td>${it.descripcion}</td>
                         <td>${it.talle}</td>
                         <td>${it.genero}</td>
                         <td>${it.tipo.descripcion}</td>
-                        <td><g:link action="agregarDisfrazCatalogo" id="${it.id}">agregar</g:link></td>
+                        <td><g:link action="agregarDisfrazCatalogo" id="${it.id}" class="btn btn-info">agregar</g:link></td>
                         </tr>
                 </g:each>
             </table>
