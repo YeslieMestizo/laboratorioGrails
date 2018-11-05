@@ -5,13 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Gesti&oacute;n de Administrador</title>
     <asset:stylesheet src="bootstrap.min.css" />
-<<<<<<< HEAD
-    <asset:stylesheet src="custom.css" />  
-=======
+
     <asset:stylesheet src="custom.css" />
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
 </head>
 <body>
+    <g:link controller="gestionAdmin" action="altaAdministrador" class="glyphicon-plus btn btn-default">Agregar</g:link>
     <g:form action="busquedaAdministrador" class="navbar-form navbar-right" role="search">
         <div class="form-group">
             <g:select name="campo" from="${['Nombre','Apellido','Usuario']}" class="form-control"/>
@@ -20,10 +18,6 @@
         <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>Buscar</button>
     </g:form>
     <h1>Gesti&oacute;n de Administrador</h1>
-<<<<<<< HEAD
-
-=======
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
     <div class="table-responsive m-b-40">
             <div class="container-fluid">
                 <table class="table table-hover">
@@ -56,9 +50,6 @@
         <asset:javascript src="jquery-1.11.3.min.js" />
         <asset:javascript src="holder.min.js" />
         <asset:javascript src="ie10-viewport-bug-workaround.js" />
-<<<<<<< HEAD
 
-=======
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
 </body>
 </html>

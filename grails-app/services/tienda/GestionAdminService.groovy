@@ -15,15 +15,15 @@ class GestionAdminService {
     //Gestion Disfraz
     void altaDisfraz(Map params) {
         def disfraz = new Disfraz(params).save(flush:true)
-        println disfraz
-
     }
     void eliminarDisfraz(Long id) {
         def disfraz = Disfraz.get(id)
-        disfraz.delete(flush: true)
+        disfraz.estado = "inactivo"
+        disfraz.save(flush:true)
+        //disfraz.delete(flush: true)
     }
     List listaDisfraz(){
-        def disfraz = Disfraz.findAll()
+        def disfraz = Disfraz.findAllByEstado("activo")
         return disfraz
     }
     Disfraz unDisfraz(Long id){
@@ -121,13 +121,11 @@ class GestionAdminService {
           
     }
     List buscarDisfrazPorGenero(String descripcion) {
-        descripcion='%'+descripcion+'%'
-        return Disfraz.findAllByGeneroLike(descripcion)
+        return Disfraz.findAllByGenero(descripcion)
           
     }
     List buscarDisfrazPorTalle(String descripcion) {
-        descripcion='%'+descripcion+'%'
-        return Disfraz.findAllByTalleLike(descripcion)
+        return Disfraz.findAllByTalle(descripcion)
           
     }
     List buscarDisfrazPorDescripcion(String descripcion) {

@@ -2,24 +2,12 @@
 <html>
 <head>
     <meta name="layout" content="mainClient"/>
-    <title>Login</title>
+    <title>Login</title>    
+    <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
+    <asset:stylesheet src="bootstrap.min.css" />
+    <asset:stylesheet src="custom.css" />
 </head>
 <body>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    <div class="container">
-      <g:if test="${message}">
-      <div class="message" role="status">${message}</div>
-      </g:if>
-      <h2>Login</h2>
-      <g:form controller="login" action="login" method="post">
-
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <label for='usuario'>Ingrese su Usuario: </label>
-=======
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
   <div class="page-wrapper">
         <div class="page-content--bge5">
             <div class="container">
@@ -58,29 +46,13 @@
                         </div>
                     </div>
                 </div>
-<<<<<<< HEAD
             </div>
         </div>
-
-=======
->>>>>>> 2cb236f453e88e6f93bf2d9e982a6a5af59fdca0
-            </div>
-        </div>
-
-<<<<<<< HEAD
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <label for='password'>Ingrese su Contraseña:</label>
-            </div>
-            <input type="password" id="password" name="password" class="form-control" aria-label="Ingrese su contraseña" aria-describedby="inputGroup-sizing-default" required >
-          </div><br>
-          <input type="submit" value="Login" class="btn btn-default"/>
-      </g:form><br>
-      <g:link controller="registroCliente" action="registro" class="btn btn-default">Registro
-      </g:link>
-=======
->>>>>>> 2cb236f453e88e6f93bf2d9e982a6a5af59fdca0
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
     </div>
+    
+        <asset:javascript src="bootstrap.min.js" />
+    <asset:javascript src="jquery-1.11.3.min.js" />
+    <asset:javascript src="holder.min.js" />
+    <asset:javascript src="ie10-viewport-bug-workaround.js" />
 </body>
 </html>

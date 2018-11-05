@@ -42,6 +42,7 @@
                     <input type="text" class="form-control" id= "telefono" name="telefono" placeholder="telefono">
                 </div>
                 <input type="submit" name="enviar" value="Guardar" class="btn btn-default"/>
+                <a href="javascript:window.history.back();" class="btn btn-default">Cancelar</a>
                 </g:form>
             </div>
         </div>

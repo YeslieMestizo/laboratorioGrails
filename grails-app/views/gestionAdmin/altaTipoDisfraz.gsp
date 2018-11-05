@@ -24,7 +24,7 @@
                             <g:form action="guardarAltaTipoDisfraz" method="post">
                                 <div class="form-group">
                                         <label for="descripcion">Descripci&oacute;n</label>
-                                        <input type="text" class="form-control" name="descripcion..." placeholder="descripcion">
+                                        <input type="text" class="form-control" name="descripcion" placeholder="descripcion">
                                 </div>
                                 <input type="submit" name="enviar" value="Guardar" class="btn btn-default" />
                             </g:form>

@@ -15,7 +15,7 @@ class GestionAdminController {
     }
     def guardarAltaDisfraz() {
         def file = request.getFile('myFile')
-        def disfraz = new Disfraz(descripcion:params.descripcion,talle:params.talle,genero:params.genero,tipo:params.tipo,imagen:file).save(flush:true)
+        def disfraz = new Disfraz(descripcion:params.descripcion,talle:params.talle,genero:params.genero,tipo:params.tipo,imagen:file,estado:"activo").save(flush:true)
         disfraz.save(flush:true)
         if (disfraz.hasErrors()) {
             disfraz.errors.allErrors.each {
@@ -40,15 +40,19 @@ class GestionAdminController {
         redirect(action:"showDisfraz")
     }
     def editarDisfraz(Long id){
-        [disfraz: gestionAdminService.unDisfraz(id)]
+        [disfraz: gestionAdminService.unDisfraz(id),tipoList: gestionAdminService.listaTipo()]
     }
 
     def actualizarDisfraz(Long id){
+        def file = request.getFile('myFile')
         def disfraz = Disfraz.get(params.id)
-        disfraz.properties = params
+        disfraz.properties = [descripcion:params.descripcion,talle:params.talle,genero:params.genero,tipo:params.tipo,imagen:file]
         if (disfraz!=null){
             disfraz.save(flush:true)
             redirect(action:"showDisfraz")
+        }
+        else{
+            render(action:"editarDisfraz",model:[disfraz: gestionAdminService.unDisfraz(params.id),tipoList: gestionAdminService.listaTipo()])
         }
     }
     //Gestion de cliente
@@ -75,13 +79,9 @@ class GestionAdminController {
         if (cliente!=null){
             cliente.save(flush:true)
             redirect(action:"showCliente")
-<<<<<<< HEAD
+
         }      
     }
-=======
-        }
-        }
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
     //Gestion de Administrador
     def showAdministrador(){
         [listado: gestionAdminService.listaAdministrador()]
@@ -114,7 +114,7 @@ class GestionAdminController {
         [listado: gestionAdminService.listaTipoDisfraz()]
     }
     def altaTipoDisfraz(){
-        [tipoDisfraz: new TipoDisfraz()]
+        render(view:"showTipoDisfraz",model:[listado: gestionAdminService.listaTipoDisfraz(),tipoDisfraz: new TipoDisfraz()])
     }
     def guardarAltaTipoDisfraz(  ) {
         gestionAdminService.altaTipoDisfraz(params)
@@ -125,7 +125,7 @@ class GestionAdminController {
         redirect(action:"showTipoDisfraz")
     }
     def editarTipoDisfraz(){
-        [tipoDisfraz: gestionAdminService.unTipoDisfraz(new Long(params.id))]
+        render(view:"showTipoDisfraz",model:[listado: gestionAdminService.listaTipoDisfraz(),tipoDisfrazE: gestionAdminService.unTipoDisfraz(new Long(params.id))])
     }
     def actualizarTipoDisfraz(Long id){
         def tipo = TipoDisfraz.get(params.id)
@@ -143,11 +143,6 @@ class GestionAdminController {
         [alquiler: gestionAdminService.unAlquiler(new Long(params.id))]
     }
 
-<<<<<<< HEAD
-=======
-    def cargar(){
-     }
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
     //gestion catalogo
     def showCatalogo() {
         [listaCatalogo: gestionAdminService.listaCatalogo(),listaDisfraz: gestionAdminService.listaDisfraz()]
@@ -202,7 +197,6 @@ class GestionAdminController {
                 if(params.descripcion != null){
                     render(view:"showDisfraz",model:[listado: gestionAdminService.buscarDisfrazPorDescripcion(params.descripcion),tipoList: gestionAdminService.listaTipo()])
                 }else{
-                    println campo
                     render(view:"showDisfraz",model:[listado: gestionAdminService.buscarDisfrazPorTipo(campo),tipoList: gestionAdminService.listaTipo()])
                 }
 
@@ -211,8 +205,7 @@ class GestionAdminController {
 
     }
     }
-    }
-<<<<<<< HEAD
+    
     def busquedaCliente(){
         if(params.campo.toString()=="Nombre"){
             render(view:"showCliente",model:[listado: gestionAdminService.buscarClientePorNombre(params.busqueda)])
@@ -231,5 +224,3 @@ class GestionAdminController {
         }        
     }
 }
-=======
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
