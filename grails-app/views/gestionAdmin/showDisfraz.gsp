@@ -21,42 +21,42 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-2">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Talle <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
+                <div class="col-sm-2">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Talle <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
                             <li><g:link action="busquedaDisfraz" params="[campo:'XS']" >XS</g:link></li>
                             <li><g:link action="busquedaDisfraz" params="[campo:'S']" >S</g:link></li>
                             <li><g:link action="busquedaDisfraz" params="[campo:'M']" >M</g:link></li>
                             <li><g:link action="busquedaDisfraz" params="[campo:'L']" >L</g:link></li>
                             <li><g:link action="busquedaDisfraz" params="[campo:'XL']" >XL</g:link></li>
                             <li><g:link action="busquedaDisfraz" params="[campo:'XXL']" >XXL</g:link></li>
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Tipo <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <g:each in="${tipoList}">
-                            <li><g:link action="busquedaDisfraz" params="[campo: "${it.id}"]">${it.descripcion}</g:link></li>
-                        </g:each>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-5">
-                <g:form action="busquedaDisfraz" class="navbar-form navbar-right" role="search">
-                    <input type="text" name="descripcion" class="form-control" placeholder="Buscar por descripci&oacute;n...">
-                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>Buscar</button>
-                </g:form>
-            </div>
-        </div>
+                            <div class="col-sm-2">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Tipo <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                    <g:each in="${tipoList}">
+                                        <li><g:link action="busquedaDisfraz" params="[campo: "${it.id}"]">${it.descripcion}</g:link></li>
+                                    </g:each>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <g:form action="busquedaDisfraz" class="navbar-form navbar-right" role="search">
+                                <input type="text" name="descripcion" class="form-control" placeholder="Buscar por descripci&oacute;n..."">
+                                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>Buscar</button>
+                            </g:form>
+                        </div>
+                    </div>
         <h1>Gesti&oacute;n de Disfraces</h1>
-        <div class="table-responsive m-b-10">
+        <div class="table-responsive m-b-40">
             <div class="container">
                 <table class="table table-hover">
                     <tr class="info">

@@ -59,27 +59,31 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="welcome2-inner m-t-60">
-                                <div class="welcome2-greeting">
-                                    <h1 class="title-6">Hola
-                                    <span>,</span> bienvenido a R A Y.c o m </h1>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="welcome2-inner m-t-60">
+                                    <div class="welcome2-greeting">
+                                        <h1 class="title-6">Hola
+                                        , bienvenido a R A Y.c o m </h1>
                                     <p>La mejor tienda de disfraces, aqu&iacute; podr&aacute;s conseguir muy buenas opciones! :)</p>
-                            </div>
-                            <div>
+                                </div>
+                                <div>
                                 <g:link controller="Login" class="btn btn-info btn-lg">Ingresar </g:link>
                             </div>
                             <div>                                
                                 <g:link controller="RegistroCliente" class="btn btn-info btn-lg"> Registrarse</g:link>
                             </div>
                         </div>
+
                     </div>
-            </section>
-        </div>
-        <div class="jumbotron feature">
-            <div class="container">
+                </div>
+
+            </div>
+        </section>
+            </div>
+            <div class="jumbotron feature">
+        <div class="container">
 
             <div id="feature-carousel" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -115,39 +119,6 @@
                 </div>
             </div>
 
-            <div id="feature-carousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#feature-carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#feature-carousel" data-slide-to="1"></li>
-                    <li data-target="#feature-carousel" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <a href="#">
-                            <asset:image src="portada1.png" alt="Portada1"/>
-                        </a>
-                        <div class="carousel-caption">
-                            <h3>Disfraces De Zombies</h3>
-                            <p><a class="btn btn-primary" href="#">Ver Más</a></p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <asset:image src="portada2.png" alt="Portada2"/>
-                        </a>
-                        <div class="carousel-caption">
-                            <h3>Disfraces De Payasos</h3>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <asset:image src="portada3.png" alt="Portada3"/>
-                        </a>
-                        <div class="carousel-caption">
-                        <h3>Disfraces de Vampiros</h3>
-                    </div>
-                </div>
-            </div>
                     <a class="left carousel-control" href="#feature-carousel" role="button" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
@@ -158,7 +129,6 @@
                     </a>
         </div>
     </header>
-
     <div class="page-container3">
         <section>
             <div class="container">
@@ -174,25 +144,25 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                      </div>
+                  </div>
+                  </div>
+                    </section>
                 </div>
-            </div>
-        </section>
-    </div>
-                    <script src="vendor/jquery-3.2.1.min.js"></script>
-                    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
-                    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
-                    <script src="vendor/slick/slick.min.js"></script>
-                    <script src="vendor/wow/wow.min.js"></script>
-                    <script src="vendor/animsition/animsition.min.js"></script>
-                    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
-                    </script>
-                    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
-                    <script src="vendor/counter-up/jquery.counterup.min.js"></script>
-                    <script src="vendor/circle-progress/circle-progress.min.js"></script>
-                    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-                    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
-                    <script src="vendor/select2/select2.min.js"></script>
-                    <script src="javascripts/main.js"></script>
-                    </body>
-                    </html>
+                <script src="vendor/jquery-3.2.1.min.js"></script>
+                <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+                <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+                <script src="vendor/slick/slick.min.js"></script>
+                <script src="vendor/wow/wow.min.js"></script>
+                <script src="vendor/animsition/animsition.min.js"></script>
+                <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+                </script>
+                <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+                <script src="vendor/counter-up/jquery.counterup.min.js"></script>
+                <script src="vendor/circle-progress/circle-progress.min.js"></script>
+                <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+                <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+                <script src="vendor/select2/select2.min.js"></script>
+                <script src="javascripts/main.js"></script>
+    </body>
+</html>

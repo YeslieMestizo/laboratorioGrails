@@ -8,6 +8,12 @@
         <asset:stylesheet src="custom.css" />
     </head>
     <body>
+      <div class="col-sm-6">
+          <g:form action="busquedaTipoDisfraz" class="navbar-form navbar-right" role="search">
+              <input type="text" name="descripcion" class="form-control" placeholder="Buscar por descripci&oacute;n...">
+              <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>Buscar</button>
+          </g:form>
+      </div>
         <h1>Gesti&oacute;n de Tipo de Disfraz</h1><br>
         <div class="table-responsive m-b-40">
             <div class="container">
@@ -28,9 +34,9 @@
                     </g:each>
                 </table>
             </div>
-        
-            
-        <asset:javascript src="bootstrap.min.js" />    
+
+
+        <asset:javascript src="bootstrap.min.js" />
         <asset:javascript src="jquery-1.11.3.min.js" />
         <asset:javascript src="holder.min.js" />
         <asset:javascript src="ie10-viewport-bug-workaround.js" />

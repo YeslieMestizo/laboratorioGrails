@@ -58,7 +58,7 @@ class GestionAdminController {
     def altaCliente(){
         [cliente: new Cliente()]
     }
-    def guardarAltaCliente(  ) {
+    def guardarAltaCliente( ) {
         gestionAdminService.altaCliente(params)
         redirect(action:"showCliente")
     }
@@ -75,7 +75,7 @@ class GestionAdminController {
         if (cliente!=null){
             cliente.save(flush:true)
             redirect(action:"showCliente")
-        }      
+        }
     }
     //Gestion de Administrador
     def showAdministrador(){
@@ -84,7 +84,7 @@ class GestionAdminController {
     def altaAdministrador(){
         [administrador: new Administrador()]
     }
-    def guardarAltaAdministrador(  ) {
+    def guardarAltaAdministrador() {
         gestionAdminService.altaAdministrador(params)
         redirect(action:"showAdministrador")
     }
@@ -137,6 +137,7 @@ class GestionAdminController {
     def detalleAlquiler(){
         [alquiler: gestionAdminService.unAlquiler(new Long(params.id))]
     }
+
     //gestion catalogo
     def showCatalogo() {
         [listaCatalogo: gestionAdminService.listaCatalogo(),listaDisfraz: gestionAdminService.listaDisfraz()]
@@ -200,14 +201,24 @@ class GestionAdminController {
 
     }
     }
-    
+
+    def busquedaTipoDisfraz(String campo){
+                if(params.descripcion != null){
+                    render(view:"showTipoDisfraz",model:[listado: gestionAdminService.buscarTipoDisfrazPorDescripcion(params.descripcion),tipoList: gestionAdminService.listaTipo()])
+                }else{
+                    println campo
+                    render(view:"showTipoDisfraz",model:[listado: gestionAdminService.buscarTipoDisfrazPorTipo(campo),tipoList: gestionAdminService.listaTipo()])
+                }
+    }
+
+
     def busquedaCliente(){
         if(params.campo.toString()=="Nombre"){
             render(view:"showCliente",model:[listado: gestionAdminService.buscarClientePorNombre(params.busqueda)])
         }else{
             if(params.campo.toString()=="Apellido"){
                 render(view:"showCliente",model:[listado: gestionAdminService.buscarClientePorApellido(params.busqueda)])
-                
+
             }else{
                 if(params.campo.toString()=="Usuario"){
                     render(view:"showCliente",model:[listado: gestionAdminService.buscarClientePorUsuario(params.busqueda)])
@@ -216,6 +227,6 @@ class GestionAdminController {
                     render(view:"showCliente",model:[listado: gestionAdminService.buscarClientePorDireccion(params.busqueda)])
                 }
             }
-        }        
+        }
     }
 }
