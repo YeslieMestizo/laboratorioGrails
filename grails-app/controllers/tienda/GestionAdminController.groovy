@@ -79,12 +79,9 @@ class GestionAdminController {
         if (cliente!=null){
             cliente.save(flush:true)
             redirect(action:"showCliente")
-<<<<<<< HEAD
 
-        }      
-=======
-        }
->>>>>>> 5d210f3eecc12834c091d5cfe36019ead3c8dc3e
+
+        }     
     }
     //Gestion de Administrador
     def showAdministrador(){
@@ -193,37 +190,33 @@ class GestionAdminController {
             render(view:"showDisfraz",model:[listado: gestionAdminService.buscarDisfrazPorGenero(campo),tipoList: gestionAdminService.listaTipo()])
         }else{
             if(campo=="Mas"){
-            render(view:"showDisfraz",model:[listado: gestionAdminService.buscarDisfrazPorGenero('M'),tipoList: gestionAdminService.listaTipo()])
-        }else{
-            if(campo=="XS" || campo=="S" || campo=="M" ||campo=="L" || campo=="XL" ||campo=="XXL"){
-                render(view:"showDisfraz",model:[listado: gestionAdminService.buscarDisfrazPorTalle(campo),tipoList: gestionAdminService.listaTipo()])
+                render(view:"showDisfraz",model:[listado: gestionAdminService.buscarDisfrazPorGenero('M'),tipoList: gestionAdminService.listaTipo()])
             }else{
-                if(params.descripcion != null){
-                    render(view:"showDisfraz",model:[listado: gestionAdminService.buscarDisfrazPorDescripcion(params.descripcion),tipoList: gestionAdminService.listaTipo()])
+                if(campo=="XS" || campo=="S" || campo=="M" ||campo=="L" || campo=="XL" ||campo=="XXL"){
+                    render(view:"showDisfraz",model:[listado: gestionAdminService.buscarDisfrazPorTalle(campo),tipoList: gestionAdminService.listaTipo()])
                 }else{
-                    render(view:"showDisfraz",model:[listado: gestionAdminService.buscarDisfrazPorTipo(campo),tipoList: gestionAdminService.listaTipo()])
+                    if(params.descripcion != null){
+                        render(view:"showDisfraz",model:[listado: gestionAdminService.buscarDisfrazPorDescripcion(params.descripcion),tipoList: gestionAdminService.listaTipo()])
+                    }else{
+                        render(view:"showDisfraz",model:[listado: gestionAdminService.buscarDisfrazPorTipo(campo),tipoList: gestionAdminService.listaTipo()])
+                    }
+
                 }
-
             }
-        }
 
+        }
     }
-    }
-<<<<<<< HEAD
-    
-=======
 
     def busquedaTipoDisfraz(String campo){
-                if(params.descripcion != null){
-                    render(view:"showTipoDisfraz",model:[listado: gestionAdminService.buscarTipoDisfrazPorDescripcion(params.descripcion),tipoList: gestionAdminService.listaTipo()])
-                }else{
-                    println campo
-                    render(view:"showTipoDisfraz",model:[listado: gestionAdminService.buscarTipoDisfrazPorTipo(campo),tipoList: gestionAdminService.listaTipo()])
-                }
+        if(params.descripcion != null){
+            render(view:"showTipoDisfraz",model:[listado: gestionAdminService.buscarTipoDisfrazPorDescripcion(params.descripcion),tipoList: gestionAdminService.listaTipo()])
+        }else{
+            println campo
+            render(view:"showTipoDisfraz",model:[listado: gestionAdminService.buscarTipoDisfrazPorTipo(campo),tipoList: gestionAdminService.listaTipo()])
+        }
     }
 
 
->>>>>>> 5d210f3eecc12834c091d5cfe36019ead3c8dc3e
     def busquedaCliente(){
         if(params.campo.toString()=="Nombre"){
             render(view:"showCliente",model:[listado: gestionAdminService.buscarClientePorNombre(params.busqueda)])
@@ -241,8 +234,4 @@ class GestionAdminController {
             }
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 5d210f3eecc12834c091d5cfe36019ead3c8dc3e

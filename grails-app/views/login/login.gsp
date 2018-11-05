@@ -2,17 +2,11 @@
 <html>
 <head>
     <meta name="layout" content="mainClient"/>
-<<<<<<< HEAD
     <title>Login</title>    
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
     <asset:stylesheet src="bootstrap.min.css" />
     <asset:stylesheet src="custom.css" />
-=======
-    <title>Login</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <asset:stylesheet src="bootstrap.min.css"/>
-    <asset:stylesheet src="custom.css"/>
->>>>>>> 5d210f3eecc12834c091d5cfe36019ead3c8dc3e
+
 </head>
 <body>
   <div class="page-wrapper">
@@ -51,13 +45,6 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 941867f59db73fc6d77d736de0176b7905c91746
->>>>>>> 5d210f3eecc12834c091d5cfe36019ead3c8dc3e
     </div>
     
         <asset:javascript src="bootstrap.min.js" />

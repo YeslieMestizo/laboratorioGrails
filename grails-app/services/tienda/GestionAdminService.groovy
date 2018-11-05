@@ -14,34 +14,17 @@ class GestionAdminService {
     }
     //Gestion Disfraz
     void altaDisfraz(Map params) {
-<<<<<<< HEAD
         def disfraz = new Disfraz(params).save(flush:true)
-    }
-    void eliminarDisfraz(Long id) {
-        def disfraz = Disfraz.get(id)
-        disfraz.estado = "inactivo"
-        disfraz.save(flush:true)
-        //disfraz.delete(flush: true)
     }
     List listaDisfraz(){
         def disfraz = Disfraz.findAllByEstado("activo")
-=======
-        def disfraz = new Disfraz(params)
-        disfraz.estado='activo'
-        disfraz.save(flush:true)
-        println disfraz
-
+        return disfraz
     }
     void eliminarDisfraz(Long id) {
         def disfraz = Disfraz.get(id)
         disfraz.estado='inactivo'
         disfraz.save()
         //disfraz.delete(flush: true)
-    }
-    List listaDisfraz(){
-        def disfraz = Disfraz.findAllByEstadoNotEqual("inactivo")
->>>>>>> 5d210f3eecc12834c091d5cfe36019ead3c8dc3e
-        return disfraz
     }
     Disfraz unDisfraz(Long id){
         def disfraz = Disfraz.get(id)
@@ -121,7 +104,7 @@ class GestionAdminService {
         return catalogo
     }
 
-    //busqueda
+    //busqueda Administrador
     List buscarAdminPorNombre(String descripcion) {
         descripcion='%'+descripcion+'%'
         return Administrador.findAllByNombreLike(descripcion)
@@ -137,31 +120,21 @@ class GestionAdminService {
         return Administrador.findAllByUsuarioLike(descripcion)
 
     }
+    //busqueda DISFRAZ
     List buscarDisfrazPorGenero(String descripcion) {
-<<<<<<< HEAD
         return Disfraz.findAllByGenero(descripcion)
           
     }
     List buscarDisfrazPorTalle(String descripcion) {
         return Disfraz.findAllByTalle(descripcion)
           
-=======
-        descripcion='%'+descripcion+'%'
-        return Disfraz.findAllByGeneroLike(descripcion)
-
-    }
-    List buscarDisfrazPorTalle(String descripcion) {
-        descripcion='%'+descripcion+'%'
-        return Disfraz.findAllByTalleLike(descripcion)
-
->>>>>>> 5d210f3eecc12834c091d5cfe36019ead3c8dc3e
     }
     List buscarDisfrazPorDescripcion(String descripcion) {
         descripcion='%'+descripcion+'%'
         return Disfraz.findAllByDescripcionLike(descripcion)
 
     }
-
+    //busqueda TIPO DISFRAZ
     List buscarTipoDisfrazPorDescripcion(String descripcion) {
         descripcion='%'+descripcion+'%'
         return TipoDisfraz.findAllByDescripcionLike(descripcion)
@@ -172,6 +145,8 @@ class GestionAdminService {
         TipoDisfraz tipo = TipoDisfraz.findById(id)
         return Disfraz.findAllByTipo(tipo)
     }
+    
+    //busqueda Cliente
     List buscarClientePorNombre(String descripcion) {
         descripcion='%'+descripcion+'%'
         return Cliente.findAllByNombreLike(descripcion)
@@ -190,6 +165,5 @@ class GestionAdminService {
     List buscarClientePorDireccion(String descripcion) {
         descripcion='%'+descripcion+'%'
         return Cliente.findAllByDireccionLike(descripcion)
-
     }
 }

@@ -5,12 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Gesti&oacute;n de Administrador</title>
     <asset:stylesheet src="bootstrap.min.css" />
-
     <asset:stylesheet src="custom.css" />
-<<<<<<< HEAD
-=======
->>>>>>> 941867f59db73fc6d77d736de0176b7905c91746
->>>>>>> 5d210f3eecc12834c091d5cfe36019ead3c8dc3e
 </head>
 <body>
     <g:link controller="gestionAdmin" action="altaAdministrador" class="glyphicon-plus btn btn-default">Agregar</g:link>
@@ -54,9 +49,6 @@
         <asset:javascript src="jquery-1.11.3.min.js" />
         <asset:javascript src="holder.min.js" />
         <asset:javascript src="ie10-viewport-bug-workaround.js" />
-<<<<<<< HEAD
 
-=======
->>>>>>> 5d210f3eecc12834c091d5cfe36019ead3c8dc3e
 </body>
 </html>
