@@ -2,10 +2,11 @@
 <html>
 <head>
     <meta name="layout" content="mainClient"/>
-    <title>Login</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <asset:stylesheet src="bootstrap.min.css"/>
-    <asset:stylesheet src="custom.css"/>
+    <title>Login</title>    
+    <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
+    <asset:stylesheet src="bootstrap.min.css" />
+    <asset:stylesheet src="custom.css" />
+
 </head>
 <body>
   <div class="page-wrapper">
@@ -14,6 +15,9 @@
                 <div class="login-wrap">
                     <div class="login-content">
                         <div class="login-logo">
+                          <g:if test="${message}">
+                            <div class="message" role="status">${message}</div>
+                          </g:if>
                             L O G I N
                         </div>
                         <div class="login-form">
@@ -41,10 +45,11 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 941867f59db73fc6d77d736de0176b7905c91746
     </div>
+    
+        <asset:javascript src="bootstrap.min.js" />
+    <asset:javascript src="jquery-1.11.3.min.js" />
+    <asset:javascript src="holder.min.js" />
+    <asset:javascript src="ie10-viewport-bug-workaround.js" />
 </body>
 </html>

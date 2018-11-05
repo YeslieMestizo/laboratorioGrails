@@ -9,8 +9,9 @@ class RegistroClienteController {
           c.errors.rejectValue("password", "cliente.password.dontmatch")
           return [cliente:c]
         }
-        else if(c.save()) {
-          session.cliente = c
+        else if(c.save(flush:true)) {
+            println c.password
+          //session.cliente = c
             redirect(controller:"Login", action:"index")
         }
         else {

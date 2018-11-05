@@ -46,7 +46,7 @@
               <g:each in="${listaCatalogo}">
               <div class="col-md-4 portfolio-item">
                 <h3>
-                    <a href="#">${it.disfraz.tipo.descripcion}</a>
+                    <a href="#">${it.disfraz.tipo.descripcion.toUpperCase ()}</a>
                 </h3>
                     <img  src=${createLink(controller:"GestionCliente", action:"verImagen", id:"${it.disfraz.id}")} width=’300′ />
                       <p>${it.disfraz.descripcion}</p>

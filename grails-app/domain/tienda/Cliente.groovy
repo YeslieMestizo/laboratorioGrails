@@ -1,6 +1,9 @@
 package tienda
+import java.security.MessageDigest
 
-class Cliente {
+
+class Cliente implements Serializable{
+
     String nombre
     String apellido
     String usuario
@@ -9,10 +12,11 @@ class Cliente {
     String direccion
     String estado
 
+
     static constraints = {
-    	nombre (blank:false, maxSize:50)
+    	  nombre (blank:false, maxSize:50)
         apellido (blank:false, mazSize:50)
-        usuario (unique:true)
+        usuario (blank:false, unique:true)
         password (blank:false)
         telefono (blank:false)
         direccion (blank:false, maxSize:500)

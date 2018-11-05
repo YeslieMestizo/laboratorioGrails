@@ -14,23 +14,19 @@ class LoginController {
         def u = Cliente.findByUsuario(params.usuario)
         def a = Administrador.findByUsuario(params.usuario)
         if(u){
-            if (u.password == u.password) {
+            if (u.password == params.password){
                 session.usuario = u
-                
                 redirect(controller:"GestionCliente", action:"index")
-
             }else{
-            redirect(controller:"gestionCliente", action:"index")
+            render(view: "login", model: [message: "Constrase\u00f1a Incorrecta"])
             }
         }else{
             if(a){
-                if(a.password == a.password){
+                if(a.password == params.password){
                     session.usuario = a
-
-                    redirect(controller:"gestionAdmin", action:"index")
-
+                    redirect(controller:"GestionAdmin", action:"index")
                 }else{
-                    render(view: "login", model: [message: "Constraseña Incorrecta"])
+                    render(view: "login", model: [message: "Constrase\u00f1a Incorrecta"])
                 }
             }else{
                 render(view: "login", model: [message: "No existe el usuario ingresado"])
@@ -42,4 +38,5 @@ class LoginController {
         session.usuario=null
         render(view: "/index")
     }
+
 }
