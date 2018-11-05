@@ -27,7 +27,7 @@ class GestionAdminService {
         //disfraz.delete(flush: true)
     }
     List listaDisfraz(){
-        def disfraz = Disfraz.findAllByEstadoNotEqual("inactivo")
+        def disfraz = Disfraz.findAll()
         return disfraz
     }
     Disfraz unDisfraz(Long id){

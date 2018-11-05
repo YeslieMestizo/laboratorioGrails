@@ -8,7 +8,10 @@
         <asset:stylesheet src="custom.css" />
     </head>
     <body>
-        <h1>Gesti&oacute;n de Alquiler</h1><br>
+        <div class="container">
+            <h1>Gesti&oacute;n de Alquiler</h1><br>
+        </div>
+        
         <div class="table-responsive m-b-40">
             <div class="container">
                 <table class="table table-hover">

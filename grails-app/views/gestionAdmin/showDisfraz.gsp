@@ -8,7 +8,7 @@
         <asset:stylesheet src="custom.css" />
 </head>
 <body>
-    <div class="form-group">
+    <div class="container">
         <div class="row">
             <div class="col-sm-2">
                 <div class="btn-group">

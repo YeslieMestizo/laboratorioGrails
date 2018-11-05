@@ -1,5 +1,7 @@
 package tienda
 
+
+
 class Administrador {
     String nombre
     String apellido

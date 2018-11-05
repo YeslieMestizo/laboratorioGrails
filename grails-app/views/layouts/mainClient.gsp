@@ -1,17 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!--
-    
-    <asset:link rel="icon" href="logo.png" type="image/x-ico"/>
-    <asset:stylesheet src="css/font-face.css"/>
-    <asset:stylesheet src="fontawesome.min.css"/>
-    <asset:stylesheet src="vendor/font-awesome-4.7/css/font-awesome.min.css"/>
-    <asset:stylesheet src="theme.css"/>
-    <asset:stylesheet src="hamburgers.min.css"/>
-    <asset:stylesheet src="vendor/font-awesome-5/css/fontawesome-all.min.css"/>
-    <asset:stylesheet src="vendor/mdi-font/css/material-design-iconic-font.min.css"/>
-    <g:layoutHead/>-->
     <title><g:layoutTitle default="TIENDA"/></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
