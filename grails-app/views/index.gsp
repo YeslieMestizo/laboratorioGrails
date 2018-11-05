@@ -67,7 +67,6 @@
                                 </div>
                             </div>
                         </div>
-<<<<<<< HEAD
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="welcome2-inner m-t-60">
@@ -83,33 +82,10 @@
                                     </button>
                                 </form>
                             </div>
-=======
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="welcome2-inner m-t-60">
-                                <div class="welcome2-greeting">
-                                    <h1 class="title-6">Hola
-                                    <span>,</span> bienvenido a R A Y.c o m </h1>
-                                    <p>La mejor tienda de disfraces, aqu&iacute; podr&aacute;s conseguir muy buenas opciones! :)</p>
-                            </div>
-                            <form class="form-header form-header2" action="" method="post">
-                                <input class="au-input au-input--w435" type="text" name="search" placeholder="B&uacute;squedas">
-                                <button class="au-btn--submit" type="submit">
-                                    <i class="zmdi zmdi-search"></i>
-                                </button>
-                            </form>
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
-                        </div>
 
                     </div>
                 </div>
-<<<<<<< HEAD
-            </section>
-        </div>
-        <div class="jumbotron feature">
-            <div class="container">
-=======
+
             </div>
         </section>
             </div>
@@ -149,42 +125,6 @@
                 <h3>Disfraces de Vampiros</h3>
               </div>
             </div>
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
-
-                <div id="feature-carousel" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#feature-carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#feature-carousel" data-slide-to="1"></li>
-                        <li data-target="#feature-carousel" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <a href="#">
-                                <asset:image src="portada1.png" alt="Portada1"/>
-                            </a>
-                            <div class="carousel-caption">
-                                <h3>Disfraces De Zombies</h3>
-                                <p><a class="btn btn-primary" href="#">Ver Más</a></p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <a href="#">
-                                <asset:image src="portada2.png" alt="Portada2"/>
-                            </a>
-                            <div class="carousel-caption">
-                                <h3>Disfraces De Payasos</h3>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <a href="#">
-                                <asset:image src="portada3.png" alt="Portada3"/>
-                            </a>
-                            <div class="carousel-caption">
-                                <h3>Disfraces de Vampiros</h3>
-                            </div>
-                        </div>
-
-<<<<<<< HEAD
                     </div>
                     <a class="left carousel-control" href="#feature-carousel" role="button" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -199,17 +139,11 @@
             </div>
         </div>
     </header>
-=======
-        </div>
-      </div>
-        </header>
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
     <div class="page-container3">
         <section>
             <div class="container">
                 <div class="row">
                     <div class="col-xl-3">
-
                     </div>
                     <div class="col-xl-9">
                         <!-- PAGE CONTENT-->
@@ -217,17 +151,12 @@
                             <div class="col-md-12">
                                 <div class="copyright">
                                     <p>Copyright © 2018 RAY.com. All rights reserved.</p>
-
-<<<<<<< HEAD
-=======
-                                        </div>
-                                    </div>
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
                                 </div>
                             </div>
                         </div>
-                    </div>
-<<<<<<< HEAD
+                      </div>
+                  </div>
+                  </div>
                     </section>
                 </div>
                 <script src="vendor/jquery-3.2.1.min.js"></script>
@@ -247,22 +176,3 @@
                 <script src="javascripts/main.js"></script>
                 </body>
                 </html>
-=======
-                    <script src="vendor/jquery-3.2.1.min.js"></script>
-                    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
-                    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
-                    <script src="vendor/slick/slick.min.js"></script>
-                    <script src="vendor/wow/wow.min.js"></script>
-                    <script src="vendor/animsition/animsition.min.js"></script>
-                    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
-                    </script>
-                    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
-                    <script src="vendor/counter-up/jquery.counterup.min.js"></script>
-                    <script src="vendor/circle-progress/circle-progress.min.js"></script>
-                    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-                    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
-                    <script src="vendor/select2/select2.min.js"></script>
-                    <script src="javascripts/main.js"></script>
-                    </body>
-                    </html>
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1

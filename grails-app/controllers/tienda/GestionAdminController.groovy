@@ -75,13 +75,8 @@ class GestionAdminController {
         if (cliente!=null){
             cliente.save(flush:true)
             redirect(action:"showCliente")
-<<<<<<< HEAD
-        }      
+        }
     }
-=======
-        }
-        }
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
     //Gestion de Administrador
     def showAdministrador(){
         [listado: gestionAdminService.listaAdministrador()]
@@ -143,11 +138,8 @@ class GestionAdminController {
         [alquiler: gestionAdminService.unAlquiler(new Long(params.id))]
     }
 
-<<<<<<< HEAD
-=======
     def cargar(){
      }
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
     //gestion catalogo
     def showCatalogo() {
         [listaCatalogo: gestionAdminService.listaCatalogo(),listaDisfraz: gestionAdminService.listaDisfraz()]
@@ -211,15 +203,23 @@ class GestionAdminController {
 
     }
     }
+
+    def busquedaTipoDisfraz(String campo){
+                if(params.descripcion != null){
+                    render(view:"showTipoDisfraz",model:[listado: gestionAdminService.buscarTipoDisfrazPorDescripcion(params.descripcion),tipoList: gestionAdminService.listaTipo()])
+                }else{
+                    println campo
+                    render(view:"showTipoDisfraz",model:[listado: gestionAdminService.buscarTipoDisfrazPorTipo(campo),tipoList: gestionAdminService.listaTipo()])
+                }
     }
-<<<<<<< HEAD
+
     def busquedaCliente(){
         if(params.campo.toString()=="Nombre"){
             render(view:"showCliente",model:[listado: gestionAdminService.buscarClientePorNombre(params.busqueda)])
         }else{
             if(params.campo.toString()=="Apellido"){
                 render(view:"showCliente",model:[listado: gestionAdminService.buscarClientePorApellido(params.busqueda)])
-                
+
             }else{
                 if(params.campo.toString()=="Usuario"){
                     render(view:"showCliente",model:[listado: gestionAdminService.buscarClientePorUsuario(params.busqueda)])
@@ -228,8 +228,6 @@ class GestionAdminController {
                     render(view:"showCliente",model:[listado: gestionAdminService.buscarClientePorDireccion(params.busqueda)])
                 }
             }
-        }        
+        }
     }
 }
-=======
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1

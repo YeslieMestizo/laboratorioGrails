@@ -4,20 +4,12 @@
         <meta name="layout" content="mainAdministrador"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Gestion de Disfraces</title>
-<<<<<<< HEAD
-        <asset:stylesheet src="bootstrap.min.css" />
-        <asset:stylesheet src="custom.css" />
-</head>
-<body>
-        <div class="row"> 
-=======
     <asset:stylesheet src="bootstrap.min.css" />
     <asset:stylesheet src="custom.css" />
 </head>
 <body>
     <div class="form-group">
         <div class="row">
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
             <div class="col-sm-2">
                 <div class="btn-group">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -26,18 +18,6 @@
                     <ul class="dropdown-menu">
                         <li ><g:link action="busquedaDisfraz" params="[campo:'F']"  >Femenino</g:link></li>
                         <li ><g:link action="busquedaDisfraz" params="[campo:'Mas']" >Masculino</g:link></li>
-<<<<<<< HEAD
-                    </ul>
-                </div>
-            </div>   
-            <div class="col-sm-2">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Talle <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><g:link action="busquedaDisfraz" params="[campo:'XS']" >XS</g:link></li>
-=======
                         </ul>
                     </div>
                 </div>
@@ -48,39 +28,11 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li><g:link action="busquedaDisfraz" params="[campo:'XS']" >XS</g:link></li>
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
                         <li><g:link action="busquedaDisfraz" params="[campo:'S']" >S</g:link></li>
                         <li><g:link action="busquedaDisfraz" params="[campo:'M']" >M</g:link></li>
                         <li><g:link action="busquedaDisfraz" params="[campo:'L']" >L</g:link></li>
                         <li><g:link action="busquedaDisfraz" params="[campo:'XL']" >XL</g:link></li>
                         <li><g:link action="busquedaDisfraz" params="[campo:'XXL']" >XXL</g:link></li>
-<<<<<<< HEAD
-                    </ul>
-                </div>
-            </div>  
-            <div class="col-sm-2">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Tipo <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                    <g:each in="${tipoList}">
-                        <li><g:link action="busquedaDisfraz" params="[campo: "${it.id}"]">${it.descripcion}</g:link></li>
-                    </g:each>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <g:form action="busquedaDisfraz" class="navbar-form navbar-right" role="search">
-                    <input type="text" name="descripcion" class="form-control" placeholder="Busqueda por descripcion...">
-                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>Buscar</button>
-                </g:form>
-            </div>  
-
-        </div>
-
-    <h1>Gesti&oacute;n de Disfraces</h1>
-=======
                             </ul>
                             </div>
                             </div>
@@ -104,7 +56,6 @@
                         </div>
 
         <h1>Gesti&oacute;n de Disfraces</h1>
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
         <div class="table-responsive m-b-40">
             <div class="container">
                 <table class="table table-hover">
@@ -138,8 +89,4 @@
         <asset:javascript src="holder.min.js" />
         <asset:javascript src="ie10-viewport-bug-workaround.js" />
     </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1

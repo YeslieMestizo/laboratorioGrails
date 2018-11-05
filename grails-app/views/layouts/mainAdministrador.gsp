@@ -1,11 +1,4 @@
 <!doctype html>
-<<<<<<< HEAD
-<html lang="en">
-    <head>
-        <title><g:layoutTitle default="TIENDA"/></title>
-        <meta charset="UTF-8">
-    <asset:link rel="icon" href="logo.png" type="image/x-ico"/>
-=======
 <html  lang="en" class="no-js">
 <head>
     <title><g:layoutTitle default="TIENDA"/></title>
@@ -23,7 +16,6 @@
     <asset:stylesheet src="hamburgers.min.css"/>
     <asset:stylesheet src="vendor/font-awesome-5/css/fontawesome-all.min.css"/>
     <asset:stylesheet src="vendor/mdi-font/css/material-design-iconic-font.min.css"/>
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
     <g:layoutHead/>
 </head>
 <body class="animsition">
@@ -61,94 +53,6 @@
             </div>
         </nav>
         </div>
-<<<<<<< HEAD
-    <!--  <div class="page-container">
-        </div>  -->
-        
-        <g:layoutBody/>
-        <footer>
-            <div class="main-content">
-                <div class="section__content section__content--p30">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>DISFRACES</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <g:link action="altaDisfraz">Alta</g:link></li>
-                                                <li>
-                                                <g:link action="showDisfraz">Listado</g:link></li>
-                                            <li>
-                                                <g:link action="showAlquiler">Alquiler</g:link></li>
-                                            <li>
-                                                <g:link action="showCatalogo">catalogo</g:link></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h4>CLIENTES</h4>
-                                        </div>
-                                        <div class="card-body">
-                                            <ul class="list-unstyled">
-                                                <li>
-                                                <g:link action="altaCliente">Alta</g:link></li>
-                                                <li>
-                                                <g:link action="showCliente">Listado</g:link></li>
-                                                <li>
-                                                <g:link action="editarEliminarCliente">Editar/Eliminar </g:link></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h4>ADMINISTRADORES</h4>
-                                        </div>
-                                        <div class="card-body">
-                                            <ul class="list-unstyled">
-                                                <li>
-                                                <g:link action="altaAdministrador">Alta</g:link></li>
-                                                <li>
-                                                <g:link action="showAdministrador">listado</g:link></li>
-                                                <li>
-                                                <g:link action="editarEliminarAdministrador">Editar/Eliminar </g:link></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h4>TIPO DISFRAZ</h4>
-                                        </div>
-                                        <div class="card-body">
-                                            <ul class="list-unstyled">
-                                                <li>
-                                                <g:link action="altaTipoDisfraz">Alta</g:link></li>
-                                                <li>
-                                                <g:link action="showTipoDisfraz">listado</g:link></li>
-                                                <li>
-                                                <g:link action="editarEliminarTipoDisfraz">Editar/Eliminar </g:link></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-=======
     </nav>
 <!---->
     <div class="page-container">
