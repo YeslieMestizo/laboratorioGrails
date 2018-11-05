@@ -75,13 +75,8 @@ class GestionAdminController {
         if (cliente!=null){
             cliente.save(flush:true)
             redirect(action:"showCliente")
-<<<<<<< HEAD
         }      
     }
-=======
-        }
-        }
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
     //Gestion de Administrador
     def showAdministrador(){
         [listado: gestionAdminService.listaAdministrador()]
@@ -142,12 +137,6 @@ class GestionAdminController {
     def detalleAlquiler(){
         [alquiler: gestionAdminService.unAlquiler(new Long(params.id))]
     }
-
-<<<<<<< HEAD
-=======
-    def cargar(){
-     }
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1
     //gestion catalogo
     def showCatalogo() {
         [listaCatalogo: gestionAdminService.listaCatalogo(),listaDisfraz: gestionAdminService.listaDisfraz()]
@@ -211,8 +200,7 @@ class GestionAdminController {
 
     }
     }
-    }
-<<<<<<< HEAD
+    
     def busquedaCliente(){
         if(params.campo.toString()=="Nombre"){
             render(view:"showCliente",model:[listado: gestionAdminService.buscarClientePorNombre(params.busqueda)])
@@ -231,5 +219,3 @@ class GestionAdminController {
         }        
     }
 }
-=======
->>>>>>> 4434afbfd13320d4f298a3c5e19a16ac0727cbd1

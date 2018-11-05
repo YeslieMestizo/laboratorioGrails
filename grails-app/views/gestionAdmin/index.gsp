@@ -35,24 +35,7 @@
         </div>
 <!---->
         <hr>
-        <div class="page-container">
-            <div class="col-sm-4">
-                <div">
-                    Cantidad de usuario
-                </div>
-                
-            </div>
-            <div class="col-sm-4">
-                <div>
-                    Items
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div>
-                    Cantidad de venta
-                </div>
-            </div>
-        </div>
+        
 
     <div class="container">    
         <div class="col-md-4">
@@ -61,7 +44,7 @@
                     <strong class="card-title text-light">CANTIDAD DE USUARIO</strong>
                 </div>
                 <div class="card-body text-white bg-success">
-                    <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.
+                    <p class="card-text text-light">...
                     </p>
                 </div>
             </div>
@@ -73,7 +56,7 @@
                     <strong class="card-title text-light">CANTIDAD DE VENTA</strong>
                 </div>
                 <div class="card-body text-white bg-info">
-                    <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.
+                    <p class="card-text text-light">...
                     </p>
                 </div>
             </div>
@@ -84,7 +67,7 @@
                     <strong class="card-title text-light">I T E M S</strong>
                 </div>
             <div class="card-body text-white bg-success">
-                <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.
+                <p class="card-text text-light">...
                 </p>
             </div>
         </div>
@@ -98,95 +81,7 @@
             <!-- HEADER DESKTOP-->
 
             <!-- MAIN CONTENT-->
-            <div class="main-content">
-                <div class="section__content section__content--p30">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="card border border-primary">
-                                    <div class="card-header">
-                                        <strong class="card-title">Cantidad de usuario</strong>
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                            content.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card border border-secondary">
-                                    <div class="card-header">
-                                        <strong class="card-title">Card Outline</strong>
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                            content.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card border border-success">
-                                    <div class="card-header">
-                                        <strong class="card-title">Card Outline</strong>
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                            content.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            
-
-                            <div class="col-md-4">
-                                <div class="card bg-primary">
-                                    <div class="card-body">
-                                        <blockquote class="blockquote mb-0 text-light">
-                                            <p class="text-light">Cantidad de usuario.</p>
-                                            <footer class="blockquote-footer text-light">Someone famous in
-                                                dfkldfkjlfkjsldkfj
-                                            </footer>
-                                        </blockquote>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <div class="card-header bg-info">
-                                        <strong class="card-title text-light">Cantidad de usuario</strong>
-                                    </div>
-                                    <div class="card-body text-white bg-primary">
-                                        <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's
-                                            content.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <div class="card-header bg-primary">
-                                        <strong class="card-title text-light">I T E M S</strong>
-                                    </div>
-                                    <div class="card-body text-white bg-info">
-                                        <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's
-                                            content.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-
-
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
 
 
