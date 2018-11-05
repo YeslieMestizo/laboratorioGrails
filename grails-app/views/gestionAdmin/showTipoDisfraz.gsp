@@ -10,7 +10,7 @@
     <body>
       <div class="col-sm-6">
           <g:form action="busquedaTipoDisfraz" class="navbar-form navbar-right" role="search">
-              <input type="text" name="descripcion" class="form-control" placeholder="Busqueda por descripcion...">
+              <input type="text" name="descripcion" class="form-control" placeholder="Buscar por descripci&oacute;n...">
               <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>Buscar</button>
           </g:form>
       </div>

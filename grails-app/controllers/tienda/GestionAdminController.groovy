@@ -58,7 +58,7 @@ class GestionAdminController {
     def altaCliente(){
         [cliente: new Cliente()]
     }
-    def guardarAltaCliente(  ) {
+    def guardarAltaCliente( ) {
         gestionAdminService.altaCliente(params)
         redirect(action:"showCliente")
     }
@@ -84,7 +84,7 @@ class GestionAdminController {
     def altaAdministrador(){
         [administrador: new Administrador()]
     }
-    def guardarAltaAdministrador(  ) {
+    def guardarAltaAdministrador() {
         gestionAdminService.altaAdministrador(params)
         redirect(action:"showAdministrador")
     }
@@ -138,8 +138,6 @@ class GestionAdminController {
         [alquiler: gestionAdminService.unAlquiler(new Long(params.id))]
     }
 
-    def cargar(){
-     }
     //gestion catalogo
     def showCatalogo() {
         [listaCatalogo: gestionAdminService.listaCatalogo(),listaDisfraz: gestionAdminService.listaDisfraz()]
@@ -212,6 +210,7 @@ class GestionAdminController {
                     render(view:"showTipoDisfraz",model:[listado: gestionAdminService.buscarTipoDisfrazPorTipo(campo),tipoList: gestionAdminService.listaTipo()])
                 }
     }
+
 
     def busquedaCliente(){
         if(params.campo.toString()=="Nombre"){
