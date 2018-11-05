@@ -1,6 +1,9 @@
 package tienda
+import java.security.MessageDigest
 
-class Administrador {
+
+class Administrador implements Serializable{
+
     String nombre
     String apellido
     String usuario

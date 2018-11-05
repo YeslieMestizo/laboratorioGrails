@@ -4,6 +4,7 @@
         <meta name="layout" content="mainAdministrador"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Gestion de Cliente</title>
+<<<<<<< HEAD
     <asset:stylesheet src="bootstrap.min.css" />
     <asset:stylesheet src="custom.css" />
 </head>
@@ -23,6 +24,29 @@
                     <th></th>
                 </tr>
                 <g:each in="${listado?}">
+=======
+        <asset:stylesheet src="bootstrap.min.css" />
+        <asset:stylesheet src="custom.css" />
+    </head>
+    <body>
+      <div class="col-sm-6">
+          <g:form action="busquedaTipoDisfraz" class="navbar-form navbar-right" role="search">
+              <input type="text" name="descripcion" class="form-control" placeholder="Buscar por descripci&oacute;n...">
+              <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>Buscar</button>
+          </g:form>
+      </div>
+        <h1>Gesti&oacute;n de Tipo de Disfraz</h1><br>
+        <div class="table-responsive m-b-40">
+            <div class="container">
+                <table class="table table-hover">
+                    <tr class="info">
+                        <th>C&oacute;digo</th>
+                        <th>Descripci&oacute;n</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <g:each in="${listado?}">
+>>>>>>> 5d210f3eecc12834c091d5cfe36019ead3c8dc3e
                     <tr class="success">
                         <td>${it.id}</td>
                         <td>${it.descripcion}</td>
@@ -56,6 +80,7 @@
                 </div>
             </div>
 
+<<<<<<< HEAD
         </div>
     </g:if>
     <g:if test="${tipoDisfraz}">
@@ -88,3 +113,12 @@
 <asset:javascript src="ie10-viewport-bug-workaround.js" />
 </body>
 </html>
+=======
+
+        <asset:javascript src="bootstrap.min.js" />
+        <asset:javascript src="jquery-1.11.3.min.js" />
+        <asset:javascript src="holder.min.js" />
+        <asset:javascript src="ie10-viewport-bug-workaround.js" />
+    </body>
+</html>
+>>>>>>> 5d210f3eecc12834c091d5cfe36019ead3c8dc3e

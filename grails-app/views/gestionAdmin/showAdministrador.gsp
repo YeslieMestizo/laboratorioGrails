@@ -7,13 +7,17 @@
     <asset:stylesheet src="bootstrap.min.css" />
 
     <asset:stylesheet src="custom.css" />
+<<<<<<< HEAD
+=======
+>>>>>>> 941867f59db73fc6d77d736de0176b7905c91746
+>>>>>>> 5d210f3eecc12834c091d5cfe36019ead3c8dc3e
 </head>
 <body>
     <g:link controller="gestionAdmin" action="altaAdministrador" class="glyphicon-plus btn btn-default">Agregar</g:link>
     <g:form action="busquedaAdministrador" class="navbar-form navbar-right" role="search">
         <div class="form-group">
             <g:select name="campo" from="${['Nombre','Apellido','Usuario']}" class="form-control"/>
-            <input type="text" name="busqueda" class="form-control" placeholder="Busqueda por ...">
+            <input type="text" name="busqueda" class="form-control" placeholder="B&uacute;squeda por ...">
         </div>
         <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>Buscar</button>
     </g:form>
@@ -50,6 +54,9 @@
         <asset:javascript src="jquery-1.11.3.min.js" />
         <asset:javascript src="holder.min.js" />
         <asset:javascript src="ie10-viewport-bug-workaround.js" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5d210f3eecc12834c091d5cfe36019ead3c8dc3e
 </body>
 </html>
