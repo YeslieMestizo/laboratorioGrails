@@ -11,6 +11,9 @@
                 <div class="login-wrap">
                     <div class="login-content">
                         <div class="login-logo">
+                          <g:if test="${message}">
+                            <div class="message" role="status">${message}</div>
+                          </g:if>
                             L O G I N
                         </div>
                         <div class="login-form">
