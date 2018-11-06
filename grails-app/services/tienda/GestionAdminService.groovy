@@ -166,4 +166,18 @@ class GestionAdminService {
         descripcion='%'+descripcion+'%'
         return Cliente.findAllByDireccionLike(descripcion)
     }
+    
+    //contadores
+    String cantidadAlquiler(){
+        def cantidad = Alquiler.count()
+        return cantidad
+    }
+    String cantidadCliente(){
+        def cantidad = Cliente.count()
+        return cantidad
+    }
+    String cantidadDisfraz(){
+        def cantidad = Disfraz.count()
+        return cantidad
+    }
 }
