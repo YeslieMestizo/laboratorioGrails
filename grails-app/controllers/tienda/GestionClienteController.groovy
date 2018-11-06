@@ -5,7 +5,7 @@ class GestionClienteController {
     GestionClienteService gestionClienteService
     GestionAdminService gestionAdminService
     def index(){
-    [listaCatalogo: gestionAdminService.listaCatalogo()]
+    [listaCatalogo: gestionAdminService.listaCatalogo(),carrito:def lista = []]
     }
 
     def verImagen = {
@@ -13,8 +13,17 @@ class GestionClienteController {
         response.outputStream << disfraz.imagen
         response.outputStream.flush()
     }
-
-    def verCarritoCompra(){
-
+    
+    def showCarrito(){
     }
+    def agregarCarrito(Long id){
+        def lista = [gestionAdminService.unCatalogo(id)]
+        render(view:"showCarrito",model:[carrito:lista])
+    }
+    def masCompra(){
+        render(view:"index",model:[listaCatalogo: gestionAdminService.listaCatalogo()])
+    }
+    
+    
+    
 }

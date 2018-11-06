@@ -97,8 +97,7 @@
                         </a>
                         <div class="carousel-caption">
                         <h3>Disfraces De Zombies</h3>
-                        <g:link controller="GestionCliente" action="index">Ver Más</g:link>
-                        <p><a class="btn btn-primary" href="#">Ver Más</a></p>
+                        <g:link controller="GestionCliente" action="index" class="btn btn-default">Ver Más</g:link>
                     </div>
                 </div>
                 <div class="item">
