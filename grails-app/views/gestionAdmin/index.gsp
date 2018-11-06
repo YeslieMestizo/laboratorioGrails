@@ -73,19 +73,9 @@
             </div>
         </div>
     </div>
-
-
-
         <div class="page-container">
-            <!-- HEADER DESKTOP-->
-            
-            <!-- HEADER DESKTOP-->
-
-            <!-- MAIN CONTENT-->
             
         </div>
-
-
         <asset:javascript src="bootstrap.min.js" />    
         <asset:javascript src="jquery-1.11.3.min.js" />
         <asset:javascript src="holder.min.js" />

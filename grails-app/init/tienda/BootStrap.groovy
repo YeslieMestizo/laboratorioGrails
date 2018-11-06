@@ -8,7 +8,7 @@ class BootStrap {
         client.save()
 
         //Prueba de administrador
-        Administrador admin = new Administrador (nombre:'Yeslie', apellido:'Mestizo', usuario:'admin', password:'123', telefono:'4567')
+        Administrador admin = new Administrador (nombre:'Ana', apellido:'Mesa', usuario:'admin', password:'123', telefono:'4567')
         admin.save()
     }
     def destroy = {

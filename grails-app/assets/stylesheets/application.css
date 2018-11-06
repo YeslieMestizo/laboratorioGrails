@@ -20,3 +20,6 @@ body{
 	background-color: darkgray;
 	/*color: white;*/
 }
+link{
+	text-decoration:none;
+}
