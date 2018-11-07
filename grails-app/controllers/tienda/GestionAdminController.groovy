@@ -3,7 +3,7 @@ import grails.validation.ValidationException
 
 class GestionAdminController {
     GestionAdminService gestionAdminService
-    
+
     def index() {
        [nroCliente:gestionAdminService.cantidadCliente(),nroAlquiler:gestionAdminService.cantidadAlquiler(),nroDisfraz:gestionAdminService.cantidadDisfraz()]
     }
@@ -17,7 +17,6 @@ class GestionAdminController {
     }
     def guardarAltaDisfraz() {
         def file = request.getFile('myFile')
-<<<<<<< HEAD
         def disfraz = new Disfraz(descripcion:params.descripcion,talle:params.talle,genero:params.genero,tipo:params.tipo,imagen:file, estado:"activo").save(flush:true)
         if (disfraz == null) {
           try {
@@ -27,14 +26,6 @@ class GestionAdminController {
           }
         } else {
           redirect action:"vistaPrevia", params: [id: disfraz.id]
-=======
-        def disfraz = new Disfraz(descripcion:params.descripcion,talle:params.talle,genero:params.genero,tipo:params.tipo,imagen:file,estado:"activo").save(flush:true)
-        disfraz.save(flush:true)
-        if (disfraz.hasErrors()) {
-            disfraz.errors.allErrors.each {
-                println it
-            }
->>>>>>> a8a647b553c1a3301070a7aaf98202275883057f
         }
     }
 
@@ -101,7 +92,7 @@ class GestionAdminController {
             redirect(action:"showCliente")
 
 
-        }     
+        }
     }
     //Gestion de Administrador
     def showAdministrador(){
@@ -139,11 +130,7 @@ class GestionAdminController {
         [listado: gestionAdminService.listaTipoDisfraz()]
     }
     def altaTipoDisfraz(){
-<<<<<<< HEAD
-        render(view:"showDisfraz",model:[tipoDisfraz: new TipoDisfraz()])
-=======
         render(view:"showTipoDisfraz",model:[listado: gestionAdminService.listaTipoDisfraz(),tipoDisfraz: new TipoDisfraz()])
->>>>>>> a8a647b553c1a3301070a7aaf98202275883057f
     }
     def guardarAltaTipoDisfraz(  ) {
         if(!gestionAdminService.altaTipoDisfraz(params)){
@@ -157,11 +144,7 @@ class GestionAdminController {
         redirect(action:"showTipoDisfraz")
     }
     def editarTipoDisfraz(){
-<<<<<<< HEAD
-        render(view:"showDisfraz",model:[tipoDisfrazE: gestionAdminService.unTipoDisfraz(new Long(params.id))])
-=======
         render(view:"showTipoDisfraz",model:[listado: gestionAdminService.listaTipoDisfraz(),tipoDisfrazE: gestionAdminService.unTipoDisfraz(new Long(params.id))])
->>>>>>> a8a647b553c1a3301070a7aaf98202275883057f
     }
     def actualizarTipoDisfraz(Long id){
         def tipo = TipoDisfraz.get(params.id)

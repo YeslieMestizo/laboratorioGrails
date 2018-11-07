@@ -12,33 +12,22 @@ class GestionClienteController extends RestfulController<Cliente> {
     }
 
     def index(){
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (request.get){
-            return //render(view: 'index')
-        }
-        [listaCatalogo: gestionAdminService.listaCatalogo(),carrito:def lista = []]
-=======
-    [listaCatalogo: gestionAdminService.listaCatalogo()]
->>>>>>> a5a458c7fd774e8c3ed56c552de03fbf8d7d6fa5
-=======
     [listado: gestionAdminService.listaCatalogo(),tipoList:gestionAdminService.listaTipo()]
->>>>>>> 3cd8c4b9265fb8d92f71f09182b9aaa1812cec7a
     }
-    
+
     def verImagen = {
         def disfraz = Disfraz.get(params.id)
         response.outputStream << disfraz.imagen
         response.outputStream.flush()
     }
-    
+
     def showCarrito(){
     }
-    def agregarCarrito(Long id){   
+    def agregarCarrito(Long id){
         println id
         println gestionAdminService.unCatalogo(new Long(id))
         session.carrito.addToItems(gestionAdminService.unCatalogo(id))
-        println session.carrito 
+        println session.carrito
         render(view:"showCarrito")
     }
     def masCompra(){
@@ -47,26 +36,26 @@ class GestionClienteController extends RestfulController<Cliente> {
     def eliminarItems(Long id){
         carrito.eliminarItems(gestionAdminService.unCatalogo(id))
         render(view:"showCarrito")
-    }   
+    }
     def guardarAlquiler(){
         def alquiler = new Alquiler(fechaEntrega:params.fechaEntrega,fechaDevolucion:params.fechaDevolucion,precio:session.carrito.total(),estado:"pendiente",cliente:session.usuario)
         println alquiler.fechaEntrega
-        
+
         if(alquiler.save(flush:true)){
             println " se guardo"
             for(catalogo in session.carrito.items ){
                 def cat = Catalogo.get(catalogo.id)
                 cat.cantidad = cat.cantidad-1
                 cat.save(flush:true)
-                alquiler.addToItems(cat.disfraz)                
+                alquiler.addToItems(cat.disfraz)
         }
         session.carrito.items.clear()
         redirect(action:"index")
-        }else{    
+        }else{
         redirect(action:"showCarrito")
         }
     }
-    
+
     // barra de busqueda
     def busquedaAlquiler(String campo){
         if(campo=="F"){
@@ -89,5 +78,5 @@ class GestionClienteController extends RestfulController<Cliente> {
 
         }
     }
-    
+
 }
