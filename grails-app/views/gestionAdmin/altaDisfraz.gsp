@@ -16,6 +16,9 @@
             <div class="well well-sm">
                 <div class="panel-heading">
                     <h3 class="panel-title">
+                      <g:if test="${message}">
+                        <div class="message" role="status">${message}</div>
+                      </g:if>
                         <span class="glyphicon glyphicon-log-in"></span>
                         Crear
                     </h3>

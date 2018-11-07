@@ -1,4 +1,7 @@
 package tienda
+import grails.rest.*
+
+@Resource(uri='/catalogos', formats=['xml', 'json'])
 
 class Catalogo {
     int cantidad
@@ -11,4 +14,3 @@ class Catalogo {
 	    disfraz (blank: false)
 	}
 }
-

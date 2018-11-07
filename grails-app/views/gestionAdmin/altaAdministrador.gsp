@@ -16,6 +16,9 @@
                 <div class="well well-sm">
                 <div class="panel-heading">
                 <h3 class="panel-title">
+                  <g:if test="${message}">
+                    <div class="message" role="status">${message}</div>
+                  </g:if>
                     <span class="glyphicon glyphicon-log-in"></span>Crear
                 </h3>
             </div>
@@ -23,23 +26,23 @@
                 <g:form action="guardarAltaAdministrador" method="post">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control" id= "nombre" name="nombre" placeholder="nombre">
+                    <input type="text" class="form-control" id= "nombre" name="nombre" value=${administrador.nombre}>
                 </div>
                 <div class="form-group">
                     <label for="apellido">Apellido</label>
-                    <input type="text" class="form-control" id= "apellido" name="apellido" placeholder="apellido">
+                    <input type="text" class="form-control" id= "apellido" name="apellido" value=${administrador.apellido}>
                 </div>
                 <div class="form-group">
                     <label for="usuario">Usuario</label>
-                    <input type="text" class="form-control" id= "usuario" name="usuario" placeholder="usuario">
+                    <input type="text" class="form-control" id= "usuario" name="usuario" value=${administrador.usuario}>
                 </div>
                 <div class="form-group">
                     <label for="password">Contraseña</label>
-                    <input type="password" class="form-control" id= "contrasena" name="password" placeholder="contrasena">
+                    <input type="password" class="form-control" id= "contrasena" name="password" value=${administrador.password}>
                 </div>
                 <div class="form-group">
                     <label for="telefono">Tel&eacute;fono</label>
-                    <input type="text" class="form-control" id= "telefono" name="telefono" placeholder="telefono">
+                    <input type="text" class="form-control" id= "telefono" name="telefono" value=${administrador.telefono}>
                 </div>
                 <input type="submit" name="enviar" value="Guardar" class="btn btn-default"/>
                 </g:form>

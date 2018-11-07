@@ -9,8 +9,8 @@ class Disfraz {
     String estado
 
     static constraints = {
-        talle (inList:['XS','S','M','L','XL','XXL'])
-        genero (inList:['F','M'])
+        talle (blank:false, inList:['XS','S','M','L','XL','XXL'])
+        genero (blank:false, inList:['F','M'])
         imagen(nullable:true)
         estado(nullable:true)
     }

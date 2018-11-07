@@ -1,8 +1,11 @@
 package tienda
+import grails.converters.JSON
+import java.text.SimpleDateFormat
 
 class BootStrap {
 
     def init = { servletContext ->
+
         //Prueba cliente
         Cliente client = new Cliente (nombre:'Guisel', apellido:'Montaño', usuario:'lulo', telefono:'532', password:'789', direccion:'bhj')
         client.save()

@@ -15,14 +15,16 @@ class GestionAdminController {
     }
     def guardarAltaDisfraz() {
         def file = request.getFile('myFile')
-        def disfraz = new Disfraz(descripcion:params.descripcion,talle:params.talle,genero:params.genero,tipo:params.tipo,imagen:file).save(flush:true)
-        disfraz.save(flush:true)
-        if (disfraz.hasErrors()) {
-            disfraz.errors.allErrors.each {
-                println it
-            }
+        def disfraz = new Disfraz(descripcion:params.descripcion,talle:params.talle,genero:params.genero,tipo:params.tipo,imagen:file, estado:"activo").save(flush:true)
+        if (disfraz == null) {
+          try {
+            disfraz.save(flush:true)
+              } catch (NullPointerException e) {
+            render (view:"altaDisfraz", model: [message: "Todos Los Campos Deben Ser Completados",tipoList:gestionAdminService.listaTipoDisfraz()])
+          }
+        } else {
+          redirect action:"vistaPrevia", params: [id: disfraz.id]
         }
-        redirect action:"vistaPrevia", params: [id: disfraz.id]
     }
 
     def vistaPrevia(Long id){
@@ -51,17 +53,24 @@ class GestionAdminController {
             redirect(action:"showDisfraz")
         }
     }
+
     //Gestion de cliente
     def showCliente(){
         [listado: gestionAdminService.listaCliente()]
     }
+
     def altaCliente(){
         [cliente: new Cliente()]
     }
+
     def guardarAltaCliente( ) {
-        gestionAdminService.altaCliente(params)
-        redirect(action:"showCliente")
+      if (!gestionAdminService.altaCliente(params)){
+          render(view:"altaCliente",model:[cliente:new Cliente(params),message: "Ingrese Datos a Todos Los Campos"])
+      }else{
+      redirect(action:"showCliente")
+      }
     }
+
     def darBajaCliente() {
         gestionAdminService.eliminarCliente(new Long(params.id))
         redirect(action:"showCliente")
@@ -85,9 +94,13 @@ class GestionAdminController {
         [administrador: new Administrador()]
     }
     def guardarAltaAdministrador() {
-        gestionAdminService.altaAdministrador(params)
+      if(!gestionAdminService.altaAdministrador(params)){
+        render(view:"altaAdministrador",model:[administrador:new Administrador(params),message:"Ingrese Todos Los Campos"])
+      }else{
         redirect(action:"showAdministrador")
+      }
     }
+
     def darBajaAdministrador() {
         gestionAdminService.eliminarAdministrador(new Long(params.id))
         redirect(action:"showAdministrador")
@@ -109,18 +122,21 @@ class GestionAdminController {
         [listado: gestionAdminService.listaTipoDisfraz()]
     }
     def altaTipoDisfraz(){
-        [tipoDisfraz: new TipoDisfraz()]
+        render(view:"showDisfraz",model:[tipoDisfraz: new TipoDisfraz()])
     }
     def guardarAltaTipoDisfraz(  ) {
-        gestionAdminService.altaTipoDisfraz(params)
-        redirect(action:"showTipoDisfraz")
+        if(!gestionAdminService.altaTipoDisfraz(params)){
+          render(view:"showDisfraz",model:[tipoDisfraz: new TipoDisfraz()],message:"Ingrese Datos a Todos Los Campos")
+        }else{
+          redirect(action:"showTipoDisfraz")
+        }
     }
     def darBajaTipoDisfraz() {
         gestionAdminService.eliminarTipoDisfraz(new Long(params.id))
         redirect(action:"showTipoDisfraz")
     }
     def editarTipoDisfraz(){
-        [tipoDisfraz: gestionAdminService.unTipoDisfraz(new Long(params.id))]
+        render(view:"showDisfraz",model:[tipoDisfrazE: gestionAdminService.unTipoDisfraz(new Long(params.id))])
     }
     def actualizarTipoDisfraz(Long id){
         def tipo = TipoDisfraz.get(params.id)

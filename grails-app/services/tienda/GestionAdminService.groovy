@@ -27,7 +27,7 @@ class GestionAdminService {
         //disfraz.delete(flush: true)
     }
     List listaDisfraz(){
-        def disfraz = Disfraz.findAllByEstadoNotEqual("inactivo")
+        def disfraz = Disfraz.findAllByEstado("activo")
         return disfraz
     }
     Disfraz unDisfraz(Long id){
@@ -35,8 +35,9 @@ class GestionAdminService {
         return disfraz
     }
     //Gestion Cliente
-    void altaCliente(Map params) {
+    Cliente altaCliente(Map params) {
         def cliente = new Cliente(params).save(flush:true)
+        return cliente
     }
     void eliminarCliente(Long id) {
         def cliente = Cliente.get(id)
@@ -51,8 +52,9 @@ class GestionAdminService {
         return cliente
     }
     //Gestion Administrador
-    void altaAdministrador(Map params) {
+    Administrador altaAdministrador(Map params) {
         def administrador = new Administrador(params).save(flush:true)
+        return administrador
     }
     void eliminarAdministrador(Long id) {
         def administrador = Administrador.get(id)

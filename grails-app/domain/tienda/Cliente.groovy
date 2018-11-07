@@ -1,6 +1,8 @@
 package tienda
 import java.security.MessageDigest
+import grails.rest.*
 
+@Resource(uri='/clientes', formats=['xml', 'json'])
 
 class Cliente implements Serializable{
 
@@ -12,9 +14,8 @@ class Cliente implements Serializable{
     String direccion
     String estado
 
-
     static constraints = {
-    	  nombre (blank:false, maxSize:50)
+    	  nombre (blank:false, maxSize:50);
         apellido (blank:false, mazSize:50)
         usuario (blank:false, unique:true)
         password (blank:false)

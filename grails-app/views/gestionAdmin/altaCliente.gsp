@@ -16,6 +16,9 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title">
+                              <g:if test="${message}">
+                                <div class="message" role="status">${message}</div>
+                              </g:if>
                             <span class="glyphicon glyphicon-log-in"></span>
                             Crear
                             </h3>
@@ -24,27 +27,27 @@
                             <g:form action="guardarAltaCliente" method="post">
                             <div class="form-group">
                                         <label for="nombre">Nombre</label>
-                                        <input type="text" class="form-control" name="nombre" placeholder="Escribir nombre">
+                                        <input type="text" class="form-control" name="nombre" value=${cliente.nombre}>
                                     </div>
                                     <div class="form-group">
                                         <label for="apellido">Apellido</label>
-                                        <input type="text" class="form-control" name="apellido" placeholder="Escribir apellido">
+                                        <input type="text" class="form-control" name="apellido" value=${cliente.apellido}>
                             </div>
                                     <div class="form-group">
                                         <label for="telefono">Tel&eacute;fono</label>
-                                        <input type="text" class="form-control" name="telefono" placeholder="Escribir telefono">
+                                        <input type="text" class="form-control" name="telefono" value=${cliente.telefono}>
                                     </div>
                             <div class="form-group">
                                         <label for="direccion">Direcci&oacute;n</label>
-                                        <input type="text" class="form-control" name="direccion" placeholder="Escribir direccion">
+                                        <input type="text" class="form-control" name="direccion" value=${cliente.direccion}>
                             </div>
                                     <div class="form-group">
                                         <label for="usuario">Usuario</label>
-                                        <input type="text" class="form-control" name="usuario" placeholder="Escribir usuario">
+                                        <input type="text" class="form-control" name="usuario" value=${cliente.usuario}>
                             </div>
                                     <div class="form-group">
                                         <label for="password">Contraseña</label>
-                                        <input type="password" class="form-control" name="password" placeholder="Escribir contraseña">
+                                        <input type="password" class="form-control" name="password" value=${cliente.password}>
                             </div>
                                         <input type="submit" name="enviar" value="Guardar" class="btn btn-default" />
                             </g:form>

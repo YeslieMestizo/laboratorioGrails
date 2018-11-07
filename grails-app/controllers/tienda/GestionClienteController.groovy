@@ -1,9 +1,16 @@
 package tienda
 import grails.validation.ValidationException
+import grails.rest.RestfulController
 
-class GestionClienteController {
+class GestionClienteController extends RestfulController<Cliente> {
+    static responseFormats = ['xml', 'json']
     GestionClienteService gestionClienteService
     GestionAdminService gestionAdminService
+
+    GestionClienteController(){
+      super(Cliente)
+    }
+
     def index(){
     [listaCatalogo: gestionAdminService.listaCatalogo()]
     }

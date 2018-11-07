@@ -5,11 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Gesti&oacute;n de Administrador</title>
     <asset:stylesheet src="bootstrap.min.css" />
-<<<<<<< HEAD
-    <asset:stylesheet src="custom.css" />  
-=======
     <asset:stylesheet src="custom.css" />
->>>>>>> 941867f59db73fc6d77d736de0176b7905c91746
 </head>
 <body>
     <g:form action="busquedaAdministrador" class="navbar-form navbar-right" role="search">
