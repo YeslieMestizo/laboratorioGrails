@@ -144,6 +144,21 @@ class GestionAdminController {
     def detalleAlquiler(){
         [alquiler: gestionAdminService.unAlquiler(new Long(params.id))]
     }
+    def editarEstadoAlquiler(Long id){
+        render(view:"showAlquiler",model:[listado: gestionAdminService.listaAlquiler(),alquiler: gestionAdminService.unAlquiler(id)])
+    }
+    def actualizarEstadoAlquiler(Long id){
+        def alquiler = Alquiler.get(id)
+        alquiler.estado = params.estado
+        if (alquiler!=null){
+            alquiler.save(flush:true)
+            redirect(action:"showAlquiler")
+        }
+    }
+    def darBajaAlquiler(Long id){
+        gestionAdminService.eliminarAlquiler(new Long(params.id))
+        redirect(action:"showAlquiler")
+    }
 
     //gestion catalogo
     def showCatalogo() {

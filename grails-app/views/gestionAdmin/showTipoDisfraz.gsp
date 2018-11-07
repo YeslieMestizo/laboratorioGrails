@@ -12,7 +12,7 @@
 
     <h1>Gesti&oacute;n de Tipo de Disfraz</h1><br>
 
-
+    <div class="row">
     <div class="col-sm-8">
         <div class="container">
             <table class="table table-hover">
@@ -33,8 +33,9 @@
             </table>
         </div>
     </div>
+    <div class="col-sm-4">
     <g:if test="${tipoDisfrazE}">
-        <div class="col-sm-4">
+        
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">
@@ -55,10 +56,9 @@
                     </g:form>
                 </div>
             </div>
-        </div>
+        
     </g:if>
     <g:if test="${tipoDisfraz}">
-        <div class="col-sm-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">
@@ -77,10 +77,10 @@
 
                     </g:form>
                 </div>
-            </div>
-        </div>
+            </div>        
     </g:if>
-
+</div>
+</div>
 <asset:javascript src="bootstrap.min.js" />    
 <asset:javascript src="jquery-1.11.3.min.js" />
 <asset:javascript src="holder.min.js" />

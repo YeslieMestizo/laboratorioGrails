@@ -36,6 +36,7 @@ class LoginController {
 
     def logout() {        
         session.usuario=null
+        session.carrito.items.clear()
         render(view: "/index")
     }
 
