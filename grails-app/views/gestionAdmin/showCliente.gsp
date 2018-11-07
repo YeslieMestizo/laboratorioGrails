@@ -8,6 +8,7 @@
         <asset:stylesheet src="custom.css" />
     </head>
     <body>
+        <g:link controller="gestionAdmin" action="altaCliente" class="glyphicon-plus btn btn-default">Agregar</g:link>
         <g:form action="busquedaCliente" class="navbar-form navbar-right" role="search">
         <div class="form-group">
             <g:select name="campo" from="${['Nombre','Apellido','Usuario','Direccion']}" class="form-control"/>

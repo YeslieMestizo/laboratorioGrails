@@ -2,10 +2,11 @@
 <html>
 <head>
     <meta name="layout" content="mainClient"/>
-    <title>Login</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <asset:stylesheet src="bootstrap.min.css"/>
-    <asset:stylesheet src="custom.css"/>
+    <title>Login</title>    
+    <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
+    <asset:stylesheet src="bootstrap.min.css" />
+    <asset:stylesheet src="custom.css" />
+
 </head>
 <body>
   <div class="page-wrapper">
@@ -35,7 +36,7 @@
                             <div class="register-link">
                                 <p>
                                     No tienes una cuenta?
-                                    <g:link controller="registroCliente" action="registro" class="btn btn-info">Registrarse
+                                    <g:link controller="registroCliente" action="registro">Registrarse
                                 </g:link>
                                 </p>
                             </div>
@@ -45,5 +46,10 @@
             </div>
         </div>
     </div>
+    
+    <asset:javascript src="bootstrap.min.js" />
+    <asset:javascript src="jquery-1.11.3.min.js" />
+    <asset:javascript src="holder.min.js" />
+    <asset:javascript src="ie10-viewport-bug-workaround.js" />
 </body>
 </html>

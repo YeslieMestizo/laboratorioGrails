@@ -28,7 +28,6 @@
         <asset:stylesheet src="vendor/select2/select2.min.css"/>
         <asset:stylesheet src="vendor/perfect-scrollbar/perfect-scrollbar.css"/>
         <asset:stylesheet src="css/theme.css"/>
-        <script src="js/main.js"></script>
 </head>
 <body>
     <header class="header-desktop4">
@@ -69,11 +68,11 @@
                                     <p>La mejor tienda de disfraces, aqu&iacute; podr&aacute;s conseguir muy buenas opciones! :)</p>
                                 </div>
                                 <div>
-                                <g:link controller="Login" class="btn btn-info btn-lg">Ingresar </g:link>
-                            </div>
-                            <div>                                
-                                <g:link controller="RegistroCliente" class="btn btn-info btn-lg"> Registrarse</g:link>
-                            </div>
+                                    <g:link controller="Login"><strong style="color: white">Ingresar</strong></g:link>
+                                </div>
+                                <div>                                
+                                    <g:link controller="RegistroCliente"><strong style="color: white">Registrarse</strong></g:link>
+                                </div>
                         </div>
 
                     </div>
@@ -98,8 +97,7 @@
                         </a>
                         <div class="carousel-caption">
                         <h3>Disfraces De Zombies</h3>
-                        <g:link controller="GestionCliente" action="index">Ver Más</g:link>
-                        <p><a class="btn btn-primary" href="#">Ver Más</a></p>
+                        <g:link controller="GestionCliente" action="index" class="btn btn-default">Ver Más</g:link>
                     </div>
                 </div>
                 <div class="item">
@@ -164,5 +162,10 @@
                 <script src="vendor/chartjs/Chart.bundle.min.js"></script>
                 <script src="vendor/select2/select2.min.js"></script>
                 <script src="javascripts/main.js"></script>
+
+                <asset:javascript src="bootstrap.min.js" />
+        <asset:javascript src="jquery-1.11.3.min.js" />
+        <asset:javascript src="holder.min.js" />
+        <asset:javascript src="ie10-viewport-bug-workaround.js" />
     </body>
 </html>

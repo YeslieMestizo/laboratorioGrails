@@ -12,7 +12,7 @@
     <div class="container-fluid"> 
         <div class="col-sm-9">
             <h2>Cat&aacute;logo</h2>
-            <table class="table table-hover">
+            <table class="table table-hover" style="height:40px;">
                 <tr class="info">
                     <th>C&oacute;digo</th>
                     <th>Descripci&oacute;n</th>

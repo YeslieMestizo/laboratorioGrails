@@ -42,9 +42,10 @@
             <div class="card">
                 <div class="card-header bg-info">
                     <strong class="card-title text-light">CANTIDAD DE USUARIO</strong>
+                    
                 </div>
                 <div class="card-body text-white bg-success">
-                    <p class="card-text text-light">...
+                    <p class="card-text text-light">${nroCliente}
                     </p>
                 </div>
             </div>
@@ -56,7 +57,7 @@
                     <strong class="card-title text-light">CANTIDAD DE VENTA</strong>
                 </div>
                 <div class="card-body text-white bg-info">
-                    <p class="card-text text-light">...
+                    <p class="card-text text-light">${nroCliente}
                     </p>
                 </div>
             </div>
@@ -67,24 +68,14 @@
                     <strong class="card-title text-light">I T E M S</strong>
                 </div>
             <div class="card-body text-white bg-success">
-                <p class="card-text text-light">...
+                <p class="card-text text-light">${nroDisfraz}
                 </p>
             </div>
         </div>
     </div>
-
-
-
         <div class="page-container">
-            <!-- HEADER DESKTOP-->
-            
-            <!-- HEADER DESKTOP-->
-
-            <!-- MAIN CONTENT-->
             
         </div>
-
-
         <asset:javascript src="bootstrap.min.js" />    
         <asset:javascript src="jquery-1.11.3.min.js" />
         <asset:javascript src="holder.min.js" />

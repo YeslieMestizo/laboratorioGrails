@@ -6,14 +6,22 @@ import grails.rest.*
 class Alquiler {
     Date fechaEntrega
     Date fechaDevolucion
+<<<<<<< HEAD
     float precio
+=======
+    BigDecimal precio 
+>>>>>>> a8a647b553c1a3301070a7aaf98202275883057f
     String estado
     Cliente cliente
-    Items items
+    static hasMany = [items:Disfraz]
+    //List<Disfraz> items = new ArrayList<>()
+    
     static constraints = {
-    	fechaEntrega (blank:false)
-    	fechaDevolucion (blank:false)
-    	precio (blank:false)
-    	estado(list:['Alquilado','Pendiente','Devuelto'])
+    	fechaEntrega(blank:false,matches:"[0-9]{2}/[0-9]{2}/[0-9]{4}")
+    	fechaDevolucion(blank:false,matches:"[0-9]{2}/[0-9]{2}/[0-9]{4}")
+    	precio (nullable:true,blank:false)
+    	estado(nullable:true,list:['Alquilado','Pendiente','Devuelto'])
+        items(nullable : true)
     }
+    
 }

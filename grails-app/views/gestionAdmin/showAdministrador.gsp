@@ -8,6 +8,7 @@
     <asset:stylesheet src="custom.css" />
 </head>
 <body>
+    <g:link controller="gestionAdmin" action="altaAdministrador" class="glyphicon-plus btn btn-default">Agregar</g:link>
     <g:form action="busquedaAdministrador" class="navbar-form navbar-right" role="search">
         <div class="form-group">
             <g:select name="campo" from="${['Nombre','Apellido','Usuario']}" class="form-control"/>
@@ -48,5 +49,6 @@
         <asset:javascript src="jquery-1.11.3.min.js" />
         <asset:javascript src="holder.min.js" />
         <asset:javascript src="ie10-viewport-bug-workaround.js" />
+
 </body>
 </html>
