@@ -6,7 +6,7 @@
     <title>Registro</title>
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
     <asset:stylesheet src="bootstrap.min.css"/>
-    <asset:stylesheet src="custom.css" />
+    <asset:stylesheet src="custom.css"/>
 </head>
 <body id="body">
     <div class="container">

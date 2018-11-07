@@ -5,9 +5,12 @@ class GestionClienteController {
     GestionClienteService gestionClienteService
     GestionAdminService gestionAdminService
     def index(){
-    [listaCatalogo: gestionAdminService.listaCatalogo(),carrito:def lista = []]
+        if (request.get){
+            return //render(view: 'index')
+        }
+        [listaCatalogo: gestionAdminService.listaCatalogo(),carrito:def lista = []]
     }
-
+    
     def verImagen = {
         def disfraz = Disfraz.get(params.id)
         response.outputStream << disfraz.imagen

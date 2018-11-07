@@ -47,7 +47,7 @@
         </div>
     </div>
     
-        <asset:javascript src="bootstrap.min.js" />
+    <asset:javascript src="bootstrap.min.js" />
     <asset:javascript src="jquery-1.11.3.min.js" />
     <asset:javascript src="holder.min.js" />
     <asset:javascript src="ie10-viewport-bug-workaround.js" />

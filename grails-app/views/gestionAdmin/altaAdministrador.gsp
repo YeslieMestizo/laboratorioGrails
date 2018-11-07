@@ -50,6 +50,50 @@
         <div class="col-sm-3"></div>
         </div>
 
+        <div class="page-wrapper">
+        <div class="page-content--bge10" style="background-color: lightgray;">
+            <div class="container">
+                <div class="login-wrap">
+                    <div class="login-content">
+                        <div class="login-logo">
+                            C R E A R
+                        </div>
+                        <div class="login-form">
+                            <form action="registro" method="post">
+                                <div class="form-group">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" value="${cliente?.nombre}" placeholder="Nombre.." class="au-input au-input--full">
+                                </div>
+                                <div class="form-group">
+                                    <label for="apellido">Apellido</label>
+                                    <input type="text" class="form-control" id="apellido" name="apellido" value="${cliente?.apellido}" placeholder="Apellido.." class="au-input au-input--full">
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefono">Tel&eacute;fono</label>
+                                    <input type="text" class="form-control" id="telefono" name="telefono" value="${cliente?.telefono}" placeholder="381-322363" class="au-input au-input--full">
+                                </div>
+                                <div class="form-group">
+                                     <label for="usuario">Usuario</label>
+                                    <input type="text" class="form-control" id="usuario" name="usuario" value="${cliente?.usuario}" placeholder="Usuario.." class="au-input au-input--full">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Contraseña</label>
+                                    <input type="password" class="form-control"  id= "contrasena" name="password" placeholder="Escribir contraseña.." class="au-input au-input--full">
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmacion">Confirmar Contraseña</label>
+                                    <input type="password" class="form-control" name="confirmacion" placeholder="Confirmar contraseña" class="au-input au-input--full">
+                                </div>
+                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit" name="enviar"><g:link controller="RegistroCliente"><strong>Guardar Datos</strong></g:link></button>
+                                <a href="javascript:window.history.back();" class="btn btn default">Cancelar</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
         <asset:javascript src="bootstrap.min.js" />
         <asset:javascript src="jquery-1.11.3.min.js" />
         <asset:javascript src="holder.min.js" />

@@ -3,6 +3,7 @@ import grails.validation.ValidationException
 
 class GestionAdminController {
     GestionAdminService gestionAdminService
+    
     def index() {
        [nroCliente:gestionAdminService.cantidadCliente(),nroAlquiler:gestionAdminService.cantidadAlquiler(),nroDisfraz:gestionAdminService.cantidadDisfraz()]
     }

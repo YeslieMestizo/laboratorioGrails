@@ -9,10 +9,12 @@ class LoginController {
     }
     def login(){
         if (request.get){
-            return render(view: 'login')
+            return //render(view: 'login')
         }
         def u = Cliente.findByUsuario(params.usuario)
+        //def u = Cliente.findByUsuario("from Cliente as c where c.id = :vid", [vid:params.id])
         def a = Administrador.findByUsuario(params.usuario)
+        //def a = Administrador.findByUsuario("from Administrador as a where a.id = :vid", [vid:params.id])
         if(u){
             if (u.password == params.password){
                 session.usuario = u
