@@ -47,7 +47,7 @@ class SecurityInterceptor {
 
 	SecurityInterceptor() {
 		//matchAll().except(controller:'GestionAdmin', action:'login')
-		matchAll()//.except(controller:'GestionAdmin', action:'login')
+		matchAll().except(controller:'GestionAdmin', action:'login')
 	}
 	boolean before() {
 		/*if (!session.usuario && actionName != "login"){//sin sesion y no se ha logueado

@@ -4,7 +4,10 @@ import java.security.MessageDigest
 
 class Administrador implements Serializable{
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 51ce08295fa0f5ff895586cd3aac258acc71f233
     String nombre
     String apellido
     String usuario

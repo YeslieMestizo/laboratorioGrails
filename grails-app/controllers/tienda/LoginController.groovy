@@ -36,7 +36,7 @@ class LoginController {
         }
     }
 
-    def logout() {
+    def logout() {        
         session.usuario=null
         render(view: "/index")
     }

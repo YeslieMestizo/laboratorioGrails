@@ -68,11 +68,11 @@
                                     <p>La mejor tienda de disfraces, aqu&iacute; podr&aacute;s conseguir muy buenas opciones! :)</p>
                                 </div>
                                 <div>
-                                <g:link controller="Login"><strong style="color: white">Ingresar</strong></g:link>
-                            </div>
-                            <div>                                
-                                <g:link controller="RegistroCliente"><strong style="color: white">Registrarse</strong></g:link>
-                            </div>
+                                    <g:link controller="Login"><strong style="color: white">Ingresar</strong></g:link>
+                                </div>
+                                <div>                                
+                                    <g:link controller="RegistroCliente"><strong style="color: white">Registrarse</strong></g:link>
+                                </div>
                         </div>
 
                     </div>
