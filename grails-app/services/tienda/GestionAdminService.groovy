@@ -26,10 +26,6 @@ class GestionAdminService {
         disfraz.save()
         //disfraz.delete(flush: true)
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> 51ce08295fa0f5ff895586cd3aac258acc71f233
     Disfraz unDisfraz(Long id){
         def disfraz = Disfraz.get(id)
         return disfraz
@@ -90,6 +86,10 @@ class GestionAdminService {
     Alquiler unAlquiler(Long id){
         def alquiler = Alquiler.get(id)
         return alquiler
+    }
+    void eliminarAlquiler(Long id) {
+        def alquiler = Alquiler.get(id)
+        alquiler.delete(flush: true)
     }
     //gestion catalogo
     List listaCatalogo(){
