@@ -26,6 +26,10 @@ class GestionAdminService {
         disfraz.save()
         //disfraz.delete(flush: true)
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 51ce08295fa0f5ff895586cd3aac258acc71f233
     Disfraz unDisfraz(Long id){
         def disfraz = Disfraz.get(id)
         return disfraz

@@ -36,7 +36,7 @@
                             <div class="register-link">
                                 <p>
                                     No tienes una cuenta?
-                                    <g:link controller="registroCliente" action="registro" class="btn btn-info">Registrarse
+                                    <g:link controller="registroCliente" action="registro">Registrarse
                                 </g:link>
                                 </p>
                             </div>
