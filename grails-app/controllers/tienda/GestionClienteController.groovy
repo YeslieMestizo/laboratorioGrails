@@ -7,13 +7,11 @@ class GestionClienteController {
     def index(){
     [listado: gestionAdminService.listaCatalogo(),tipoList:gestionAdminService.listaTipo()]
     }
-
     def verImagen = {
         def disfraz = Disfraz.get(params.id)
         response.outputStream << disfraz.imagen
         response.outputStream.flush()
-    }
-    
+    }    
     def showCarrito(){
     }
     def agregarCarrito(Long id){   
