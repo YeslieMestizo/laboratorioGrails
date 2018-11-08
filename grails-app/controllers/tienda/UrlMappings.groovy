@@ -18,6 +18,8 @@ GestionAdminService gestionAdminService
         } 
         
 
+        "/clientes"(resources:"cliente")
+
         "/"(view:"/index")
         "500"(view:'/error')
         "404"(view:'/notFound')

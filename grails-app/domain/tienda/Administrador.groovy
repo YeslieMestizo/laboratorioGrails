@@ -1,6 +1,8 @@
 package tienda
 import java.security.MessageDigest
+import grails.rest.*
 
+@Resource(uri='/administradores', formats=['xml', 'json'])
 
 class Administrador implements Serializable{
 

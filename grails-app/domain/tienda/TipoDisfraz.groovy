@@ -1,4 +1,7 @@
 package tienda
+import grails.rest.*
+
+@Resource(uri='/tiposDisfraces', formats=['xml', 'json'])
 
 class TipoDisfraz {
     String descripcion
