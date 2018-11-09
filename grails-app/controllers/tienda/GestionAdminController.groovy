@@ -72,16 +72,20 @@ class GestionAdminController {
         redirect(action:"showCliente")
     }
     def editarCliente(){
-        [cliente: gestionAdminService.unCliente(new Long(params.id))]
+        def cliente = gestionAdminService.unCliente(new Long(params.id))
+        [cliente: cliente, user:gestionAdminService.getUsuario(cliente.usuario)]
     }
     def actualizarCliente(Long id){
         def cliente = Cliente.get(params.id)
-        cliente.properties = params
-        if (cliente!=null){
+        def usuario = Usuario.findByEmail(cliente.usuario)
+        cliente.properties = [nombre:params.nombre, apellido:params.apellido, usuario:params.usuario,telefono:params.telefono,direccion:params.direccion,estado:"activo"]
+        if (cliente!=null){                        
+            usuario.email = cliente.usuario
+            usuario.password = params.password
+            usuario.beforeUpdate()
+            usuario.save(flush:true)
             cliente.save(flush:true)
             redirect(action:"showCliente")
-
-
         }     
     }
     //Gestion de Administrador
@@ -89,7 +93,7 @@ class GestionAdminController {
         [listado: gestionAdminService.listaAdministrador()]
     }
     def altaAdministrador(){
-        [administrador: new Administrador()]
+        [Usuario: new Usuario()]
     }
     def guardarAltaAdministrador() {
         gestionAdminService.altaAdministrador(params)
@@ -103,13 +107,13 @@ class GestionAdminController {
         [administrador: gestionAdminService.unAdministrador(new Long(params.id))]
     }
     def actualizarAdministrador(Long id){
-        def administrador = Administrador.get(params.id)
-        administrador.properties = params
+        def administrador = Usuario.get(params.id)
+        administrador.properties = params        
         if (administrador!=null){
-
-            administrador.save(flush:true)
+            usuario.beforeUpdate()
+            usuario.save(flush:true)
             redirect(action:"showAdministrador")
-        }
+        }     
     }
     //Gestion de tipoDisfraz
     def showTipoDisfraz(){
@@ -151,6 +155,11 @@ class GestionAdminController {
         def alquiler = Alquiler.get(id)
         alquiler.estado = params.estado
         if (alquiler!=null){
+            if(params.estado=='Devuelto'){
+            for(disfraz in alquiler.items){
+                gestionAdminService.devolverItems(disfraz)
+            }
+            }
             alquiler.save(flush:true)
             redirect(action:"showAlquiler")
         }
@@ -192,15 +201,11 @@ class GestionAdminController {
     def busquedaAdministrador(){
         if(params.campo.toString()=="Nombre"){
             render(view:"showAdministrador",model:[listado: gestionAdminService.buscarAdminPorNombre(params.busqueda)])
-        }else{
-            if(params.campo.toString()=="Apellido"){
-                render(view:"showAdministrador",model:[listado: gestionAdminService.buscarAdminPorApellido(params.busqueda)])
-
-            }else{
+        }else{            
                 render(view:"showAdministrador",model:[listado: gestionAdminService.buscarAdminPorUsuario(params.busqueda)])
             }
         }
-    }
+    
     def busquedaDisfraz(String campo){
         if(campo=="F"){
             render(view:"showDisfraz",model:[listado: gestionAdminService.buscarDisfrazPorGenero(campo),tipoList: gestionAdminService.listaTipo()])
@@ -241,13 +246,9 @@ class GestionAdminController {
                 render(view:"showCliente",model:[listado: gestionAdminService.buscarClientePorApellido(params.busqueda)])
 
             }else{
-                if(params.campo.toString()=="Usuario"){
-                    render(view:"showCliente",model:[listado: gestionAdminService.buscarClientePorUsuario(params.busqueda)])
-                }
-                else{
                     render(view:"showCliente",model:[listado: gestionAdminService.buscarClientePorDireccion(params.busqueda)])
                 }
             }
         }
-    }
+    
 }

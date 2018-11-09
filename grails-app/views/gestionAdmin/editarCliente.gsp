@@ -4,24 +4,6 @@
         <meta name="layout" content="mainAdministrador"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Editar Cliente</title>
-<<<<<<< HEAD
-        <asset:stylesheet src="bootstrap.min.css" />
-        <asset:stylesheet src="custom.css"/>
-    </head>
-    <body>
-        <h1>Editar</h1>
-        <g:form controller="gestionAdmin" action="actualizarCliente" method="POST">
-            <g:hiddenField name="version" value="${this.cliente?.version}"/>
-            <g:hiddenField name="id" value="${this.cliente?.id}" />
-            <fieldset class="form">
-                <f:all bean="cliente"/>
-            </fieldset>
-            <fieldset class="buttons">
-                <input class="save" type="submit" value="${message(code: 'default.button.update.label', default: 'Update')}" />
-            </fieldset>
-        </g:form>
-    </body>
-=======
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
     <asset:stylesheet src="bootstrap.min.css" />
     <asset:stylesheet src="custom.css"/>
@@ -60,11 +42,11 @@
                         </div>
                         <div class="form-group">
                             <label for="usuario">Usuario</label>
-                            <input type="text" class="form-control" name="usuario" value="${cliente.usuario}">
+                            <input type="text" class="form-control" name="usuario" value="${user.email}">
                         </div>
                         <div class="form-group">
                             <label for="password">Contraseña</label>
-                            <input type="password" class="form-control" name="password" value="${cliente.password}">
+                            <input type="password" class="form-control" name="password" value="${user.password}">
                         </div>
                         <input type="submit" name="enviar" value="Guardar" class="btn btn-default" />
                         <a href="javascript:window.history.back();" class="btn btn-default">Cancelar</a>
@@ -80,5 +62,4 @@
 <asset:javascript src="holder.min.js" />
 <asset:javascript src="ie10-viewport-bug-workaround.js" />
 </body>
->>>>>>> cc124f449f913dec460c9cdc7609902b6f29b914
 </html>

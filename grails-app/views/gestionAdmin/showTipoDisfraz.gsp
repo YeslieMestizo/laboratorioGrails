@@ -12,9 +12,8 @@
 
     <h1>Gesti&oacute;n de Tipo de Disfraz</h1><br>
 
-    <div class="row">
-    <div class="col-sm-8">
-        <div class="container">
+    <div class="container-fluid">
+        <div class="col-md-7">
             <table class="table table-hover">
                 <tr class="info">
                     <th>C&oacute;digo</th>
@@ -31,35 +30,34 @@
                         </tr>
                 </g:each>
             </table>
+
         </div>
-    </div>
-    <div class="col-sm-4">
-    <g:if test="${tipoDisfrazE}">
-        
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">
-                        <span class="glyphicon glyphicon-log-in"></span> 
-                        Editar
-                    </h3>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-4">
+            <g:if test="${tipoDisfrazE}">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <span class="glyphicon glyphicon-log-in"></span> 
+                            Editar
+                        </h3>
+                    </div>
+                    <div class="well well-sm">
+                        <g:form action="actualizarTipoDisfraz" method="post">
+                            <g:hiddenField name="version" value="${this.tipoDisfrazE?.version}" />
+                            <g:hiddenField name="id" value="${this.tipoDisfrazE?.id}" />
+                            <div class="form-group">
+                                <label for="descripcion">Descripci&oacute;n</label>
+                                <input type="text" class="form-control" name="descripcion" value="${tipoDisfrazE.descripcion}">
+                            </div>
+                            <input type="submit" name="enviar" value="Guardar" class="btn btn-default" />
+                            <a href="javascript:window.history.back();" class="btn btn-default">Cancelar</a>
+                        </g:form>
+                    </div>    
                 </div>
-                <div class="well well-sm">
-                    <g:form action="actualizarTipoDisfraz" method="post">
-                        <g:hiddenField name="version" value="${this.tipoDisfrazE?.version}" />
-                        <g:hiddenField name="id" value="${this.tipoDisfrazE?.id}" />
-                        <div class="form-group">
-                            <label for="descripcion">Descripci&oacute;n</label>
-                            <input type="text" class="form-control" name="descripcion" value="${tipoDisfrazE.descripcion}">
-                        </div>
-                        <input type="submit" name="enviar" value="Guardar" class="btn btn-default" />
-                        <a href="javascript:window.history.back();" class="btn btn-default">Cancelar</a>
-                    </g:form>
-                </div>
-            </div>
-        
-    </g:if>
-    <g:if test="${tipoDisfraz}">
-            <div class="panel panel-default">
+
+            </g:if>
+            <g:if test="${tipoDisfraz}">
                 <div class="panel-heading">
                     <h3 class="panel-title">
                         <span class="glyphicon glyphicon-log-in"></span> 
@@ -76,11 +74,13 @@
                         <a href="javascript:window.history.back();" class="btn btn-default">Cancelar</a>
 
                     </g:form>
-                </div>
-            </div>        
-    </g:if>
-</div>
-</div>
+
+                </div>        
+            </g:if>
+        </div>
+    </div>
+    <br><br>
+
 <asset:javascript src="bootstrap.min.js" />    
 <asset:javascript src="jquery-1.11.3.min.js" />
 <asset:javascript src="holder.min.js" />

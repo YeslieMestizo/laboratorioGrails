@@ -50,7 +50,6 @@
                     <th>Telefono</th>
                     <th>Direccion</th>
                     <th>Usuario</th>
-                    <th>Contraseña</th>
                 </tr>
                 <tr class="success">
                     <td>${alquiler.cliente.id}</td>
@@ -59,7 +58,6 @@
                     <td>${alquiler.cliente.telefono}</td>
                     <td>${alquiler.cliente.direccion}</td>
                     <td>${alquiler.cliente.usuario}</td>
-                    <td>${alquiler.cliente.password}</td>
                 </tr>
             </table>
         </div>

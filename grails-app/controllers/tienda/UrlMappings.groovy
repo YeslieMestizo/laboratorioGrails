@@ -8,7 +8,15 @@ GestionAdminService gestionAdminService
             constraints {
                 // apply constraints here
             }
+            
         }
+        
+        
+        "/busqueda"(resources:"apiDisfraz") {
+        collection {"/lista"(controller: "ApiDisfraz", action: "lista")
+        }
+        } 
+        
 
         "/"(view:"/index")
         "500"(view:'/error')

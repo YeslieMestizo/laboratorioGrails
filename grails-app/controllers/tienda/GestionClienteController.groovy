@@ -7,31 +7,29 @@ class GestionClienteController {
     def index(){
     [listado: gestionAdminService.listaCatalogo(),tipoList:gestionAdminService.listaTipo()]
     }
-
     def verImagen = {
         def disfraz = Disfraz.get(params.id)
         response.outputStream << disfraz.imagen
         response.outputStream.flush()
-    }
-    
+    }    
     def showCarrito(){
     }
     def agregarCarrito(Long id){   
         println id
         println gestionAdminService.unCatalogo(new Long(id))
-        session.carrito.addToItems(gestionAdminService.unCatalogo(id))
-        println session.carrito 
+        session.carrito.addToItems(gestionAdminService.unCatalogo(new Long(id)))
+        println session.carrito.items
         render(view:"showCarrito")
     }
     def masCompra(){
         render(view:"index",model:[listado: gestionAdminService.listaCatalogo()])
     }
     def eliminarItems(Long id){
-        carrito.eliminarItems(gestionAdminService.unCatalogo(id))
+        session.carrito.eliminarItems(gestionAdminService.unCatalogo(id))
         render(view:"showCarrito")
     }   
     def guardarAlquiler(){
-        def alquiler = new Alquiler(fechaEntrega:params.fechaEntrega,fechaDevolucion:params.fechaDevolucion,precio:session.carrito.total(),estado:"pendiente",cliente:session.usuario)
+        def alquiler = new Alquiler(fechaEntrega:params.fechaEntrega,fechaDevolucion:params.fechaDevolucion,precio:session.carrito.total(),estado:"pendiente",cliente:session.datos)
         println alquiler.fechaEntrega
         
         if(alquiler.save(flush:true)){
@@ -40,8 +38,9 @@ class GestionClienteController {
                 def cat = Catalogo.get(catalogo.id)
                 cat.cantidad = cat.cantidad-1
                 cat.save(flush:true)
-                alquiler.addToItems(cat.disfraz)                
+                alquiler.addToItems(cat.disfraz)
         }
+        alquiler.save(flush:true)
         session.carrito.items.clear()
         redirect(action:"index")
         }else{    

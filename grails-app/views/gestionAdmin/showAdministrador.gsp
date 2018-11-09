@@ -11,7 +11,7 @@
     <g:link controller="gestionAdmin" action="altaAdministrador" class="glyphicon-plus btn btn-default">Agregar</g:link>
     <g:form action="busquedaAdministrador" class="navbar-form navbar-right" role="search">
         <div class="form-group">
-            <g:select name="campo" from="${['Nombre','Apellido','Usuario']}" class="form-control"/>
+            <g:select name="campo" from="${['Nombre','Usuario']}" class="form-control"/>
             <input type="text" name="busqueda" class="form-control" placeholder="B&uacute;squeda por ...">
         </div>
         <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>Buscar</button>
@@ -23,8 +23,6 @@
                 <tr class="info">
                     <th>C&oacute;digo</th>
                     <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Tel&eacute;fono</th>
                     <th>Usuario</th>
                     <th>Contraseña</th>
                     <th></th>
@@ -32,14 +30,12 @@
                 </tr>
                 <g:each in="${listado?}">
                 <tr class="success">
-                    <td>${it.id}</td>
-                    <td>${it.nombre}</td>
-                    <td>${it.apellido}</td>
-                    <td>${it.telefono}</td>
-                    <td>${it.usuario}</td>
-                    <td>${it.password}</td>
-                    <td><g:link action="editarAdministrador" id="${it.id}" class="btn btn-info">Editar</g:link></td>
-                    <td><g:link action="darBajaAdministrador" id="${it.id}" class="btn btn-info">Eliminar</g:link></td>
+                    <td>${it.usuario.id}</td>
+                    <td>${it.usuario.nombreUsuario}</td>
+                    <td>${it.usuario.email}</td>
+                    <td>${it.usuario.password}</td>
+                    <td><g:link action="editarAdministrador" id="${it.usuario.id}" class="btn btn-info">Editar</g:link></td>
+                    <td><g:link action="darBajaAdministrador" id="${it.usuario.id}" class="btn btn-info">Eliminar</g:link></td>
                 </tr>
                 </g:each>
             </table>

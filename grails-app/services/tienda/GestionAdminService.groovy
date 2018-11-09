@@ -32,14 +32,33 @@ class GestionAdminService {
     }
     //Gestion Cliente
     void altaCliente(Map params) {
-        def cliente = new Cliente(params).save(flush:true)
+        //def cliente = new Cliente(params).save(flush:true)
+        def c = new Cliente(nombre:params.nombre, apellido:params.apellido, usuario:params.usuario,telefono:params.telefono,direccion:params.direccion,estado:"activo").save(flush:true)
+        def usuario = new Usuario(nombreUsuario: params.nombre ,password: params.password,email: params.usuario)
+        if(!usuario.save(flush: true)) {
+            usuario.errors.each{
+                println it
+            }
+        }
+        def rol = Rol.findByAuthority("CLIENTE")     
+        def usuarioRol = new UsuarioRol(usuario: usuario, rol: rol)
+        if(!usuarioRol.save(flush: true)) {
+            usuarioRol.errors.each{
+                println it
+            }                
+        }    
     }
     void eliminarCliente(Long id) {
         def cliente = Cliente.get(id)
-        cliente.delete(flush: true)
+        cliente.estado='inactivo'
+        cliente.save(flush:true)
+        def client = Usuario.findByEmail(cliente.usuario)
+        def usuarioRol = UsuarioRol.findByUsuario(client)
+        usuarioRol.delete(flush:true)
+        client.delete(flush: true)
     }
     List listaCliente(){
-        def cliente = Cliente.findAll()
+        def cliente = Cliente.findAllByEstado("activo")
         return cliente
     }
     Cliente unCliente(Long id){
@@ -48,20 +67,39 @@ class GestionAdminService {
     }
     //Gestion Administrador
     void altaAdministrador(Map params) {
-        def administrador = new Administrador(params).save(flush:true)
+        def usuario = new Usuario(params)
+        if(!usuario.save(flush: true)) {
+            usuario.errors.each{
+                println it
+            }
+        }
+        def rol = Rol.findByAuthority("ADMIN")     
+        def usuarioRol = new UsuarioRol(usuario: usuario, rol: rol)
+        if(!usuarioRol.save(flush: true)) {
+            usuarioRol.errors.each{
+                println it
+            }                
+        }    
     }
     void eliminarAdministrador(Long id) {
-        def administrador = Administrador.get(id)
+        def administrador = Usuario.get(id)
+        def usuarioRol = UsuarioRol.findByUsuario(administrador)
+        usuarioRol.delete(flush:true)
         administrador.delete(flush: true)
     }
     List listaAdministrador(){
-        def administrador = Administrador.findAll()
+        def rol = Rol.findByAuthority("ADMIN")
+        return UsuarioRol.findAllByRol(rol)
+    }
+    Usuario unAdministrador(Long id){
+        def administrador = Usuario.get(id)
         return administrador
     }
-    Administrador unAdministrador(Long id){
-        def administrador = Administrador.get(id)
-        return administrador
+    //gestion usuario
+    Usuario getUsuario(String mail){
+        return Usuario.findByEmail(mail)        
     }
+    
     //Gestion TipoDisfraz
     void altaTipoDisfraz(Map params) {
         def tipoDisfraz = new TipoDisfraz(params).save(flush:true)
@@ -106,6 +144,11 @@ class GestionAdminService {
     Catalogo unCatalogo(Long id){
         def catalogo = Catalogo.get(id)
         return catalogo
+    }
+    void devolverItems(Disfraz disfraz){
+        def catalogo = Catalogo.findByDisfraz(disfraz)
+        catalogo.cantidad = catalogo.cantidad+1
+        catalogo.save(flush:true)
     }
 
     //busqueda Administrador

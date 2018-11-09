@@ -22,25 +22,17 @@
             <div class="well well-sm">
                 <g:form action="guardarAltaAdministrador" method="post">
                 <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control" id= "nombre" name="nombre" placeholder="nombre">
-                </div>
+                    <label for="nombreUsuario">Nombre</label>
+                    <input type="text" class="form-control" id= "nombre" name="nombreUsuario" placeholder="nombre">
+                </div>                
                 <div class="form-group">
-                    <label for="apellido">Apellido</label>
-                    <input type="text" class="form-control" id= "apellido" name="apellido" placeholder="apellido">
-                </div>
-                <div class="form-group">
-                    <label for="usuario">Usuario</label>
-                    <input type="text" class="form-control" id= "usuario" name="usuario" placeholder="usuario">
+                    <label for="email">Usuario</label>
+                    <input type="text" class="form-control" id= "usuario" name="email" placeholder="example@example.com">
                 </div>
                 <div class="form-group">
                     <label for="password">Contraseña</label>
                     <input type="password" class="form-control" id= "contrasena" name="password" placeholder="contrasena">
-                </div>
-                <div class="form-group">
-                    <label for="telefono">Tel&eacute;fono</label>
-                    <input type="text" class="form-control" id= "telefono" name="telefono" placeholder="telefono">
-                </div>
+                </div>                
                 <input type="submit" name="enviar" value="Guardar" class="btn btn-default"/>
                 <a href="javascript:window.history.back();" class="btn btn-default">Cancelar</a>
                 </g:form>
