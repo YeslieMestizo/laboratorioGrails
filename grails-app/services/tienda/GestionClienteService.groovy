@@ -3,22 +3,42 @@ import grails.gorm.transactions.Transactional
 
 @Transactional
 class GestionClienteService{
+    GestionAdminService gestionAdminService
 	def serviceMethod(){
 
 	}
         //busqueda DISFRAZ
     List buscarDisfrazPorGenero(String descripcion) {
-        return Disfraz.findAllByGenero(descripcion)
-          
+        def list=[]
+        for (disfraz in gestionAdminService.buscarDisfrazPorGenero(descripcion)){
+            if(Catalogo.findByDisfraz(disfraz)){
+            list.add(Catalogo.findByDisfraz(disfraz))}
+        }
+         return list
     }
     List buscarDisfrazPorTalle(String descripcion) {
-        return Disfraz.findAllByTalle(descripcion)
-          
+        def list=[]
+        for (disfraz in gestionAdminService.buscarDisfrazPorTalle(descripcion)){
+            if(Catalogo.findByDisfraz(disfraz)){
+            list.add(Catalogo.findByDisfraz(disfraz))}
+        }
+         return list
     }
     List buscarDisfrazPorDescripcion(String descripcion) {
-        descripcion='%'+descripcion+'%'
-        return Disfraz.findAllByDescripcionLike(descripcion)
-
+        def list=[]
+        for (disfraz in gestionAdminService.buscarDisfrazPorDescripcion(descripcion)){
+            if(Catalogo.findByDisfraz(disfraz)){
+            list.add(Catalogo.findByDisfraz(disfraz))}
+        }
+         return list
+    }
+    List buscarDisfrazPorTipo(String descripcion){
+        def list=[]
+        for (disfraz in gestionAdminService.buscarDisfrazPorTipo(descripcion)){
+            if(Catalogo.findByDisfraz(disfraz)){
+            list.add(Catalogo.findByDisfraz(disfraz))}
+        }
+        return list
     }
 	
 }

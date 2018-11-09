@@ -11,7 +11,7 @@
         <g:link controller="gestionAdmin" action="altaCliente" class="glyphicon-plus btn btn-default">Agregar</g:link>
         <g:form action="busquedaCliente" class="navbar-form navbar-right" role="search">
         <div class="form-group">
-            <g:select name="campo" from="${['Nombre','Apellido','Usuario','Direccion']}" class="form-control"/>
+            <g:select name="campo" from="${['Nombre','Apellido','Direccion']}" class="form-control"/>
             <input type="text" name="busqueda" class="form-control" placeholder="Busqueda por ...">
         </div>
         <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>Buscar</button>

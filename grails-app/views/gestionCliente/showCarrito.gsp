@@ -23,10 +23,22 @@ if (session.getAttribute("carrito")== null) {  //si existe un carrito en la sesi
     <div class="container-fluid">
         <div class="col-sm-4">
             <div class="container-fluid">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7396376f1cbbff08f3103867ea0d5f770ea24eba
                 <label>Nombre: ${session.datos.nombre}</label><br>
                 <label>Apellido: ${session.datos.apellido}</label><br>     
                 <label>Direccion: ${session.datos.direccion}</label><br> 
                 <label>Telefono: ${session.datos.telefono}</label><br> 
+<<<<<<< HEAD
+=======
+=======
+                <label>Nombre: ${session.usuario.nombreUsuario}</label><br>
+                <label>Apellido: ${session.usuario.email}</label><br>     
+                
+>>>>>>> df3574264bd979ae2abbe2844a40ec56077270bd
+>>>>>>> 7396376f1cbbff08f3103867ea0d5f770ea24eba
             </div>
             <g:form action="guardarAlquiler" method="post">
                 <div class="form-group">

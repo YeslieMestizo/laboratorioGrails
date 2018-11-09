@@ -42,11 +42,11 @@
                         </div>
                         <div class="form-group">
                             <label for="usuario">Usuario</label>
-                            <input type="text" class="form-control" name="usuario" value="${cliente.usuario}">
+                            <input type="text" class="form-control" name="usuario" value="${user.email}">
                         </div>
                         <div class="form-group">
                             <label for="password">Contraseña</label>
-                            <input type="password" class="form-control" name="password" value="${cliente.password}">
+                            <input type="password" class="form-control" name="password" value="${user.password}">
                         </div>
                         <input type="submit" name="enviar" value="Guardar" class="btn btn-default" />
                         <a href="javascript:window.history.back();" class="btn btn-default">Cancelar</a>
@@ -62,4 +62,16 @@
 <asset:javascript src="holder.min.js" />
 <asset:javascript src="ie10-viewport-bug-workaround.js" />
 </body>
+<<<<<<< HEAD
 </html>
+=======
+<<<<<<< HEAD
+</html>
+=======
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> a1e647305293c522db912bf67d61331a111f86cf
+>>>>>>> df3574264bd979ae2abbe2844a40ec56077270bd
+>>>>>>> 7396376f1cbbff08f3103867ea0d5f770ea24eba

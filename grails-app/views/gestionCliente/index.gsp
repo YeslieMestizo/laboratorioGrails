@@ -107,10 +107,11 @@ if (session.getAttribute("carrito")== null) {  //si existe un carrito en la sesi
                 <a href="#">${it.disfraz.tipo.descripcion.toUpperCase()}</a>
             </h3>
             <img  src=${createLink(controller:"GestionCliente", action:"verImagen", id:"${it.disfraz.id}")} width=′300′ />
-                  <p>${it.disfraz.descripcion.toUpperCase()}</p>
-                  <p>${it.disfraz.talle}</p>
-                  <p>${it.disfraz.genero}</p>
-                  <p>${it.disfraz.tipo.descripcion.toUpperCase()}</p>
+                  <p>Descripcion: ${it.disfraz.descripcion.toUpperCase()}</p>
+                  <p>Talle: ${it.disfraz.talle}</p>
+                  <p>Genero: ${it.disfraz.genero}</p>
+                  <p>Tipo: ${it.disfraz.tipo.descripcion.toUpperCase()}</p>
+                  <p>Precio: ${it.precio}</p>
                   <g:link controller="gestionCliente" action="agregarCarrito" class="glyphicon-plus btn btn-default" params="[id:it.id]" >Agregar Carrito</g:link>
                       </div>
             </g:each>

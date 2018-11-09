@@ -26,20 +26,46 @@ class GestionAdminService {
         disfraz.save()
         //disfraz.delete(flush: true)
     }
+
     Disfraz unDisfraz(Long id){
         def disfraz = Disfraz.get(id)
         return disfraz
     }
     //Gestion Cliente
+<<<<<<< HEAD
     void altaCliente(Map params) {
+        //def cliente = new Cliente(params).save(flush:true)
+        def c = new Cliente(nombre:params.nombre, apellido:params.apellido, usuario:params.usuario,telefono:params.telefono,direccion:params.direccion,estado:"activo").save(flush:true)
+        def usuario = new Usuario(nombreUsuario: params.nombre ,password: params.password,email: params.usuario)
+        if(!usuario.save(flush: true)) {
+            usuario.errors.each{
+                println it
+            }
+        }
+        def rol = Rol.findByAuthority("CLIENTE")     
+        def usuarioRol = new UsuarioRol(usuario: usuario, rol: rol)
+        if(!usuarioRol.save(flush: true)) {
+            usuarioRol.errors.each{
+                println it
+            }                
+        }    
+=======
+    Cliente altaCliente(Map params) {
         def cliente = new Cliente(params).save(flush:true)
+        return cliente
+>>>>>>> df3574264bd979ae2abbe2844a40ec56077270bd
     }
     void eliminarCliente(Long id) {
         def cliente = Cliente.get(id)
-        cliente.delete(flush: true)
+        cliente.estado='inactivo'
+        cliente.save(flush:true)
+        def client = Usuario.findByEmail(cliente.usuario)
+        def usuarioRol = UsuarioRol.findByUsuario(client)
+        usuarioRol.delete(flush:true)
+        client.delete(flush: true)
     }
     List listaCliente(){
-        def cliente = Cliente.findAll()
+        def cliente = Cliente.findAllByEstado("activo")
         return cliente
     }
     Cliente unCliente(Long id){
@@ -47,21 +73,46 @@ class GestionAdminService {
         return cliente
     }
     //Gestion Administrador
+<<<<<<< HEAD
     void altaAdministrador(Map params) {
+        def usuario = new Usuario(params)
+        if(!usuario.save(flush: true)) {
+            usuario.errors.each{
+                println it
+            }
+        }
+        def rol = Rol.findByAuthority("ADMIN")     
+        def usuarioRol = new UsuarioRol(usuario: usuario, rol: rol)
+        if(!usuarioRol.save(flush: true)) {
+            usuarioRol.errors.each{
+                println it
+            }                
+        }    
+=======
+    Administrador altaAdministrador(Map params) {
         def administrador = new Administrador(params).save(flush:true)
+        return administrador
+>>>>>>> df3574264bd979ae2abbe2844a40ec56077270bd
     }
     void eliminarAdministrador(Long id) {
-        def administrador = Administrador.get(id)
+        def administrador = Usuario.get(id)
+        def usuarioRol = UsuarioRol.findByUsuario(administrador)
+        usuarioRol.delete(flush:true)
         administrador.delete(flush: true)
     }
     List listaAdministrador(){
-        def administrador = Administrador.findAll()
+        def rol = Rol.findByAuthority("ADMIN")
+        return UsuarioRol.findAllByRol(rol)
+    }
+    Usuario unAdministrador(Long id){
+        def administrador = Usuario.get(id)
         return administrador
     }
-    Administrador unAdministrador(Long id){
-        def administrador = Administrador.get(id)
-        return administrador
+    //gestion usuario
+    Usuario getUsuario(String mail){
+        return Usuario.findByEmail(mail)        
     }
+    
     //Gestion TipoDisfraz
     void altaTipoDisfraz(Map params) {
         def tipoDisfraz = new TipoDisfraz(params).save(flush:true)
@@ -107,6 +158,11 @@ class GestionAdminService {
         def catalogo = Catalogo.get(id)
         return catalogo
     }
+    void devolverItems(Disfraz disfraz){
+        def catalogo = Catalogo.findByDisfraz(disfraz)
+        catalogo.cantidad = catalogo.cantidad+1
+        catalogo.save(flush:true)
+    }
 
     //busqueda Administrador
     List buscarAdminPorNombre(String descripcion) {
@@ -127,11 +183,11 @@ class GestionAdminService {
     //busqueda DISFRAZ
     List buscarDisfrazPorGenero(String descripcion) {
         return Disfraz.findAllByGenero(descripcion)
-          
+
     }
     List buscarDisfrazPorTalle(String descripcion) {
         return Disfraz.findAllByTalle(descripcion)
-          
+
     }
     List buscarDisfrazPorDescripcion(String descripcion) {
         descripcion='%'+descripcion+'%'
@@ -149,7 +205,7 @@ class GestionAdminService {
         TipoDisfraz tipo = TipoDisfraz.findById(id)
         return Disfraz.findAllByTipo(tipo)
     }
-    
+
     //busqueda Cliente
     List buscarClientePorNombre(String descripcion) {
         descripcion='%'+descripcion+'%'
@@ -170,7 +226,7 @@ class GestionAdminService {
         descripcion='%'+descripcion+'%'
         return Cliente.findAllByDireccionLike(descripcion)
     }
-    
+
     //contadores
     String cantidadAlquiler(){
         def cantidad = Alquiler.count()

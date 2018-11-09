@@ -1,8 +1,19 @@
 package tienda
+import grails.converters.JSON
+import java.text.SimpleDateFormat
 
 class BootStrap {
 
     def init = { servletContext ->
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> df3574264bd979ae2abbe2844a40ec56077270bd
+>>>>>>> 7396376f1cbbff08f3103867ea0d5f770ea24eba
         //        //Prueba cliente
         //        Cliente client = new Cliente (nombre:'Guisel', apellido:'Montaño', usuario:'lulo', telefono:'532', password:'789', direccion:'bhj')
         //        client.save()
@@ -66,6 +77,7 @@ class BootStrap {
 //                println it
 //            }
 //        }
+<<<<<<< HEAD
 //
 //        def usuarioRol3 = new UsuarioRol(usuario: usuario3, rol: rol3)
 //        if(!usuarioRol3.save(flush: true)) {
@@ -74,6 +86,51 @@ class BootStrap {
 //            }
 //        }
         
+=======
+<<<<<<< HEAD
+//
+//        def usuarioRol3 = new UsuarioRol(usuario: usuario3, rol: rol3)
+//        if(!usuarioRol3.save(flush: true)) {
+//            usuarioRol3.errors.each{
+//                println it
+//            }
+//        }
+        
+=======
+//
+//        def usuarioRol3 = new UsuarioRol(usuario: usuario3, rol: rol3)
+//        if(!usuarioRol3.save(flush: true)) {
+//            usuarioRol3.errors.each{
+//                println it
+//            }
+//        }
+        
+=======
+<<<<<<< HEAD
+>>>>>>> a1e647305293c522db912bf67d61331a111f86cf
+
+        //Prueba cliente
+        Cliente client = new Cliente (nombre:'Guisel', apellido:'Montaño', usuario:'lulo', telefono:'532', password:'789', direccion:'bhj')
+        client.save()
+
+        //Prueba de administrador
+        Administrador admin = new Administrador (nombre:'Yeslie', apellido:'Mestizo', usuario:'admin', password:'123', telefono:'4567')
+        admin.save()
+<<<<<<< HEAD
+=======
+=======
+//        //Prueba cliente
+//        Cliente client = new Cliente (nombre:'Guisel', apellido:'Montaño', usuario:'lulo', telefono:'532', password:'789', direccion:'bhj')
+//        client.save()
+//
+//        //Prueba de administrador
+//        Administrador admin = new Administrador (nombre:'Ana', apellido:'Mesa', usuario:'admin', password:'123', telefono:'4567')
+//        admin.save()
+>>>>>>> a8a647b553c1a3301070a7aaf98202275883057f
+>>>>>>> d168a23818e80d95f96e36f939b3be7e5df9721e
+>>>>>>> a1e647305293c522db912bf67d61331a111f86cf
+>>>>>>> df3574264bd979ae2abbe2844a40ec56077270bd
+>>>>>>> 7396376f1cbbff08f3103867ea0d5f770ea24eba
     }
     def destroy = {
     }

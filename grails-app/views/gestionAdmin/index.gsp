@@ -41,7 +41,7 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-header bg-info">
-                    <strong class="card-title text-light">CANTIDAD DE USUARIO</strong>
+                    <strong class="card-title text-light">CANTIDAD DE CLIENTES</strong>
                     
                 </div>
                 <div class="card-body text-white bg-success">
@@ -57,7 +57,7 @@
                     <strong class="card-title text-light">CANTIDAD DE VENTA</strong>
                 </div>
                 <div class="card-body text-white bg-info">
-                    <p class="card-text text-light">${nroCliente}
+                    <p class="card-text text-light">${nroAlquiler}
                     </p>
                 </div>
             </div>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="layout" content="mainClient"/>
-    <title>Login</title>    
+    <title>Login</title>
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
     <asset:stylesheet src="bootstrap.min.css" />
     <asset:stylesheet src="custom.css" />
@@ -23,12 +23,16 @@
                         <div class="login-form">
                             <g:form controller="login" action="login" method="post" class="form-group row">
                                 <div class="form-group">
+<<<<<<< HEAD
                                     <label for='email'>Correo:</label>
+=======
+                                    <label for='email'>Usuario:</label>
+>>>>>>> 7396376f1cbbff08f3103867ea0d5f770ea24eba
                                     <input type="text" id="usuario" name="email" class="au-input au-input--full" placeholder="Usuario...">
                                 </div>
                                 <div class="form-group">
                                     <label>Contraseña:</label>
-                                    <input type="password" id="password" name="password" class="au-input au-input--full" type="password" placeholder="Contraseña...">
+                                    <input type="password" id="password" name="password" class="au-input au-input--full" placeholder="Contraseña...">
                                 </div>
                                 <br>
                                 <input type="submit" value="I n g r e s a r" class="au-btn au-btn--block au-btn--green m-b-20"/>
@@ -46,8 +50,8 @@
             </div>
         </div>
     </div>
-    
-        <asset:javascript src="bootstrap.min.js" />
+
+    <asset:javascript src="bootstrap.min.js" />
     <asset:javascript src="jquery-1.11.3.min.js" />
     <asset:javascript src="holder.min.js" />
     <asset:javascript src="ie10-viewport-bug-workaround.js" />

@@ -25,24 +25,16 @@
                         <g:hiddenField name="id" value="${this.administrador?.id}" />
                         <div class="form-group">
                             <label for="nombre">Nombre</label>
-                            <input type="text" class="form-control" name="nombre" value="${administrador.nombre}">
-                        </div>
-                        <div class="form-group">
-                            <label for="apellido">Apellido</label>
-                            <input type="text" class="form-control" name="apellido" value="${administrador.apellido}">
-                        </div>
+                            <input type="text" class="form-control" name="nombreUsuario" value="${administrador.nombreUsuario}">
+                        </div>                       
                         <div class="form-group">
                             <label for="usuario">Usuario</label>
-                            <input type="text" class="form-control" name="usuario" value="${administrador.usuario}">
+                            <input type="text" class="form-control" name="email" value="${administrador.email}">
                         </div>
                         <div class="form-group">
                             <label for="password">Contraseña</label>
                             <input type="password" class="form-control" name="password" value="${administrador.password}">
-                        </div>
-                        <div class="form-group">
-                            <label for="telefono">Tel&eacute;fono</label>
-                            <input type="text" class="form-control" name="telefono" value="${administrador.telefono}">
-                        </div>
+                        </div>                        
                         <input type="submit" name="enviar" value="Guardar" class="btn btn-default"/>
                         <a href="javascript:window.history.back();" class="btn btn-default">Cancelar</a>
                     </g:form>
@@ -57,4 +49,16 @@
 <asset:javascript src="holder.min.js" />
 <asset:javascript src="ie10-viewport-bug-workaround.js" />
 </body>
+<<<<<<< HEAD
 </html>
+=======
+<<<<<<< HEAD
+</html>
+=======
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> a1e647305293c522db912bf67d61331a111f86cf
+>>>>>>> df3574264bd979ae2abbe2844a40ec56077270bd
+>>>>>>> 7396376f1cbbff08f3103867ea0d5f770ea24eba

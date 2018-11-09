@@ -9,11 +9,17 @@ class RegistroClienteController {
             def c = new Cliente(nombre:params.nombre, apellido:params.apellido, usuario:params.usuario,telefono:params.telefono,direccion:params.direccion,estado:"activo")
         
             if(params.password != params.confirmacion) {
+<<<<<<< HEAD
                 //c.errors.rejectValue("password", "cliente.password.dontmatch")
                 return [cliente:c, message:"No verifica la contraseña"]
             }
             else if(c.save(flush:true)) {
                 //session.cliente = c
+=======
+                return [cliente:c, message:"No verifica la contraseña"]
+            }
+            else if(c.save(flush:true)) {
+>>>>>>> 7396376f1cbbff08f3103867ea0d5f770ea24eba
                 def usuario = new Usuario(nombreUsuario: params.nombre ,password: params.password,email: params.usuario)
                 if(!usuario.save(flush: true)) {
                     usuario.errors.each{
@@ -27,8 +33,12 @@ class RegistroClienteController {
                     usuarioRol.errors.each{
                         println it
                     }
+<<<<<<< HEAD
                 }
                 
+=======
+                }                
+>>>>>>> 7396376f1cbbff08f3103867ea0d5f770ea24eba
                 redirect(controller:"Login", action:"index")
             }
             else {

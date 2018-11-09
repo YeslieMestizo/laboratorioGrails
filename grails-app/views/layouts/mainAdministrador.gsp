@@ -41,7 +41,11 @@
                     <div class="collapse navbar-collapse" id="navbar">
                         <ul class="nav navbar-nav">
                             <!--li>
+<<<<<<< HEAD
                                 <a href="http://localhost:8080">Inicio</a>
+=======
+                                <a href="http://localhost:8080">Inicio</a-->
+>>>>>>> 7396376f1cbbff08f3103867ea0d5f770ea24eba
                             <li>
                                 <g:link action="index">Principal</g:link></li>
                             <li>
@@ -100,7 +104,8 @@
         </nav>
     </div>
 <!---->
-    <g:layoutBody/>
+ <div class="container-fluid"><g:layoutBody/></div>
+    
         <footer>
             <div class="container-fluid">
                 <div class="main-content">
