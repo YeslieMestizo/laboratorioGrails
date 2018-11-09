@@ -34,19 +34,20 @@
                 </div>
                 <div class="navbar-collapse collapse" style="float: right;">
                     <g:if test="${session.usuario}">
-                        <strong style="color: white;">Login as :  ${session.usuario.nombre}</strong> | <g:link controller="login" action="logout" class="btn btn-primary">Salir</g:link>
+                        <strong style="color: white;">Login as :  ${session.usuario.nombreUsuario}</strong> | <g:link controller="login" action="logout" class="btn btn-primary">Salir</g:link>
                     </g:if>
                 </div>
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse" id="navbar">
                         <ul class="nav navbar-nav">
-                            <li>
+                            <!--li>
                                 <a href="http://localhost:8080">Inicio</a>
                             <li>
                                 <g:link action="index">Principal</g:link></li>
                             <li>
                                 <a href="javascript:window.history.back();">&laquo; Volver atrás</a></li>
-                            <div class="container"></div>
+                            <div class="container"></div-->
+                            <li><div class="collapse navbar-collapse"><g:link action="index">Home</g:link></div></li>
                             <li>
                                   <div class="collapse navbar-collapse">
                                     <button  type="button" data-toggle="dropdown">DISFRACES
@@ -59,7 +60,6 @@
                                     </ul>
                                   </div>
                             </li>
-                            
                             <li>
                                   <div class="collapse navbar-collapse">
                                     <button  type="button" data-toggle="dropdown">CLIENTES
@@ -83,20 +83,19 @@
                             </li>
 
                             <li>
-                                  <div class="collapse navbar-collapse">
+                                <div class="collapse navbar-collapse">
                                     <button  type="button" data-toggle="dropdown">TIPO DISFRAZ
                                     <span class="caret"></span></button>
                                     <ul class="dropdown-menu">
                                       <li><g:link action="altaTipoDisfraz">Alta</g:link></li>
                                       <li><g:link action="showTipoDisfraz">listado</g:link></li>
                                     </ul>
-                                  </div>
+                                </div>
                             </li>
+                            <li><div class="collapse navbar-collapse"><a href="javascript:window.history.back();">&laquo; Volver atrás</a></div></li>
                         </ul>
-
                     </div>
-                </div>
-                
+                </div>                
             </div>
         </nav>
     </div>

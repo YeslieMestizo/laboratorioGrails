@@ -27,7 +27,6 @@
                         <th>Tel&eacute;fono</th>
                         <th>Direcci&oacute;n</th>
                         <th>Usuario</th>
-                        <th>Contraseña</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -39,7 +38,6 @@
                         <td>${it.telefono}</td>
                         <td>${it.direccion}</td>
                         <td>${it.usuario}</td>
-                        <td>${it.password}</td>
                         <td><g:link action="editarCliente" id="${it.id}" class="btn btn-info">Editar</g:link></td>
                         <td><g:link action="darBajaCliente" id="${it.id}" class="btn btn-info">Eliminar</g:link></td>
                     </tr>

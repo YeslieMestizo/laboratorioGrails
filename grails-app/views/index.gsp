@@ -65,7 +65,7 @@
                                     <div class="welcome2-greeting">
                                         <h1 class="title-6">Hola
                                         , bienvenido a R A Y.c o m </h1>
-                                    <p>La mejor tienda de disfraces, aqu&iacute; podr&aacute;s conseguir muy buenas opciones! :)</p>
+                                    <p style="color: white;">La mejor tienda de disfraces, aqu&iacute; podr&aacute;s conseguir muy buenas opciones! :)</p>
                                 </div>
                                 <div>
                                     <g:link controller="Login"><strong style="color: white">Ingresar</strong></g:link>

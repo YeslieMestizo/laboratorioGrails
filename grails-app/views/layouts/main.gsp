@@ -30,13 +30,6 @@
                 <a href="/#">I N I C I O</a>
             </div>
             <div class="navbar-collapse collapse">
-                <!--Login y Salida de Sesion
-                <g:if test="${session.usuario}">
-                    login as:${session.usuario.nombre}|<g:link controller="login" action="logout">Salir</g:link>
-                </g:if>
-                <g:else>
-                    <g:link controller="login" action="login">Ingresar al sistema</g:link>
-                </g:else>-->
             </div>
 
             

@@ -10,7 +10,6 @@
 </head>
 <body>
     <h1>Carrito</h1>
-    <g:link controller="gestionCliente" action="masCompra" class="glyphicon-plus btn btn-default"  >Agregar Carrito</g:link>
     <%
 Items carrito=null;
 if (session.getAttribute("carrito")== null) {  //si existe un carrito en la sesion, crea un carrito
@@ -22,12 +21,12 @@ if (session.getAttribute("carrito")== null) {  //si existe un carrito en la sesi
 %>
 
     <div class="container-fluid">
-        <div class="col-sm-3">
+        <div class="col-sm-4">
             <div class="container-fluid">
-                <label>Nombre: ${session.usuario.nombre}</label><br>
-                <label>Apellido: ${session.usuario.apellido}</label><br>
-                <label>Nombre: ${session.usuario.direccion}</label><br>
-                <label>Nombre: ${session.usuario.telefono}</label> <br>           
+                <label>Nombre: ${session.datos.nombre}</label><br>
+                <label>Apellido: ${session.datos.apellido}</label><br>     
+                <label>Direccion: ${session.datos.direccion}</label><br> 
+                <label>Telefono: ${session.datos.telefono}</label><br> 
             </div>
             <g:form action="guardarAlquiler" method="post">
                 <div class="form-group">
@@ -38,12 +37,11 @@ if (session.getAttribute("carrito")== null) {  //si existe un carrito en la sesi
                 <div class="form-group">
                     <label for="fechaDevolucion">Fecha de Devolucion</label>
                     <g:datePicker name="fechaDevolucion" value="${new Date()}" precision="day" years="${2018..2050}"/>
-                    <!--input type="date" class="form-control" name="fechaDevolucion"  class="au-input au-input--full"-->
                 </div>
                 <input type="submit" name="enviar" value="Confirmar Alquiler" class="btn btn-default" />
             </g:form>
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-8">
             <table class="table table-borderless table-data3">
                 <tr>
                     <th>Descripci&oacute;n</th>
@@ -51,6 +49,7 @@ if (session.getAttribute("carrito")== null) {  //si existe un carrito en la sesi
                     <th>G&eacute;nero</th>
                     <th>Tipo</th>
                     <th>Precio Unitario</th>
+                    <th></th>
                 </tr>
                 <g:each in="${carrito.items}">
                     <tr>

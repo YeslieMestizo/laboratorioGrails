@@ -11,6 +11,7 @@
     <div class="container">
         <h1>Gesti&oacute;n de Alquiler</h1><br>
     </div>
+    <div class="container">
     <div class="col-sm-10">
         <div class="container">
             <table class="table table-hover">
@@ -32,7 +33,7 @@
                         <td>${it.cliente.id}</td>
                         <td>${it.fechaEntrega}</td>
                         <td>${it.fechaDevolucion}</td>
-                        <td>${it.items}</td>
+                        <td>${it.items.id}</td>
                         <td>${it.precio}</td>
                         <td>${it.estado}</td>
                         <td><g:link action="editarEstadoAlquiler" id="${it.id}" class="btn btn-info">Editar</g:link></td>
@@ -68,7 +69,8 @@
             </div>  
         </div>
     </g:if>
-
+</div>
+<br><br>
 <asset:javascript src="bootstrap.min.js" />    
 <asset:javascript src="jquery-1.11.3.min.js" />
 <asset:javascript src="holder.min.js" />

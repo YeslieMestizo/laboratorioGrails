@@ -35,25 +35,31 @@
                 <div class="navbar-collapse collapse" style="float: right;">
                     <!--Login y Salida de Sesion-->
                     <g:if test="${session.usuario}">
-                        <strong style="color: white;">Login as : ${session.usuario.nombre}</strong> | <g:link controller="login" action="logout" class="btn btn-primary">Salir</g:link>
+                        <strong style="color: white;">Login as : ${session.usuario.nombreUsuario}</strong> | <g:link controller="login" action="logout" class="btn btn-primary">Salir</g:link>
                     </g:if>
                     <g:else>
-                        <div>
-                            <g:link controller="Login"><strong style="color: white">Ingresar</strong></g:link>
-                        </div>
-                        <div>                                
-                            <g:link controller="RegistroCliente"><strong style="color: white">Registrarse</strong></g:link>
-                        </div>
+                            <g:link controller="Login" action="login"><strong style="color: white">Ingresar</strong></g:link>
+                                                      
+                            <g:link controller="RegistroCliente" action="index"><strong style="color: white">Registrarse</strong></g:link>
+                        
                     </g:else>
+                    </div>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="nav navbar-nav">
-                        <li class="active">
+                        <li>
                             <a href="http://localhost:8080">Inicio</a></li>
                         <li>
-                            <g:link action="altaDisfraz">Productos</g:link></li>
+                            <g:link controller="gestionCliente" action="index">Productos</g:link></li>
+                        <li>
+                            <g:link controller="gestionCliente" action="showCarrito">Carrito</g:link></li>
                             <li>
-                                <a href="javascript:window.history.back();">&laquo; Volver atrás</a></li>
+                        <li>
+                            <g:link controller="gestionAdmin" action="showCompras">Compras Realizadas</g:link></li>
+                        <li>
+                            <g:link controller="gestionCliente" action="showDatos">Datos Personales</g:link></li>
+                            <li>
+                        <li>  <a href="javascript:window.history.back();">&laquo; Volver atrás</a></li>
                         </ul>
                     </div>
                 </div>

@@ -7,13 +7,11 @@ class GestionClienteController {
     def index(){
     [listado: gestionAdminService.listaCatalogo(),tipoList:gestionAdminService.listaTipo()]
     }
-
     def verImagen = {
         def disfraz = Disfraz.get(params.id)
         response.outputStream << disfraz.imagen
         response.outputStream.flush()
-    }
-    
+    }    
     def showCarrito(){
     }
     def agregarCarrito(Long id){   
@@ -31,16 +29,17 @@ class GestionClienteController {
         render(view:"showCarrito")
     }   
     def guardarAlquiler(){
-        def alquiler = new Alquiler(fechaEntrega:params.fechaEntrega,fechaDevolucion:params.fechaDevolucion,precio:session.carrito.total(),estado:"pendiente",cliente:session.usuario)
+        def alquiler = new Alquiler(fechaEntrega:params.fechaEntrega,fechaDevolucion:params.fechaDevolucion,precio:session.carrito.total(),estado:"pendiente",cliente:session.datos)
         println alquiler.fechaEntrega
         
         if(alquiler.save(flush:true)){
             println " se guardo"
             for(catalogo in session.carrito.items ){
-                def cat = Catalogo.get(catalogo.id)
+                /*def cat = Catalogo.get(catalogo.id)
                 cat.cantidad = cat.cantidad-1
                 cat.save(flush:true)
-                alquiler.addToItems(cat.disfraz)                
+                alquiler.addToItems(cat.disfraz)  */     
+                alquiler.addToItems(catalogo.disfraz)
         }
         session.carrito.items.clear()
         redirect(action:"index")
