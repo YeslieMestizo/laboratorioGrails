@@ -1,9 +1,16 @@
 package tienda
 import grails.validation.ValidationException
+import grails.rest.RestfulController
 
-class GestionClienteController {
+class GestionClienteController extends RestfulController<Cliente> {
+    static responseFormats = ['xml', 'json']
     GestionClienteService gestionClienteService
     GestionAdminService gestionAdminService
+
+    GestionClienteController(){
+      super(Cliente)
+    }
+
     def index(){
     [listado: gestionAdminService.listaCatalogo(),tipoList:gestionAdminService.listaTipo()]
     }
@@ -11,14 +18,28 @@ class GestionClienteController {
         def disfraz = Disfraz.get(params.id)
         response.outputStream << disfraz.imagen
         response.outputStream.flush()
+<<<<<<< HEAD
     }    
+=======
+<<<<<<< HEAD
+    }    
+=======
+    }
+
+>>>>>>> d168a23818e80d95f96e36f939b3be7e5df9721e
+>>>>>>> df3574264bd979ae2abbe2844a40ec56077270bd
     def showCarrito(){
     }
-    def agregarCarrito(Long id){   
+    def agregarCarrito(Long id){
         println id
         println gestionAdminService.unCatalogo(new Long(id))
+<<<<<<< HEAD
         session.carrito.addToItems(gestionAdminService.unCatalogo(new Long(id)))
         println session.carrito.items
+=======
+        session.carrito.addToItems(gestionAdminService.unCatalogo(id))
+        println session.carrito
+>>>>>>> df3574264bd979ae2abbe2844a40ec56077270bd
         render(view:"showCarrito")
     }
     def masCompra(){
@@ -27,11 +48,11 @@ class GestionClienteController {
     def eliminarItems(Long id){
         session.carrito.eliminarItems(gestionAdminService.unCatalogo(id))
         render(view:"showCarrito")
-    }   
+    }
     def guardarAlquiler(){
         def alquiler = new Alquiler(fechaEntrega:params.fechaEntrega,fechaDevolucion:params.fechaDevolucion,precio:session.carrito.total(),estado:"pendiente",cliente:session.datos)
         println alquiler.fechaEntrega
-        
+
         if(alquiler.save(flush:true)){
             println " se guardo"
             for(catalogo in session.carrito.items ){
@@ -43,11 +64,11 @@ class GestionClienteController {
         alquiler.save(flush:true)
         session.carrito.items.clear()
         redirect(action:"index")
-        }else{    
+        }else{
         redirect(action:"showCarrito")
         }
     }
-    
+
     // barra de busqueda
     def busquedaAlquiler(String campo){
         if(campo=="F"){
@@ -70,5 +91,5 @@ class GestionClienteController {
 
         }
     }
-    
+
 }
