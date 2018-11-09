@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="layout" content="mainClient"/>
-    <title>Login</title>    
+    <title>Login</title>
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
     <asset:stylesheet src="bootstrap.min.css" />
     <asset:stylesheet src="custom.css" />
@@ -28,7 +28,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Contraseña:</label>
-                                    <input type="password" id="password" name="password" class="au-input au-input--full" type="password" placeholder="Contraseña...">
+                                    <input type="password" id="password" name="password" class="au-input au-input--full" placeholder="Contraseña...">
                                 </div>
                                 <br>
                                 <input type="submit" value="I n g r e s a r" class="au-btn au-btn--block au-btn--green m-b-20"/>
@@ -46,7 +46,7 @@
             </div>
         </div>
     </div>
-    
+
     <asset:javascript src="bootstrap.min.js" />
     <asset:javascript src="jquery-1.11.3.min.js" />
     <asset:javascript src="holder.min.js" />

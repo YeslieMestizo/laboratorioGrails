@@ -26,13 +26,7 @@ class GestionAdminService {
         disfraz.save()
         //disfraz.delete(flush: true)
     }
-<<<<<<< HEAD
-    List listaDisfraz(){
-        def disfraz = Disfraz.findAllByEstado("activo")
-        return disfraz
-    }
-=======
->>>>>>> a8a647b553c1a3301070a7aaf98202275883057f
+
     Disfraz unDisfraz(Long id){
         def disfraz = Disfraz.get(id)
         return disfraz
@@ -136,11 +130,11 @@ class GestionAdminService {
     //busqueda DISFRAZ
     List buscarDisfrazPorGenero(String descripcion) {
         return Disfraz.findAllByGenero(descripcion)
-          
+
     }
     List buscarDisfrazPorTalle(String descripcion) {
         return Disfraz.findAllByTalle(descripcion)
-          
+
     }
     List buscarDisfrazPorDescripcion(String descripcion) {
         descripcion='%'+descripcion+'%'
@@ -158,7 +152,7 @@ class GestionAdminService {
         TipoDisfraz tipo = TipoDisfraz.findById(id)
         return Disfraz.findAllByTipo(tipo)
     }
-    
+
     //busqueda Cliente
     List buscarClientePorNombre(String descripcion) {
         descripcion='%'+descripcion+'%'
@@ -179,7 +173,7 @@ class GestionAdminService {
         descripcion='%'+descripcion+'%'
         return Cliente.findAllByDireccionLike(descripcion)
     }
-    
+
     //contadores
     String cantidadAlquiler(){
         def cantidad = Alquiler.count()

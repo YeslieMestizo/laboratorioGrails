@@ -12,10 +12,7 @@ class Cliente implements Serializable{
     String password
     String direccion
     String estado
-<<<<<<< HEAD
 
-=======
->>>>>>> a8a647b553c1a3301070a7aaf98202275883057f
     static constraints = {
     	  nombre (blank:false, maxSize:50);
         apellido (blank:false, mazSize:50)

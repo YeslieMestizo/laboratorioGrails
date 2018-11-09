@@ -41,7 +41,7 @@
                         <div>
                             <g:link controller="Login"><strong style="color: white">Ingresar</strong></g:link>
                         </div>
-                        <div>                                
+                        <div>
                             <g:link controller="RegistroCliente"><strong style="color: white">Registrarse</strong></g:link>
                         </div>
                     </g:else>
