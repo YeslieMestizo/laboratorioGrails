@@ -14,8 +14,20 @@
     <g:link controller="gestionAdmin" action="altaTipoDisfraz" class="glyphicon-plus btn btn-default">Agregar</g:link>
 
     <h1>Gesti&oacute;n de Tipo de Disfraz</h1><br>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+    <div clas="row">
+    <div class="col-sm-6">
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> a1e647305293c522db912bf67d61331a111f86cf
     <div class="row">
     <div class="col-sm-8">
+>>>>>>> d168a23818e80d95f96e36f939b3be7e5df9721e
         <div class="container">
             <table class="table table-hover">
                 <tr class="info">
@@ -35,12 +47,33 @@
             </table>
         </div>
     </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <div class="col-sm-4"></div>
+    <div class="col-sm-2">
+=======
+<<<<<<< HEAD
+>>>>>>> a1e647305293c522db912bf67d61331a111f86cf
     <g:if test="${tipoDisfrazE}">
         <div class="col-sm-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">
                         <span class="glyphicon glyphicon-log-in"></span>
+<<<<<<< HEAD
+=======
+=======
+    <div class="col-sm-4">
+>>>>>>> d168a23818e80d95f96e36f939b3be7e5df9721e
+    <g:if test="${tipoDisfrazE}">
+        
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-log-in"></span> 
+>>>>>>> a8a647b553c1a3301070a7aaf98202275883057f
+>>>>>>> a1e647305293c522db912bf67d61331a111f86cf
                         Editar
                     </h3>
                 </div>

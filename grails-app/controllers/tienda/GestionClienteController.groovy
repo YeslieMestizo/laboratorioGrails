@@ -14,13 +14,16 @@ class GestionClienteController extends RestfulController<Cliente> {
     def index(){
     [listado: gestionAdminService.listaCatalogo(),tipoList:gestionAdminService.listaTipo()]
     }
-
     def verImagen = {
         def disfraz = Disfraz.get(params.id)
         response.outputStream << disfraz.imagen
         response.outputStream.flush()
+<<<<<<< HEAD
+    }    
+=======
     }
 
+>>>>>>> d168a23818e80d95f96e36f939b3be7e5df9721e
     def showCarrito(){
     }
     def agregarCarrito(Long id){

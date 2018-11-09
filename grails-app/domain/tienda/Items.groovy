@@ -4,8 +4,12 @@ import grails.rest.*
 @Resource(uri='/items', formats=['xml', 'json'])
 
 class Items {
+<<<<<<< HEAD
     //List<Catalogo> items = new ArrayList();
 
+=======
+    
+>>>>>>> a1e647305293c522db912bf67d61331a111f86cf
     static hasMany = [items: Catalogo]
     static constraints = {
     }
@@ -15,7 +19,10 @@ class Items {
             this.items.add(catalogo);
         }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a1e647305293c522db912bf67d61331a111f86cf
     void eliminarItems(Catalogo catalogo) {
 	this.items.remove(catalogo);
     }

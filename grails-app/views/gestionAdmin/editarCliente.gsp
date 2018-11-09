@@ -62,4 +62,8 @@
 <asset:javascript src="holder.min.js" />
 <asset:javascript src="ie10-viewport-bug-workaround.js" />
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> a1e647305293c522db912bf67d61331a111f86cf

@@ -34,7 +34,7 @@
                 </div>
                 <div class="navbar-collapse collapse" style="float: right;">
                     <g:if test="${session.usuario}">
-                        <strong style="color: white;">Login as :  ${session.usuario.nombre}</strong> | <g:link controller="login" action="logout" class="btn btn-primary">Salir</g:link>
+                        <strong style="color: white;">Login as :  ${session.usuario.nombreUsuario}</strong> | <g:link controller="login" action="logout" class="btn btn-primary">Salir</g:link>
                     </g:if>
                 </div>
                 <div class="container-fluid">
@@ -59,7 +59,6 @@
                                     </ul>
                                   </div>
                             </li>
-                            
                             <li>
                                   <div class="collapse navbar-collapse">
                                     <button  type="button" data-toggle="dropdown">CLIENTES
@@ -83,20 +82,18 @@
                             </li>
 
                             <li>
-                                  <div class="collapse navbar-collapse">
+                                <div class="collapse navbar-collapse">
                                     <button  type="button" data-toggle="dropdown">TIPO DISFRAZ
                                     <span class="caret"></span></button>
                                     <ul class="dropdown-menu">
                                       <li><g:link action="altaTipoDisfraz">Alta</g:link></li>
                                       <li><g:link action="showTipoDisfraz">listado</g:link></li>
                                     </ul>
-                                  </div>
+                                </div>
                             </li>
                         </ul>
-
                     </div>
-                </div>
-                
+                </div>                
             </div>
         </nav>
     </div>

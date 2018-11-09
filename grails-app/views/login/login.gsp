@@ -23,8 +23,8 @@
                         <div class="login-form">
                             <g:form controller="login" action="login" method="post" class="form-group row">
                                 <div class="form-group">
-                                    <label for='usuario'>Usuario:</label>
-                                    <input type="text" id="usuario" name="usuario" class="au-input au-input--full" placeholder="Usuario...">
+                                    <label for='email'>Usuario:</label>
+                                    <input type="text" id="usuario" name="email" class="au-input au-input--full" placeholder="Usuario...">
                                 </div>
                                 <div class="form-group">
                                     <label>Contraseña:</label>

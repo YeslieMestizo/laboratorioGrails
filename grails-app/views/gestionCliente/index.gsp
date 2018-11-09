@@ -11,7 +11,7 @@
     <asset:stylesheet src="custom.css" />
 </head>
 <body>
-    <div class="container">
+    <!--<div class="container">
         <div class="row">
             <div class="col-lg-4">
                 <div class="card-body">
@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     <%
 Items carrito=null;
 if (session.getAttribute("carrito")== null) {  //si existe un carrito en la sesion, crea un carrito

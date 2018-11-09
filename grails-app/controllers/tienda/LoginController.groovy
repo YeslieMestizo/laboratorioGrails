@@ -1,9 +1,35 @@
 package tienda
-import grails.validation.ValidationException
-
 class LoginController {
-    LoginService loginService
+ def index(){
+     redirect action:"login"
+ }
+    
+  def login() {
+   if (request.get) {
+     return render(view: 'login')
+   }
 
+<<<<<<< HEAD
+
+    def u = Usuario.findByEmail(params.email)
+    //def roles = Usuario.getRoles()
+
+     if (u) {
+       if (u.password == u.generateMD5_A(params.password)) {
+          session.usuario = u
+          //if(roles.authority=="ADMINISTRADOR"){
+          if(session.usuario.getRoles().any{it.authority=='ADMIN'}) {
+            redirect(controller: "gestionAdmin", action: "index")
+          }
+          else{
+            redirect(controller: "gestionCliente", action: "index")
+          }
+
+
+
+        } else {
+          render(view: "login", model: [message: "Constraseña Incorrecta"])
+=======
     def index(){
         render(view: "login")
     }
@@ -33,13 +59,15 @@ class LoginController {
             }else{
                 render(view: "login", model: [message: "No existe el usuario ingresado"])
             }
+>>>>>>> d168a23818e80d95f96e36f939b3be7e5df9721e
         }
+      } else {
+        render(view: "login", model: [message: "No existe el usuario ingresado"])
+      }
     }
 
-    def logout() {        
-        session.usuario=null
-        session.carrito.items.clear()
-        render(view: "/index")
+    def logout() {
+      session.usuario=null
+      render(view: "/index")
     }
-
 }
