@@ -1,6 +1,4 @@
 <%@page import="tienda.Items"%>
-
-
 <!DOCTYPE html>
 <html>
     <head>

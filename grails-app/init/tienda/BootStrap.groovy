@@ -19,7 +19,6 @@ class BootStrap {
 //                println it
 //            }
 //        }
-//       // def rol = Rol.findByAuthority("ADMIN")
 //        def usuarioRol1 = new UsuarioRol(usuario: usuario1, rol: rol1)
 //        if(!usuarioRol1.save(flush: true)) {
 //            usuarioRol1.errors.each{
@@ -32,6 +31,8 @@ class BootStrap {
 //                println it
 //            }
 //        }
+
+
     }
     def destroy = {
     }

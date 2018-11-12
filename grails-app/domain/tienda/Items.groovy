@@ -13,6 +13,7 @@ class Items {
             this.items.add(catalogo);
         }
     }
+
     void eliminarItems(Catalogo catalogo) {
 	this.items.remove(catalogo);
     }

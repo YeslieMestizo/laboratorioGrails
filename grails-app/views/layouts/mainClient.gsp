@@ -38,27 +38,27 @@
                         <strong style="color: white;">Login as : ${session.usuario.nombreUsuario}</strong> | <g:link controller="login" action="logout" class="btn btn-primary">Salir</g:link>
                     </g:if>
                     <g:else>
-                            <g:link controller="Login" action="login"><strong style="color: white">Ingresar</strong></g:link>
-                                                      
-                            <g:link controller="RegistroCliente" action="registro"><strong style="color: white">Registrarse</strong></g:link>
-                        
+
+                        <div>
+                            <g:link controller="Login"><strong style="color: white">Ingresar</strong></g:link>
+                            <g:link controller="RegistroCliente"><strong style="color: white">Registrarse</strong></g:link>
+                        </div>
                     </g:else>
                     </div>
-                </div>
+                
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="nav navbar-nav">
-                        <li class="active">
+                        <li>
                             <a href="http://localhost:8080">Inicio</a></li>
                         <li>
                             <g:link controller="gestionCliente" action="index">Productos</g:link></li>
                         <li>
                             <g:link controller="gestionCliente" action="showCarrito">Carrito</g:link></li>
-                        
 
                         <li>  <a href="javascript:window.history.back();">&laquo; Volver atrás</a></li>
                         </ul>
                     </div>
-               
+               </div>
             </nav>
             </div>
         <!---->
@@ -70,8 +70,6 @@
                 <g:message code="spinner.alt" default="Loading&hellip;"/>
             </div>
         </div>
-    </div>
-
     <script src="vendor/jquery-3.2.1.min.js"></script>
     <script src="vendor/bootstrap-4.1/popper.min.js"></script>
     <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>

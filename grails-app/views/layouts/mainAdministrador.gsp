@@ -40,13 +40,7 @@
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse" id="navbar">
                         <ul class="nav navbar-nav">
-                            <!--li>
-                                <a href="http://localhost:8080">Inicio</a-->
-                            <li>
-                                <g:link action="index">Principal</g:link></li>
-                            <li>
-                                <a href="javascript:window.history.back();">&laquo; Volver atrás</a></li>
-                            <div class="container"></div>
+                            <li><div class="collapse navbar-collapse"><g:link action="index">Home</g:link></div></li>
                             <li>
                                   <div class="collapse navbar-collapse">
                                     <button  type="button" data-toggle="dropdown">DISFRACES
@@ -91,6 +85,7 @@
                                     </ul>
                                 </div>
                             </li>
+                            <li><div class="collapse navbar-collapse"><a href="javascript:window.history.back();">&laquo; Volver atrás</a></div></li>
                         </ul>
                     </div>
                 </div>                

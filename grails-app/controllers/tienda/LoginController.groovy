@@ -1,8 +1,10 @@
 package tienda
 class LoginController {
-    def index(){
-        render(view: "login")
-    }
+    
+  def index() {
+     return render(view: 'login')
+   }
+
     
     def login() {
         if (request.get) {

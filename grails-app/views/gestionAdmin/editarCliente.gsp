@@ -51,5 +51,4 @@
 <asset:javascript src="holder.min.js" />
 <asset:javascript src="ie10-viewport-bug-workaround.js" />
 </body>
-
 </html>
