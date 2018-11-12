@@ -8,6 +8,7 @@ class Usuario implements Serializable {
       String nombreUsuario
       String password
       String email//para que se loguee
+      String estado
 
       def generateMD5_A(String s){
           return MessageDigest.getInstance("MD5").digest(s.bytes).encodeHex().toString()
@@ -57,6 +58,7 @@ class Usuario implements Serializable {
         nombreUsuario blank: false, unique: true
         password blank: false
         email blank: false, email: true, unique: true
+        estado nullable:true
         //restricciones
       }
 }

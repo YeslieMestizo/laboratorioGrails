@@ -38,26 +38,10 @@
                         <strong style="color: white;">Login as : ${session.usuario.nombreUsuario}</strong> | <g:link controller="login" action="logout" class="btn btn-primary">Salir</g:link>
                     </g:if>
                     <g:else>
-<<<<<<< HEAD
-                            <g:link controller="Login" action="login"><strong style="color: white">Ingresar</strong></g:link>
-                                                      
-                            <g:link controller="RegistroCliente" action="index"><strong style="color: white">Registrarse</strong></g:link>
-                        
-=======
-<<<<<<< HEAD
-                        <div>
-                            <g:link controller="Login"><strong style="color: white">Ingresar</strong></g:link>
-                        </div>
-                        <div>
-                            <g:link controller="RegistroCliente"><strong style="color: white">Registrarse</strong></g:link>
-                        </div>
-=======
                             <g:link controller="Login" action="login"><strong style="color: white">Ingresar</strong></g:link>
                                                       
                             <g:link controller="RegistroCliente" action="registro"><strong style="color: white">Registrarse</strong></g:link>
                         
->>>>>>> a1e647305293c522db912bf67d61331a111f86cf
->>>>>>> df3574264bd979ae2abbe2844a40ec56077270bd
                     </g:else>
                     </div>
                 </div>
@@ -69,20 +53,14 @@
                             <g:link controller="gestionCliente" action="index">Productos</g:link></li>
                         <li>
                             <g:link controller="gestionCliente" action="showCarrito">Carrito</g:link></li>
-<<<<<<< HEAD
-=======
-                            <li>
-                        <li>
-                            <g:link controller="gestionAdmin" action="showCompras">Compras Realizadas</g:link></li>
-                        <li>
-                            <g:link controller="gestionCliente" action="showDatos">Datos Personales</g:link></li>
->>>>>>> df3574264bd979ae2abbe2844a40ec56077270bd
-                            <li>
+                        
+
                         <li>  <a href="javascript:window.history.back();">&laquo; Volver atrás</a></li>
                         </ul>
                     </div>
-                </div>
+               
             </nav>
+            </div>
         <!---->
         <g:layoutBody/>
     <!---->

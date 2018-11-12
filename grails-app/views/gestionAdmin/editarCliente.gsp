@@ -26,20 +26,9 @@
                         <g:hiddenField name="id" value="${this.cliente?.id}" />
                         <div class="form-group">
                             <label for="nombre">Nombre</label>
-                            <input type="text" class="form-control" name="nombre" value="${cliente.nombre}">
+                            <input type="text" class="form-control" name="nombreUsuario" value="${cliente.nombreUsuario}">
                         </div>
-                        <div class="form-group">
-                            <label for="apellido">Apellido</label>
-                            <input type="text" class="form-control" name="apellido" value="${cliente.apellido}">
-                        </div>
-                        <div class="form-group">
-                            <label for="telefono">Tel&eacute;fono</label>
-                            <input type="text" class="form-control" name="telefono" value="${cliente.telefono}">
-                        </div>
-                        <div class="form-group">
-                            <label for="direccion">Direcci&oacute;n</label>
-                            <input type="text" class="form-control" name="direccion" value="${cliente.direccion}">
-                        </div>
+                        
                         <div class="form-group">
                             <label for="usuario">Usuario</label>
                             <input type="text" class="form-control" name="usuario" value="${user.email}">
@@ -62,12 +51,5 @@
 <asset:javascript src="holder.min.js" />
 <asset:javascript src="ie10-viewport-bug-workaround.js" />
 </body>
-<<<<<<< HEAD
+
 </html>
-=======
-<<<<<<< HEAD
-</html>
-=======
-</html>
->>>>>>> a1e647305293c522db912bf67d61331a111f86cf
->>>>>>> df3574264bd979ae2abbe2844a40ec56077270bd

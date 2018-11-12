@@ -2,14 +2,15 @@ package tienda
 import grails.validation.ValidationException
 import grails.rest.RestfulController
 
-class GestionClienteController extends RestfulController<Cliente> {
+//class GestionClienteController extends RestfulController<Cliente> {
+class GestionClienteController{
     static responseFormats = ['xml', 'json']
     GestionClienteService gestionClienteService
     GestionAdminService gestionAdminService
 
-    GestionClienteController(){
+   /* GestionClienteController(){
       super(Cliente)
-    }
+    }*/
 
     def index(){
     [listado: gestionAdminService.listaCatalogo(),tipoList:gestionAdminService.listaTipo()]
@@ -18,28 +19,15 @@ class GestionClienteController extends RestfulController<Cliente> {
         def disfraz = Disfraz.get(params.id)
         response.outputStream << disfraz.imagen
         response.outputStream.flush()
-<<<<<<< HEAD
-    }    
-=======
-<<<<<<< HEAD
-    }    
-=======
     }
 
->>>>>>> d168a23818e80d95f96e36f939b3be7e5df9721e
->>>>>>> df3574264bd979ae2abbe2844a40ec56077270bd
     def showCarrito(){
     }
     def agregarCarrito(Long id){
         println id
         println gestionAdminService.unCatalogo(new Long(id))
-<<<<<<< HEAD
         session.carrito.addToItems(gestionAdminService.unCatalogo(new Long(id)))
         println session.carrito.items
-=======
-        session.carrito.addToItems(gestionAdminService.unCatalogo(id))
-        println session.carrito
->>>>>>> df3574264bd979ae2abbe2844a40ec56077270bd
         render(view:"showCarrito")
     }
     def masCompra(){
@@ -50,7 +38,7 @@ class GestionClienteController extends RestfulController<Cliente> {
         render(view:"showCarrito")
     }
     def guardarAlquiler(){
-        def alquiler = new Alquiler(fechaEntrega:params.fechaEntrega,fechaDevolucion:params.fechaDevolucion,precio:session.carrito.total(),estado:"pendiente",cliente:session.datos)
+        def alquiler = new Alquiler(fechaEntrega:params.fechaEntrega,fechaDevolucion:params.fechaDevolucion,precio:session.carrito.total(),estado:"pendiente",cliente:session.usuario)
         println alquiler.fechaEntrega
 
         if(alquiler.save(flush:true)){
@@ -63,12 +51,12 @@ class GestionClienteController extends RestfulController<Cliente> {
         }
         alquiler.save(flush:true)
         session.carrito.items.clear()
-        redirect(action:"index")
+        render(view:"recibo",model:[alquiler:alquiler])
         }else{
         redirect(action:"showCarrito")
         }
     }
-
+    
     // barra de busqueda
     def busquedaAlquiler(String campo){
         if(campo=="F"){

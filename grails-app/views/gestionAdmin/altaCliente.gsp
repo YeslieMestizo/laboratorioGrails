@@ -24,39 +24,24 @@
                             C R E A R
                         </div>
                         <div class="login-form">
-                            <form action="registro" method="post">
+                            <form action="guardarAltaCliente" method="post">
                                 <div class="form-group">
-                                    <label for="nombre">Nombre</label>
-                                    <input type="text" class="form-control" name="nombre" value="${cliente?.nombre}" placeholder="Nombre.." class="au-input au-input--full">
+                                    <label for="nombreUsuario">Nombre</label>
+                                    <input type="text" class="form-control" name="nombreUsuario" value="${cliente?.nombreUsuario}" placeholder="Nombre.." class="au-input au-input--full">
                                 </div>
-                                <div class="form-group">
-                                    <label for="apellido">Apellido</label>
-                                    <input type="text" class="form-control" name="apellido" value="${cliente?.apellido}" placeholder="Apellido.." class="au-input au-input--full">
-                                </div>
-                                <div class="form-group">
-                                    <label for="telefono">Tel&eacute;fono</label>
-                                    <input type="text" class="form-control" name="telefono" value="${cliente?.telefono}" placeholder="381-322363" class="au-input au-input--full">
-                                </div>
-                                <div class="form-group">
-                                    <label for="direccion">Direcci&oacute;n</label>
-                                    <input type="text" class="form-control" name="direccion" value="${cliente?.direccion}" placeholder="Calle/Avenida.." class="au-input au-input--full">
-                                </div>
+                                
                                 <div class="form-group">
                                      <label for="usuario">Usuario</label>
-                                    <input type="text" class="form-control" name="usuario" value="${cliente?.usuario}" placeholder="Usuario.." class="au-input au-input--full">
+                                    <input type="text" class="form-control" name="email" value="${cliente?.email}" placeholder="example@example.com" class="au-input au-input--full">
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Contraseña</label>
                                     <input type="password" class="form-control" name="password" placeholder="Escribir contraseña.." class="au-input au-input--full">
                                 </div>
-                                <div class="form-group">
-                                    <label for="confirmacion">Confirmar Contraseña</label>
-                                    <input type="password" class="form-control" name="confirmacion" placeholder="Confirmar contraseña" class="au-input au-input--full">
-                                </div>
+                                
                                 <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit" name="enviar"><g:link controller="RegistroCliente"><strong>Guardar Datos</strong></g:link></button>
                                 <a href="javascript:window.history.back();" class="btn btn default">Cancelar</a>
                             </form>
->>>>>>> a8a647b553c1a3301070a7aaf98202275883057f
                         </div>
                     </div>
                 </div>

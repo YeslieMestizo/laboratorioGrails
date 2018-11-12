@@ -8,17 +8,8 @@ GestionAdminService gestionAdminService
             constraints {
                 // apply constraints here
             }
-            
+
         }
-        
-        
-        "/busqueda"(resources:"apiDisfraz") {
-        collection {"/lista"(controller: "ApiDisfraz", action: "lista")
-        }
-        } 
-        
-<<<<<<< HEAD
-=======
 
         "/clientes"(resources:"cliente")
         "/administradores"(resources:"administrador")
@@ -30,7 +21,6 @@ GestionAdminService gestionAdminService
         }
         "/busquedaGenero"(resources:"apiDisfraces") {
         collection {"/apiDisfracesGenero"(controller: "ApiDisfraces", action: "apiDisfracesGenero")}}
->>>>>>> df3574264bd979ae2abbe2844a40ec56077270bd
 
         "/"(view:"/index")
         "500"(view:'/error')

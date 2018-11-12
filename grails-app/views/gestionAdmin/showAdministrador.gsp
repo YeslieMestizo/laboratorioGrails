@@ -17,6 +17,7 @@
         <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>Buscar</button>
     </g:form>
     <h1>Gesti&oacute;n de Administrador</h1>
+    <g:if test="${listado}">
     <div class="table-responsive m-b-40">
             <div class="container-fluid">
                 <table class="table table-hover">
@@ -41,6 +42,36 @@
             </table>
             </div>
         </div>
+   </g:if>
+    
+    
+    <g:if test="${busqueda}">
+         <div class="table-responsive m-b-40">
+            <div class="container-fluid">
+                <table class="table table-hover">
+                <tr class="info">
+                    <th>C&oacute;digo</th>
+                    <th>Nombre</th>
+                    <th>Usuario</th>
+                    <th>Contraseña</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <g:each in="${busqueda?}">
+                <tr class="success">
+                    <td>${it.id}</td>
+                    <td>${it.nombreUsuario}</td>
+                    <td>${it.email}</td>
+                    <td>${it.password}</td>
+                    <td><g:link action="editarAdministrador" id="${it.id}" class="btn btn-info">Editar</g:link></td>
+                    <td><g:link action="darBajaAdministrador" id="${it.id}" class="btn btn-info">Eliminar</g:link></td>
+                </tr>
+                </g:each>
+            </table>
+            </div>
+        </div>
+    </g:if>
+        
         <asset:javascript src="bootstrap.min.js" />
         <asset:javascript src="jquery-1.11.3.min.js" />
         <asset:javascript src="holder.min.js" />

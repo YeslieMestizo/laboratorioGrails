@@ -9,7 +9,7 @@ class Alquiler {
     BigDecimal precio
 
     String estado
-    Cliente cliente
+    Usuario cliente
     static hasMany = [items:Disfraz]
     //List<Disfraz> items = new ArrayList<>()
 

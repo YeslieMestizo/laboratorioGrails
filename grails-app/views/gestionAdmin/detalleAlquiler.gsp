@@ -46,18 +46,12 @@
                 <tr class="info">
                     <th>Codigo</th>
                     <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Telefono</th>
-                    <th>Direccion</th>
                     <th>Usuario</th>
                 </tr>
                 <tr class="success">
                     <td>${alquiler.cliente.id}</td>
-                    <td>${alquiler.cliente.nombre}</td>
-                    <td>${alquiler.cliente.apellido}</td>
-                    <td>${alquiler.cliente.telefono}</td>
-                    <td>${alquiler.cliente.direccion}</td>
-                    <td>${alquiler.cliente.usuario}</td>
+                    <td>${alquiler.cliente.nombreUsuario}</td>
+                    <td>${alquiler.cliente.email}</td>
                 </tr>
             </table>
         </div>

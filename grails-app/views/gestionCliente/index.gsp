@@ -11,48 +11,16 @@
     <asset:stylesheet src="custom.css" />
 </head>
 <body>
-    <!--<div class="container">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="card-body">
-                    <ul class="list-unstyled">
-                        <li>
-                            <g:link controller="GestionCliente" action="showCliente" class="btn btn-primary btn-lg btn-block">D A T O S - C L I E N T E</g:link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            <div class="col-lg-4">
-                <div class="card-body">
-                    <ul class="list-unstyled">
-                        <li>
-                            <g:link controller="GestionCliente" action="showCarrito" class="btn btn-success btn-lg btn-block">C A R R I T O</g:link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            <div class="col-lg-4">
-                <div class="card-body">
-                    <ul class="list-unstyled">
-                        <li>
-                            <g:link controller="GestionCliente" action="showPago" class="btn btn-primary btn-lg btn-block">L I S T A - P R O D U C T O S</g:link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>-->
+   
     <%
-Items carrito=null;
-if (session.getAttribute("carrito")== null) {  //si existe un carrito en la sesion, crea un carrito
-    carrito=new Items();
-    session.setAttribute("carrito", carrito);
-} else {
-    carrito= (Items) session.getAttribute("carrito");
-}
-%>
+    Items carrito=null;
+    if (session.getAttribute("carrito")== null) {  //si existe un carrito en la sesion, crea un carrito
+        carrito=new Items();
+        session.setAttribute("carrito", carrito);
+    } else {
+        carrito= (Items) session.getAttribute("carrito");
+    }
+    %>
 
 <!--  barra de busqueda personalizada-->
 

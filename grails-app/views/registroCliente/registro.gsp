@@ -23,29 +23,21 @@
                 <div class="login-wrap">
                     <div class="login-content">
                         <div class="login-logo">
+                            <g:if test="${message}">
+                            <div class="message" role="status">${message}</div>
+                          </g:if>
                             R E G I S T R A R S E
                         </div>
                         <div class="login-form">
                             <form action="registro" method="post">
                                 <div class="form-group">
-                                    <label for="nombre">Nombre</label>
-                                    <input type="text" class="form-control" name="nombre" value="${cliente?.nombre}" placeholder="Nombre.." class="au-input au-input--full">
-                                </div>
+                                    <label for="nombreUsuario">Nombre</label>
+                                    <input type="text" class="form-control" name="nombreUsuario" value="${cliente?.nombreUsuario}" placeholder="Nombre.." class="au-input au-input--full">
+                                </div>                              
+                                
                                 <div class="form-group">
-                                    <label for="apellido">Apellido</label>
-                                    <input type="text" class="form-control" name="apellido" value="${cliente?.apellido}" placeholder="Apellido.." class="au-input au-input--full">
-                                </div>
-                                <div class="form-group">
-                                    <label for="telefono">Tel&eacute;fono</label>
-                                    <input type="text" class="form-control" name="telefono" value="${cliente?.telefono}" placeholder="381-322363" class="au-input au-input--full">
-                                </div>
-                                <div class="form-group">
-                                    <label for="direccion">Direcci&oacute;n</label>
-                                    <input type="text" class="form-control" name="direccion" value="${cliente?.direccion}" placeholder="Calle/Avenida.." class="au-input au-input--full">
-                                </div>
-                                <div class="form-group">
-                                     <label for="usuario">Usuario</label>
-                                    <input type="text" class="form-control" name="usuario" value="${cliente?.usuario}" placeholder="Usuario.." class="au-input au-input--full">
+                                     <label for="email">Usuario</label>
+                                    <input type="text" class="form-control" name="email" value="${cliente?.email}" placeholder="Usuario.." class="au-input au-input--full">
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Contraseña</label>

@@ -74,6 +74,17 @@
         </div>
     </div>
         <div class="page-container">
+            <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-info">
+                    <strong class="card-title text-light">Ganancias</strong>
+                </div>
+            <div class="card-body text-white bg-success">
+                <p class="card-text text-light">${ganancia}
+                </p>
+            </div>
+        </div>
+    </div>
             
         </div>
         <asset:javascript src="bootstrap.min.js" />    

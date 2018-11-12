@@ -11,7 +11,7 @@
         <g:link controller="gestionAdmin" action="altaCliente" class="glyphicon-plus btn btn-default">Agregar</g:link>
         <g:form action="busquedaCliente" class="navbar-form navbar-right" role="search">
         <div class="form-group">
-            <g:select name="campo" from="${['Nombre','Apellido','Direccion']}" class="form-control"/>
+            <g:select name="campo" from="${['Nombre','Usuario']}" class="form-control"/>
             <input type="text" name="busqueda" class="form-control" placeholder="Busqueda por ...">
         </div>
         <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>Buscar</button>
@@ -23,21 +23,17 @@
                     <tr class="info">
                         <th>C&oacute;digo</th>
                         <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Tel&eacute;fono</th>
-                        <th>Direcci&oacute;n</th>
                         <th>Usuario</th>
+                        <th>Password</th>
                         <th></th>
                         <th></th>
                     </tr>
                     <g:each in="${listado?}">
                     <tr class="success">
                         <td>${it.id}</td>
-                        <td>${it.nombre}</td>
-                        <td>${it.apellido}</td>
-                        <td>${it.telefono}</td>
-                        <td>${it.direccion}</td>
-                        <td>${it.usuario}</td>
+                        <td>${it.nombreUsuario}</td>
+                        <td>${it.email}</td>
+                        <td>${it.password}</td>
                         <td><g:link action="editarCliente" id="${it.id}" class="btn btn-info">Editar</g:link></td>
                         <td><g:link action="darBajaCliente" id="${it.id}" class="btn btn-info">Eliminar</g:link></td>
                     </tr>

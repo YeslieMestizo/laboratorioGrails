@@ -5,7 +5,7 @@ class GestionAdminController {
     GestionAdminService gestionAdminService
 
     def index() {
-       [nroCliente:gestionAdminService.cantidadCliente(),nroAlquiler:gestionAdminService.cantidadAlquiler(),nroDisfraz:gestionAdminService.cantidadDisfraz()]
+       [nroCliente:gestionAdminService.cantidadCliente(),nroAlquiler:gestionAdminService.cantidadAlquiler(),nroDisfraz:gestionAdminService.cantidadDisfraz(),ganancia:gestionAdminService.contabilidadGanancia()]
     }
 
     //gestion disfraz
@@ -66,15 +66,36 @@ class GestionAdminController {
     }
 
     def altaCliente(){
-        [cliente: new Cliente()]
+        [cliente: new Usuario()]
     }
 
     def guardarAltaCliente( ) {
-      if (!gestionAdminService.altaCliente(params)){
-          render(view:"altaCliente",model:[cliente:new Cliente(params),message: "Ingrese Datos a Todos Los Campos"])
-      }else{
-      redirect(action:"showCliente")
-      }
+        try{
+            if(request.method == 'POST') {
+      def usuario = new Usuario(nombreUsuario:params.nombreUsuario, email:params.email,password:params.password,estado:"activo")
+       
+        if(usuario != null){
+            usuario.save(flush:true)
+            def rol = Rol.findByAuthority("CLIENTE") 
+            def usuarioRol = new UsuarioRol(usuario: usuario, rol: rol)
+            if(!usuarioRol.save(flush: true)) {
+                usuarioRol.errors.each{
+                    println it
+                }
+            }else{
+                render(view:"showCliente")
+            }               
+                    
+        }else{
+            usuario.errors.each{
+                println it
+            }
+            render(view:"altaCliente",model: [cliente:new Usuario(params),message:"Ingrese datos validos!"])
+        }
+            }
+        }catch(NullPointerException e){
+            render(view:"altaCliente",model: [cliente:new Usuario(params),message:e])
+        }
     }
 
     def darBajaCliente() {
@@ -82,27 +103,15 @@ class GestionAdminController {
         redirect(action:"showCliente")
     }
     def editarCliente(){
-        def cliente = gestionAdminService.unCliente(new Long(params.id))
-        [cliente: cliente, user:gestionAdminService.getUsuario(cliente.usuario)]
+        [cliente: gestionAdminService.unCliente(new Long(params.id))]
     }
     def actualizarCliente(Long id){
-        def cliente = Cliente.get(params.id)
-        def usuario = Usuario.findByEmail(cliente.usuario)
-        cliente.properties = [nombre:params.nombre, apellido:params.apellido, usuario:params.usuario,telefono:params.telefono,direccion:params.direccion,estado:"activo"]
-        if (cliente!=null){                        
-            usuario.email = cliente.usuario
-            usuario.password = params.password
-            usuario.beforeUpdate()
-            usuario.save(flush:true)
+        def cliente = Usuario.get(id)
+        cliente.properties = params
+        if (cliente!=null){  
             cliente.save(flush:true)
             redirect(action:"showCliente")
-<<<<<<< HEAD
-        }     
-=======
-
-
-        }
->>>>>>> df3574264bd979ae2abbe2844a40ec56077270bd
+        }  
     }
     //Gestion de Administrador
     def showAdministrador(){
@@ -112,11 +121,32 @@ class GestionAdminController {
         [Usuario: new Usuario()]
     }
     def guardarAltaAdministrador() {
-      if(!gestionAdminService.altaAdministrador(params)){
-        render(view:"altaAdministrador",model:[administrador:new Administrador(params),message:"Ingrese Todos Los Campos"])
-      }else{
-        redirect(action:"showAdministrador")
-      }
+      try{
+            if(request.method == 'POST') {
+      def usuario = new Usuario(nombreUsuario:params.nombreUsuario, email:params.email,password:params.password,estado:"activo")
+       
+        if(usuario != null){
+            usuario.save(flush:true)
+            def rol = Rol.findByAuthority("ADMIN") 
+            def usuarioRol = new UsuarioRol(usuario: usuario, rol: rol)
+            if(!usuarioRol.save(flush: true)) {
+                usuarioRol.errors.each{
+                    println it
+                }
+            }else{
+                render(view:"showAdministrador")
+            }               
+                    
+        }else{
+            usuario.errors.each{
+                println it
+            }
+            render(view:"altaAdministrador",model: [cliente:new Usuario(params),message:"Ingrese datos validos!"])
+        }
+            }
+        }catch(NullPointerException e){
+            render(view:"altaAdministrador",model: [cliente:new Usuario(params),message:e])
+        }
     }
 
     def darBajaAdministrador() {
@@ -127,13 +157,12 @@ class GestionAdminController {
         [administrador: gestionAdminService.unAdministrador(new Long(params.id))]
     }
     def actualizarAdministrador(Long id){
-        def administrador = Usuario.get(params.id)
-        administrador.properties = params        
-        if (administrador!=null){
-            usuario.beforeUpdate()
-            usuario.save(flush:true)
+       def admin = Usuario.get(id)
+        admin.properties = params
+        if (admin!=null){  
+            admin.save(flush:true)
             redirect(action:"showAdministrador")
-        }     
+        } 
     }
     //Gestion de tipoDisfraz
     def showTipoDisfraz(){
@@ -223,9 +252,9 @@ class GestionAdminController {
     //Busqueda
     def busquedaAdministrador(){
         if(params.campo.toString()=="Nombre"){
-            render(view:"showAdministrador",model:[listado: gestionAdminService.buscarAdminPorNombre(params.busqueda)])
+            render(view:"showAdministrador",model:[busqueda: gestionAdminService.buscarAdminPorNombre(params.busqueda)])
         }else{            
-                render(view:"showAdministrador",model:[listado: gestionAdminService.buscarAdminPorUsuario(params.busqueda)])
+                render(view:"showAdministrador",model:[busqueda: gestionAdminService.buscarAdminPorUsuario(params.busqueda)])
             }
         }
     
@@ -265,12 +294,8 @@ class GestionAdminController {
         if(params.campo.toString()=="Nombre"){
             render(view:"showCliente",model:[listado: gestionAdminService.buscarClientePorNombre(params.busqueda)])
         }else{
-            if(params.campo.toString()=="Apellido"){
-                render(view:"showCliente",model:[listado: gestionAdminService.buscarClientePorApellido(params.busqueda)])
-
-            }else{
-                    render(view:"showCliente",model:[listado: gestionAdminService.buscarClientePorDireccion(params.busqueda)])
-                }
+                render(view:"showCliente",model:[listado: gestionAdminService.buscarClientePorUsuario(params.busqueda)])
+               
             }
         }
     
